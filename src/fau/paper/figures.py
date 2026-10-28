@@ -20,7 +20,7 @@ from matplotlib.patches import FancyArrowPatch
 from matplotlib.ticker import FixedLocator, NullLocator
 from PIL import Image
 
-COL, TEXT = 3.25, 6.875   # CVPR column and text widths (inches): LaTeX includes the figures at 100%
+COL, TEXT = 3.25, 6.875   # the paper's column and text widths (inches): LaTeX includes the figures at 100%
 INK, INK2, MUTED, GRID, AXIS = "#0b0b0b", "#52514e", "#898781", "#e1e0d9", "#c3c2b7"
 BLUE, ORANGE, AQUA, VIOLET, GRAY = "#2a78d6", "#eb6834", "#1baf7a", "#4a3aa7", "#707070"
 ROLE = {"distilled": (ORANGE, "^"), "basefirst": (AQUA, "D"), "adapter": (VIOLET, "*"), "unguided": (BLUE, "o"),

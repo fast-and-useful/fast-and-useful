@@ -162,7 +162,9 @@ study (`klein_all50`, `klein_b2d*`, `klein_d2b*`) and `kd_ad2_ext`. The method f
 
 ## Data and licenses
 
-The code is released under the MIT license. The generators, encoders and datasets keep their own licenses and terms
-of use (several generators restrict commercial use; ImageNet requires accepting its terms of access). The
-prompt files contain captions and descriptions written by Qwen2.5-VL-7B-Instruct and 16,000 COCO-2017 training captions
-(CC BY 4.0); `results/figure-images` holds the twelve FLUX.2-klein images of the method figure.
+The code is under the [MIT License](LICENSE). The paper's tables, numbers and figures in `paper/` and the twelve
+FLUX.2-klein images of the method figure in `results/figure-images` are from the paper and are under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), like the paper. The generators, encoders and datasets keep
+their own licenses and terms of use (several generators restrict commercial use; ImageNet requires accepting its terms
+of access). The prompt files contain captions and descriptions written by Qwen2.5-VL-7B-Instruct and 16,000 COCO-2017
+training captions (CC BY 4.0).

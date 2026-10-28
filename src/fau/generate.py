@@ -56,7 +56,7 @@ DISAMBIG = {"n02012849": "crane bird", "n03126707": "construction crane", "n0371
             "n02108089": "boxer dog", "n03424325": "gas mask", "n02086910": "papillon dog", "n02091831": "Saluki dog",
             "n02100583": "vizsla dog", "n07714571": "cabbage", "n03379051": "American football helmet",
             "n02116738": "African wild dog", "n04493381": "tub",
-            # the 200-class protocol of Adamkiewicz et al. (CVPR 2026), classes outside ImageNet-100
+            # the 200-class protocol of Adamkiewicz et al. (2026), classes outside ImageNet-100
             "n02892201": "brass memorial plaque", "n02190166": "fly insect", "n03014705": "wooden chest", "n03854065": "pipe organ", "n03976657": "tall pole", "n03804744": "metal nail", "n07579787": "plate of food", "n04456115": "flaming torch", "n04399382": "teddy bear", "n04417672": "thatched roof", "n02814860": "lighthouse", "n02395406": "hog pig", "n01945685": "slug", "n02999410": "metal chain", "n02795169": "wooden barrel", "n09193705": "alpine mountain", "n07875152": "pot pie", "n02236044": "praying mantis", "n03250847": "drumstick for a drum", "n04008634": "missile", "n02509815": "red panda", "n03599486": "rickshaw", "n02814533": "station wagon car", "n02977058": "ATM cash machine", "n03089624": "candy store", "n07615774": "popsicle", "n03983396": "soda bottle", "n03902125": "payphone", "n03393912": "railway freight car", "n02793495": "barn", "n03160309": "dam", "n02403003": "ox", "n03617480": "kimono", "n04133789": "sandal", "n04596742": "wok", "n02699494": "altar",
             # the 1,000-class pilot: classes outside both lists above whose name collides with one of them
             "n03773504": "guided missile"}
@@ -84,7 +84,7 @@ SD3 = ["text_encoder/model.safetensors", "text_encoder_2/model.safetensors", "te
        "transformer/*.safetensors", "vae/*.safetensors"]
 SDXL_REPO = "stabilityai/stable-diffusion-xl-base-1.0"
 SD35 = {"sd35_large": "stabilityai/stable-diffusion-3.5-large", "sd35_medium": "stabilityai/stable-diffusion-3.5-medium"}
-# DP-DMD's released SD3.5-Medium student (a full transformer state dict; Wu et al., ICML 2026), run on SD3.5-Medium's
+# DP-DMD's released SD3.5-Medium student (a full transformer state dict; Wu et al., 2026), run on SD3.5-Medium's
 # pipeline; SD3.5-Medium's text encoders are SD3.5-Large's files (same sha256), loaded from SD3.5-Large's snapshot
 DPDMD = ("TianheWu/dpdmd", "DPDMD-SD35M-4NFE-natural.pt")
 SCHED = {"sd35_medium": SD35["sd35_medium"], "dpdmd_sd35m": SD35["sd35_medium"]}   # the scheduler each SD3.5 model runs on
@@ -390,7 +390,7 @@ class Stager(torch.nn.Module):
         return out
 
     def cads_cond(self, y, t):
-        """CADS (Sadat et al., ICLR 2024): the condition y at noise level t in [0, 1] (1 = pure noise) becomes
+        """CADS (Sadat et al., 2024): the condition y at noise level t in [0, 1] (1 = pure noise) becomes
         sqrt(gamma) y + s sqrt(1 - gamma) n, gamma = 1 below t1, 0 above t2, linear between, then is rescaled to y's mean
         and spread (psi = 1). Fresh noise per step, seeded per batch and step."""
         scale, t1, t2 = self.cads

@@ -1,6 +1,7 @@
 """Real-image captions as prompts: one caption per real training image, written by an open vision-language model
-(Qwen2.5-VL-7B-Instruct, greedy decoding) with the instruction Adamkiewicz et al. (CVPR 2026) gave GPT-4.1-nano. Generation then prompts "<class name>, <caption>" for image
-(class k, index j), so every class gets as many distinct prompts as it has real images.
+(Qwen2.5-VL-7B-Instruct, greedy decoding) with the instruction Adamkiewicz et al. (2026) gave GPT-4.1-nano. Generation
+then prompts "<class name>, <caption>" for image (class k, index j), so every class gets as many distinct prompts as it
+has real images.
 
 The images are the first N per class of a real pack, in pack order (the same images as the real-data baseline
 <pack>:0:N). Shards split the (class, index) list; each writes <out>.part<i>.json, and --merge joins them into <out>

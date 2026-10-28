@@ -1,7 +1,7 @@
 """Class-conditional training sets from distilled FLUX.2-klein-4B with two published training-free diversity methods,
 the inference-time baselines for the commitment-step adapter:
 
-  fsg   Feature Self-Guidance (Bhat et al., "Don't Settle at the Mode!", ECCV 2026, arXiv 2606.27371)
+  fsg   Feature Self-Guidance (Bhat et al., "Don't Settle at the Mode!", 2026, arXiv 2606.27371)
   mono  manifold-constrained noise optimization, MoNO (Shi et al., arXiv 2607.23937)
   none  plain klein, batched the same way (the control)
 

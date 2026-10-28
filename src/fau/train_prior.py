@@ -1,4 +1,4 @@
-"""The classifier recipe of Adamkiewicz et al. (CVPR 2026), reimplemented on our packs from the paper's description and
+"""The classifier recipe of Adamkiewicz et al. (2026), reimplemented on our packs from the paper's description and
 settings (their released code carries no license, so none of it is used): ResNet-50, 80 epochs, batch 1,024, Adam at
 1e-3, five epochs of linear warm-up from 1e-5 of the rate, cosine annealing to a floor of 1e-8, stepped per batch, no
 weight decay, gradient clipping at 1, CutMix on every batch (alpha 1); training images: random resized crop 224
