@@ -608,8 +608,9 @@ def s7_quality(R):
     return tabular("@{}l" + "r" * (1 + len(QUALITY_COLS)) + "@{}", head, body, rule_after_header=False)
 
 
-def s15_contrasts(R, numbers):
-    """Supporting paired contrasts (numbers: the gap macros of fau.paper.numbers)."""
+def s15_contrasts(R):
+    """Supporting paired contrasts."""
+    from fau.paper.numbers import gap_macros
     body = [block("ImageNet-100: generator and dataset-size comparisons", 3)]
     for label, a, b in [("SRPO versus FLUX.1-dev", "srpo", "flux_dev"),
                         ("FLUX.2-klein: adapter versus base-first", "kd_ad2_x3", "kb_dd2_g1"),
@@ -642,14 +643,14 @@ def s15_contrasts(R, numbers):
     for title, rows in blocks:
         body += [r"\midrule", block(title, 3)]
         for key, label in rows:
-            g, ci = numbers["gp@" + key], numbers["gpci@" + key]
+            g, ci = gap_macros(R, key)
             low = float(ci[1:].split(",")[0].replace("$-$", "-"))
             body.append(label + " & " + (rf"\textbf{{{g}}}" if low > 0 else g) + " & " + ci + END)
     return tabular("@{}lrr@{}", [r"Comparison & Gain & 95\% CI" + END], body)
 
 
 # The paper's table files -----------------------------------------------------------------------------------------------
-def build(R, study, weighting, numbers):
+def build(R, study, weighting):
     """{file name: LaTeX} for every table the paper and its supplement input."""
     plain = {"t0-method-config": t0_method_config, "t1-scale-transfer": t1_scale_transfer, "t2-ablation": t2_ablation,
              "t3-finegrained": t3_finegrained, "t5-learners": t5_learners, "t6-prompts": t6_prompts,
@@ -664,5 +665,5 @@ def build(R, study, weighting, numbers):
     out["s3-metrics"] = s3_metrics(R, study)
     out["s11-heldout"] = s11_heldout(R, study)
     out["s13-family-weighting"] = s13_family_weighting(R, weighting)
-    out["s15-contrasts"] = s15_contrasts(R, numbers)
+    out["s15-contrasts"] = s15_contrasts(R)
     return out

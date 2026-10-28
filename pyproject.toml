@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fau"
+version = "1.0.0"
+description = "Fast and Useful: adapting distilled generators for visual learning (code to reproduce the paper)"
+requires-python = ">=3.12"
+readme = "README.md"
+license = "MIT"
+
+[tool.setuptools.packages.find]
+where = ["src"]

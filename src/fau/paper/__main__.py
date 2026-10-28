@@ -127,7 +127,7 @@ def main():
     study = metric_study.analyze(inputs, a.workers)
     weighting = metric_study.family_weighting(inputs)
     nums = numbers.build(R, study, weighting)
-    tabs = tables.build(R, study, weighting, nums)
+    tabs = tables.build(R, study, weighting)
     write(a.out, tabs, nums)
     if not a.no_figures:
         figures.build(R, a.out / "figures")

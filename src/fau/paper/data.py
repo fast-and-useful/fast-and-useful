@@ -48,7 +48,8 @@ class Results:
         self._runs = list(csv.DictReader((self.root / "runs.csv").open()))
         self._pc = json.loads((self.root / "per_class.json").read_text())
         self._cache = {}
-        self.used = set()
+        self.used = set()   # run groups and sets read; and the evaluations behind them (fau.plan)
+        self.needs = dict(ood=set(), transfer=set(), metrics=set(), study=False, relay=False, recall=False)
 
     def _json(self, name):
         if name not in self._cache:
@@ -70,6 +71,8 @@ class Results:
         return num(self.row(g)["top1_sd"])
 
     def col(self, g, c):
+        if c in ("recall", "vendi", "fid", "recog", "aesthetic", "pickscore"):
+            self.needs["metrics"].add(g)
         return num(self.row(g)[c])
 
     def runs(self, g):
@@ -101,21 +104,25 @@ class Results:
 
     def ood_top1(self, g, test):
         """Top-1 (points) of every run of group g on an OOD test set."""
+        self.needs["ood"].add(g)
         ood = self._json("ood.json")
         return [100 * ood[r][test]["top1"] for r in self._run_names(g, ood) if test in ood[r]]
 
     def ood_per_class(self, g, test):
+        self.needs["ood"].add(g)
         ood = self._json("ood.json")
         rs = [ood[r][test]["per_class"] for r in self._run_names(g, ood) if "per_class" in ood[r].get(test, {})]
         classes = set.intersection(*(set(r) for r in rs))
         return {c: statistics.mean(r[c] for r in rs) for c in classes}
 
     def transfer_top1(self, g, target):
+        self.needs["transfer"].add(g)
         tr = self._json("transfer.json")
         v = [100 * tr[r][target]["top1"] for r in self._run_names(g, tr) if target in tr[r]]
         return statistics.mean(v), statistics.stdev(v)
 
     def transfer_per_class(self, g, target):
+        self.needs["transfer"].add(g)
         tr = self._json("transfer.json")
         rs = [tr[r][target]["per_class"] for r in self._run_names(g, tr) if target in tr[r]]
         classes = set.intersection(*(set(r) for r in rs))
@@ -127,10 +134,12 @@ class Results:
 
     @property
     def metric_study(self):
+        self.needs["study"] = True
         return self._json("metric_study.json")
 
     @property
     def diagnostics(self):
+        self.needs["relay"] = self.needs["recall"] = True
         return self._json("diagnostics.json")
 
     def set_config(self, set_id):

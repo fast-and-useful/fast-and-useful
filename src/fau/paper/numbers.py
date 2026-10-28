@@ -80,6 +80,17 @@ def nozero(v):
     return re.sub(r"(\$-\$|\+)(0\.0+)(?!\d)", r"\2", str(v))
 
 
+def gap_macros(R, name):
+    """(\\gp, \\gpci) of a named gap of GAPS or OOD_GAPS, as the paper prints them."""
+    if name in OOD_GAPS:
+        a, b, test = OOD_GAPS[name]
+        g, lo, hi = gap_by_class(R.ood_per_class(a, test), R.ood_per_class(b, test))
+    else:
+        a, b = GAPS[name]
+        g, lo, hi = gap(R.per_class(a), R.per_class(b))
+    return nozero(signed(g)), nozero(interval(lo, hi))
+
+
 def spearman_ci(x, y):
     """Spearman correlation of two per-class vectors with a 95% interval from 10,000 resamples of the classes."""
     from fau.metric_study import pearson, rank, summary
@@ -101,19 +112,13 @@ def build(R, study, weighting):
     for g in TPSEC:
         put("tpsec", g, f"{R.col(g, 'sec'):.2f}")
 
-    for name, (a, b) in GAPS.items():
-        g, lo, hi = gap(R.per_class(a), R.per_class(b))
-        put("gp", name, signed(g))
-        put("gpci", name, interval(lo, hi))
+    for name in [*GAPS, *OOD_GAPS]:
+        out[f"gp@{name}"], out[f"gpci@{name}"] = gap_macros(R, name)
     for name, (a, b) in MAGNITUDES.items():
         g, lo, hi = gap(R.per_class(a), R.per_class(b))
         put("gpa", name, f"{abs(g):.1f}")
         alo, ahi = (lo, hi) if g >= 0 else (-hi, -lo)   # the interval of |gap|
         put("gpcia", name, f"[{alo:.1f}, {ahi:.1f}]".replace("-", "$-$"))
-    for name, (a, b, test) in OOD_GAPS.items():
-        g, lo, hi = gap_by_class(R.ood_per_class(a, test), R.ood_per_class(b, test))
-        put("gp", name, signed(g))
-        put("gpci", name, interval(lo, hi))
     for name, (a, b) in [("native", ("dpdmd_ad1_r1024", "dpdmd_r1024")), ("resolutionReleased", ("dpdmd_r1024", "dpdmd")),
                          ("resolutionAdapted", ("dpdmd_ad1_r1024", "dpdmd_ad1"))]:   # DP-DMD at its native resolution
         g, lo, hi = gap(R.per_class(a), R.per_class(b), exact_mean=True)

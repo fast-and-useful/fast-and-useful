@@ -196,6 +196,7 @@ def pairs_sd(a):
         if (b // bs) % 25 == 0:
             print(f"pairs shard {a.shard}: {b + len(chunk)}/{len(jobs)}, {(time.time() - t0) / (b + len(chunk)):.3f} s each", flush=True)
     os.makedirs(a.out, exist_ok=True)
+    json.dump(dict(seconds=time.time() - t0, pairs=len(jobs), shard=a.shard, nshards=a.nshards), open(f"{a.out}/pairs{a.shard}.json", "w"))
     torch.save(dict(family="sd", guidance=a.guidance, k=torch.tensor(rec["k"]), j=torch.tensor(rec["j"]), fine=SD_FINE, coarse=SD_COARSE,
                     **sig, **{n: torch.cat(v) for n, v in rec.items() if n not in ("k", "j")}), out + ".tmp")
     os.replace(out + ".tmp", out)
@@ -245,6 +246,7 @@ def pairs_mmdit(a):
         if (b // bs) % 25 == 0:
             print(f"pairs shard {a.shard}: {b + len(chunk)}/{len(jobs)}, {(time.time() - t0) / (b + len(chunk)):.3f} s each", flush=True)
     os.makedirs(a.out, exist_ok=True)
+    json.dump(dict(seconds=time.time() - t0, pairs=len(jobs), shard=a.shard, nshards=a.nshards), open(f"{a.out}/pairs{a.shard}.json", "w"))
     torch.save(dict(family=a.family, guidance=a.guidance, sig=sig, k=torch.tensor(rec["k"]), j=torch.tensor(rec["j"]), fine=fine,
                     coarse=coarse, **{n: torch.cat(v) for n, v in rec.items() if n not in ("k", "j")}), out + ".tmp")
     os.replace(out + ".tmp", out)
@@ -295,6 +297,7 @@ def pairs(a):
         if (b // bs) % 25 == 0:
             print(f"pairs shard {a.shard}: {b + len(chunk)}/{len(jobs)}, {(time.time() - t0) / (b + len(chunk)):.3f} s each", flush=True)
     os.makedirs(a.out, exist_ok=True)
+    json.dump(dict(seconds=time.time() - t0, pairs=len(jobs), shard=a.shard, nshards=a.nshards), open(f"{a.out}/pairs{a.shard}.json", "w"))
     torch.save(dict(family="klein", guidance=a.guidance, grid=a.grid, sig=sig, k=torch.tensor(rec["k"]), j=torch.tensor(rec["j"]), fine=fine,
                     coarse=coarse, **{n: torch.cat(v) for n, v in rec.items() if n not in ("k", "j")}), out + ".tmp")
     os.replace(out + ".tmp", out)
@@ -507,7 +510,8 @@ def train(a):
         ad["weights"] = {n: (net.get_submodule(n).A.detach().cpu(), net.get_submodule(n).B.detach().cpu()) for n in names_lora}
     os.makedirs(os.path.dirname(a.out) or ".", exist_ok=True)
     torch.save(ad, a.out + ".tmp"); os.replace(a.out + ".tmp", a.out)
-    json.dump(dict(log=log, args=vars(a), sigma_target=sig_t, teacher_guidance=teacher_g, full=a.full), open(a.out + ".json", "w"), indent=1)
+    json.dump(dict(log=log, args=vars(a), sigma_target=sig_t, teacher_guidance=teacher_g, full=a.full, seconds=minutes * 60),
+              open(a.out + ".json", "w"), indent=1)
     print(f"ADAPTER DONE {a.out}: held-out relative error {log['start']:.4f} -> {log['curve'][-1][1]:.4f}, merged {log['merged']:.4f} "
           f"(coarse base {coarse_err:.4f}); content error {log['start_content']:.4f} -> {log['curve'][-1][2]:.4f}, merged "
           f"{log['merged_content']:.4f} (coarse {coarse_c:.4f}); teacher guidance {teacher_g}, {'full' if a.full else f'rank {a.rank}'}, "
