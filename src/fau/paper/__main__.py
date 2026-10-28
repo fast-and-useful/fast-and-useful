@@ -121,7 +121,7 @@ def main():
     ap.add_argument("--compare", type=Path, help="another build, or a LaTeX tree, to compare against")
     ap.add_argument("--no-figures", action="store_true")
     ap.add_argument("--workers", type=int, default=4)
-    ap.add_argument("--used", type=Path, help="write the run groups the build reads to this JSON file")
+    ap.add_argument("--used", type=Path, help="write what the build reads (run groups, sets, columns, tests) to this JSON file")
     a = ap.parse_args()
     t0 = time.time()
     R = Results(a.results, a.configs)
@@ -135,8 +135,10 @@ def main():
         figures.build(R, a.out / "figures")
     print(f"PAPER: {len(tabs)} tables, {len(nums)} numbers{'' if a.no_figures else ', 7 figures'} -> {a.out} "
           f"({time.time() - t0:.0f} s)")
-    if a.used:
-        a.used.write_text(json.dumps(sorted(R.used), indent=1) + "\n")
+    if a.used:   # what the build read: the export's scope (scripts/export_release.py in the experiment code)
+        needs = {k: sorted(map(list, v)) if k in ("metrics", "ood", "transfer") else sorted(v) if isinstance(v, set) else v
+                 for k, v in R.needs.items()}
+        a.used.write_text(json.dumps(dict(used=sorted(R.used), needs=needs), indent=1) + "\n")
     if a.compare:
         raise SystemExit(0 if compare(a.out, a.compare, tabs) else 1)
 

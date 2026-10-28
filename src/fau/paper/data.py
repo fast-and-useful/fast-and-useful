@@ -8,7 +8,7 @@
   ood.json          per classifier run, top-1 and per-class top-1 on ImageNet-V2, -Sketch, -R and -A
   transfer.json     per classifier run, linear-probe top-1 of its frozen features on Food-101, Cars, Pets and ImageNet-900
   metric_study.json the 186 template-prompt sets of the metric study: family, top-1 and every set metric
-  costs.json        one-time preparation (H100-hours) of every adapter whose cost the paper reports
+  costs.json        one-time preparation (H100-hours) of every adapter whose cost the paper reports, keyed by its set
   diagnostics.json  the seed-relay similarities and the per-class recall of the per-class analysis
 
 A pooled group (e.g. `kd_ad2_x3`) is every classifier run of its members (the same adapter trained three times);
@@ -48,8 +48,9 @@ class Results:
         self._runs = list(csv.DictReader((self.root / "runs.csv").open()))
         self._pc = json.loads((self.root / "per_class.json").read_text())
         self._cache = {}
-        self.used = set()   # run groups and sets read; and the evaluations behind them (fau.plan)
-        self.needs = dict(ood=set(), transfer=set(), metrics=set(), study=False, relay=False, recall=False)
+        self.used = set()   # run groups and sets read; and what was read of them (fau.plan, the export's scope)
+        self.needs = dict(top1=set(), metrics=set(), timing=set(), ood=set(), transfer=set(), study=False, relay=False,
+                          recall=False)
 
     def _json(self, name):
         if name not in self._cache:
@@ -65,29 +66,36 @@ class Results:
         return self._sets[g]
 
     def mean(self, g):
+        self.needs["top1"].add(g)
         return num(self.row(g)["top1_mean"])
 
     def sd(self, g):
+        self.needs["top1"].add(g)
         return num(self.row(g)["top1_sd"])
 
     def col(self, g, c):
         if c in ("recall", "vendi", "fid", "recog", "aesthetic", "pickscore"):
-            self.needs["metrics"].add(g)
+            self.needs["metrics"].add((g, c))
+        elif c == "sec":   # a measured time per image: reproducing it means generating the set
+            self.needs["timing"].add(g)
         return num(self.row(g)[c])
 
     def runs(self, g):
         """Top-1 of each classifier run of a (not pooled) group, by increasing seed."""
         self.used.add(g)
+        self.needs["top1"].add(g)
         rs = sorted((r for r in self._runs if r["group"] == g), key=lambda r: int(r["seed"]))
         return [float(r["top1"]) for r in rs]
 
     def run(self, g, seed):
         self.used.add(g)
+        self.needs["top1"].add(g)
         return next(float(r["top1"]) for r in self._runs if r["group"] == g and int(r["seed"]) == seed)
 
     def per_class(self, g, classes=None):
         """{run: [per-class top-1]} of a group, optionally restricted to class indices."""
         self.used.add(g)
+        self.needs["top1"].add(g)
         pc = self._pc[g]
         return pc if classes is None else {s: [v[k] for k in classes] for s, v in pc.items()}
 
@@ -104,25 +112,25 @@ class Results:
 
     def ood_top1(self, g, test):
         """Top-1 (points) of every run of group g on an OOD test set."""
-        self.needs["ood"].add(g)
+        self.needs["ood"].add((g, test))
         ood = self._json("ood.json")
         return [100 * ood[r][test]["top1"] for r in self._run_names(g, ood) if test in ood[r]]
 
     def ood_per_class(self, g, test):
-        self.needs["ood"].add(g)
+        self.needs["ood"].add((g, test))
         ood = self._json("ood.json")
         rs = [ood[r][test]["per_class"] for r in self._run_names(g, ood) if "per_class" in ood[r].get(test, {})]
         classes = set.intersection(*(set(r) for r in rs))
         return {c: statistics.mean(r[c] for r in rs) for c in classes}
 
     def transfer_top1(self, g, target):
-        self.needs["transfer"].add(g)
+        self.needs["transfer"].add((g, target))
         tr = self._json("transfer.json")
         v = [100 * tr[r][target]["top1"] for r in self._run_names(g, tr) if target in tr[r]]
         return statistics.mean(v), statistics.stdev(v)
 
     def transfer_per_class(self, g, target):
-        self.needs["transfer"].add(g)
+        self.needs["transfer"].add((g, target))
         tr = self._json("transfer.json")
         rs = [tr[r][target]["per_class"] for r in self._run_names(g, tr) if target in tr[r]]
         classes = set.intersection(*(set(r) for r in rs))

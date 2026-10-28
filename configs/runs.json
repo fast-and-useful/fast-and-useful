@@ -50,7 +50,7 @@
   ]
  },
  "cap_kd_ad2": {
-  "description": "the FLUX.2-klein class-name adapter, E5's real-image captions as prompts",
+  "description": "the FLUX.2-klein class-name adapter, the real-image captions as prompts",
   "trainer": "standard",
   "train": [
    "set:in100/cap_kd_ad2:1"
@@ -350,7 +350,7 @@
   ]
  },
  "cap_sdt_ad1": {
-  "description": "the SD-Turbo class-name adapter, E5's real-image captions as prompts",
+  "description": "the SD-Turbo class-name adapter, the real-image captions as prompts",
   "trainer": "standard",
   "train": [
    "set:in100/cap_sdt_ad1:1"
@@ -550,7 +550,7 @@
   ]
  },
  "cars_kd_coco": {
-  "description": "E25's COCO-caption FLUX.2-klein adapter, unchanged, on Cars",
+  "description": "the COCO-caption FLUX.2-klein adapter, unchanged, on Cars",
   "trainer": "standard",
   "train": [
    "set:cars/kd_coco:1"
@@ -725,7 +725,7 @@
   ]
  },
  "cars_sdt_coco": {
-  "description": "E25's COCO-caption SD-Turbo adapter, unchanged, on Cars",
+  "description": "the COCO-caption SD-Turbo adapter, unchanged, on Cars",
   "trainer": "standard",
   "train": [
    "set:cars/sdt_coco:1"
@@ -800,7 +800,7 @@
   ]
  },
  "cars_zt_sda_all": {
-  "description": "Stanford Cars, 500 per class: Z-Image-Turbo + the public SDA LoKr in all 8 steps (E46's setting)",
+  "description": "Stanford Cars, 500 per class: Z-Image-Turbo + the public SDA LoKr in all 8 steps",
   "trainer": "standard",
   "train": [
    "set:cars/zt_sda_all:1"
@@ -1432,7 +1432,7 @@
   ]
  },
  "food101_kd_coco": {
-  "description": "E25's COCO-caption FLUX.2-klein adapter, unchanged, on Food-101",
+  "description": "the COCO-caption FLUX.2-klein adapter, unchanged, on Food-101",
   "trainer": "standard",
   "train": [
    "set:food101/kd_coco:1"
@@ -1607,7 +1607,7 @@
   ]
  },
  "food101_sdt_coco": {
-  "description": "E25's COCO-caption SD-Turbo adapter, unchanged, on Food-101",
+  "description": "the COCO-caption SD-Turbo adapter, unchanged, on Food-101",
   "trainer": "standard",
   "train": [
    "set:food101/sdt_coco:1"
@@ -1682,7 +1682,7 @@
   ]
  },
  "food101_zt_sda_all": {
-  "description": "Food-101, 500 per class: Z-Image-Turbo + the public SDA LoKr in all 8 steps (E46's setting)",
+  "description": "Food-101, 500 per class: Z-Image-Turbo + the public SDA LoKr in all 8 steps",
   "trainer": "standard",
   "train": [
    "set:food101/zt_sda_all:1"
@@ -1932,7 +1932,7 @@
   ]
  },
  "in1k_llm_kd_ad2": {
-  "description": "ImageNet-1k, 100 per class, LLM descriptions: klein + the template adapter `kd_ad2` (E50's post-hoc arm, 2026-10-23)",
+  "description": "ImageNet-1k, 100 per class, LLM descriptions: klein + the template adapter `kd_ad2` (post hoc)",
   "trainer": "standard",
   "train": [
    "set:in1k/llm_kd_ad2:1"
@@ -1957,7 +1957,7 @@
   ]
  },
  "in1k_llm_kd_llm": {
-  "description": "ImageNet-1k, 100 per class, LLM descriptions: klein + `kd_llm` (chosen on Part 1)",
+  "description": "ImageNet-1k, 100 per class, LLM descriptions: klein + `kd_llm` (chosen on ImageNet-100)",
   "trainer": "standard",
   "train": [
    "set:in1k/llm_kd_llm:1"
@@ -2082,7 +2082,7 @@
   ]
  },
  "in1k_llm_sdt_ad1": {
-  "description": "ImageNet-1k, 100 per class, LLM descriptions: SD-Turbo + the template adapter `sdt_ad1` (chosen on Part 1)",
+  "description": "ImageNet-1k, 100 per class, LLM descriptions: SD-Turbo + the template adapter `sdt_ad1` (chosen on ImageNet-100)",
   "trainer": "standard",
   "train": [
    "set:in1k/llm_sdt_ad1:1"
@@ -3684,7 +3684,7 @@
   ]
  },
  "kd_ad2_r128": {
-  "description": "`kd_ad2` with rank 128 (alpha 128) on the E13 pairs",
+  "description": "`kd_ad2` with rank 128 (alpha 128) on the same teacher pairs",
   "trainer": "standard",
   "train": [
    "set:in100/kd_ad2_r128:1"
@@ -3709,7 +3709,7 @@
   ]
  },
  "kd_ad2_r8": {
-  "description": "`kd_ad2` with rank 8 (alpha 8) on the E13 pairs",
+  "description": "`kd_ad2` with rank 8 (alpha 8) on the same teacher pairs",
   "trainer": "standard",
   "train": [
    "set:in100/kd_ad2_r8:1"
@@ -3841,7 +3841,7 @@
   ]
  },
  "kd_ad2x": {
-  "description": "klein adapter jump 1 -> 0.7175 trained on the unguided base over the four-anchor grid, then distilled klein's last step; W1a's same-grid reference",
+  "description": "klein adapter jump 1 -> 0.7175 trained on the unguided base over the four-anchor grid, then distilled klein's last step",
   "trainer": "standard",
   "train": [
    "set:in100/kd_ad2x:1"
@@ -5091,7 +5091,7 @@
   ]
  },
  "llm_kd_ad2": {
-  "description": "FLUX.2-klein's class-name adapter, E5's LLM-written prompts",
+  "description": "FLUX.2-klein's class-name adapter, LLM-written prompts",
   "trainer": "standard",
   "train": [
    "set:in100/llm_kd_ad2:1"
@@ -5116,7 +5116,7 @@
   ]
  },
  "llm_kd_llm": {
-  "description": "LLM dataset 1 (E5's pool and seeds): FLUX.2-klein + `kd_llm` (`kd_ad2`'s recipe fitted on 16,000 image-free LLM descriptions)",
+  "description": "LLM dataset 1 (the first description pool and seeds): FLUX.2-klein + `kd_llm` (`kd_ad2`'s recipe fitted on 16,000 image-free LLM descriptions)",
   "trainer": "standard",
   "train": [
    "set:in100/llm_kd_llm:1"
@@ -5291,7 +5291,7 @@
   ]
  },
  "llm_sdt_ad1": {
-  "description": "SD-Turbo's class-name adapter, E5's LLM-written prompts",
+  "description": "SD-Turbo's class-name adapter, LLM-written prompts",
   "trainer": "standard",
   "train": [
    "set:in100/llm_sdt_ad1:1"
@@ -5316,7 +5316,7 @@
   ]
  },
  "llm_sdt_llm": {
-  "description": "LLM dataset 1 (E5's pool and seeds): SD-Turbo + `sdt_llm` (`sdt_ad1`'s recipe fitted on the same 16,000 descriptions)",
+  "description": "LLM dataset 1 (the first description pool and seeds): SD-Turbo + `sdt_llm` (`sdt_ad1`'s recipe fitted on the same 16,000 descriptions)",
   "trainer": "standard",
   "train": [
    "set:in100/llm_sdt_llm:1"
@@ -6085,7 +6085,7 @@
   ]
  },
  "pets_zt_sda_all": {
-  "description": "Oxford-IIIT Pets, 500 per class: Z-Image-Turbo + the public SDA LoKr in all 8 steps (E46's setting)",
+  "description": "Oxford-IIIT Pets, 500 per class: Z-Image-Turbo + the public SDA LoKr in all 8 steps",
   "trainer": "standard",
   "train": [
    "set:pets/zt_sda_all:1"
@@ -8392,7 +8392,7 @@
   ]
  },
  "sdxl": {
-  "description": "SDXL base at guidance 7 (the diffusers default is 5; E48), 30 steps, 1024 px",
+  "description": "SDXL base at guidance 7 (the diffusers default is 5), 30 steps, 1024 px",
   "trainer": "standard",
   "train": [
    "set:in100/sdxl:1"
@@ -9542,7 +9542,7 @@
   ]
  },
  "wp_kb_g1": {
-  "description": "When Pretty's recipe (train_whenpretty) on the unguided klein base",
+  "description": "the prior recipe (Adamkiewicz et al.) on the unguided klein base",
   "trainer": "prior",
   "train": [
    "set:in100/kb_g1:1"
@@ -9564,7 +9564,7 @@
   ]
  },
  "wp_kd_ad2": {
-  "description": "When Pretty's recipe (train_whenpretty) on the FLUX.2-klein adapter (first training run)",
+  "description": "the prior recipe (Adamkiewicz et al.) on the FLUX.2-klein adapter (first training run)",
   "trainer": "prior",
   "train": [
    "set:in100/kd_ad2:1"
@@ -9586,7 +9586,7 @@
   ]
  },
  "wp_klein": {
-  "description": "When Pretty's recipe (train_whenpretty) on distilled FLUX.2-klein",
+  "description": "the prior recipe (Adamkiewicz et al.) on distilled FLUX.2-klein",
   "trainer": "prior",
   "train": [
    "set:in100/klein:1"
@@ -9608,7 +9608,7 @@
   ]
  },
  "wp_real500": {
-  "description": "When Pretty's recipe (train_whenpretty) on 500 real images per class",
+  "description": "the prior recipe (Adamkiewicz et al.) on 500 real images per class",
   "trainer": "prior",
   "train": [
    "real:in100_train:0:500"
@@ -9630,7 +9630,7 @@
   ]
  },
  "wp_sd21_g1": {
-  "description": "When Pretty's recipe (train_whenpretty) on unguided SD 2.1",
+  "description": "the prior recipe (Adamkiewicz et al.) on unguided SD 2.1",
   "trainer": "prior",
   "train": [
    "set:in100/sd21_g1:1"
@@ -9652,7 +9652,7 @@
   ]
  },
  "wp_sdt4": {
-  "description": "When Pretty's recipe (train_whenpretty) on SD-Turbo at 4 steps",
+  "description": "the prior recipe (Adamkiewicz et al.) on SD-Turbo at 4 steps",
   "trainer": "prior",
   "train": [
    "set:in100/sdt4:1"
@@ -9674,7 +9674,7 @@
   ]
  },
  "wp_sdt_ad1": {
-  "description": "When Pretty's recipe (train_whenpretty) on the SD-Turbo adapter (first training run)",
+  "description": "the prior recipe (Adamkiewicz et al.) on the SD-Turbo adapter (first training run)",
   "trainer": "prior",
   "train": [
    "set:in100/sdt_ad1:1"

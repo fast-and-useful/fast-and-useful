@@ -1761,7 +1761,7 @@
   }
  },
  "in100/cap_kd_ad2": {
-  "description": "the FLUX.2-klein class-name adapter, E5's real-image captions as prompts",
+  "description": "the FLUX.2-klein class-name adapter, the real-image captions as prompts",
   "classes": "in100",
   "record": "set",
   "shards": 1,
@@ -2656,7 +2656,7 @@
   }
  },
  "in100/cap_sdt_ad1": {
-  "description": "the SD-Turbo class-name adapter, E5's real-image captions as prompts",
+  "description": "the SD-Turbo class-name adapter, the real-image captions as prompts",
   "classes": "in100",
   "record": "set",
   "shards": 1,
@@ -13202,7 +13202,7 @@
   }
  },
  "in100/kd_ad2_ext": {
-  "description": "",
+  "description": "the FLUX.2-klein adapter's set kd_ad2 continued from image 500 to 3,000 per class (the seeds of one full run)",
   "classes": "in100",
   "record": "set",
   "shards": 3,
@@ -13370,7 +13370,7 @@
   }
  },
  "in100/kd_ad2_r128": {
-  "description": "`kd_ad2` with rank 128 (alpha 128) on the E13 pairs",
+  "description": "`kd_ad2` with rank 128 (alpha 128) on the same teacher pairs",
   "classes": "in100",
   "record": "set",
   "shards": 2,
@@ -13412,7 +13412,7 @@
   }
  },
  "in100/kd_ad2_r8": {
-  "description": "`kd_ad2` with rank 8 (alpha 8) on the E13 pairs",
+  "description": "`kd_ad2` with rank 8 (alpha 8) on the same teacher pairs",
   "classes": "in100",
   "record": "set",
   "shards": 2,
@@ -13622,7 +13622,7 @@
   }
  },
  "in100/kd_ad2x": {
-  "description": "klein adapter jump 1 -> 0.7175 trained on the unguided base over the four-anchor grid, then distilled klein's last step; W1a's same-grid reference",
+  "description": "klein adapter jump 1 -> 0.7175 trained on the unguided base over the four-anchor grid, then distilled klein's last step",
   "classes": "in100",
   "record": "set",
   "shards": 2,
@@ -17170,7 +17170,7 @@
   }
  },
  "in100/klein_x3000": {
-  "description": "",
+  "description": "distilled FLUX.2-klein, its own 4 steps, 3,000 images per class (the data-scaling subsets keep each class's lowest image indices)",
   "classes": "in100",
   "record": "set",
   "shards": 4,
@@ -18117,7 +18117,7 @@
   }
  },
  "in100/llm_kd_ad2": {
-  "description": "FLUX.2-klein's class-name adapter, E5's LLM-written prompts",
+  "description": "FLUX.2-klein's class-name adapter, LLM-written prompts",
   "classes": "in100",
   "record": "set",
   "shards": 1,
@@ -18160,7 +18160,7 @@
   }
  },
  "in100/llm_kd_llm": {
-  "description": "LLM dataset 1 (E5's pool and seeds): FLUX.2-klein + `kd_llm` (`kd_ad2`'s recipe fitted on 16,000 image-free LLM descriptions)",
+  "description": "LLM dataset 1 (the first description pool and seeds): FLUX.2-klein + `kd_llm` (`kd_ad2`'s recipe fitted on 16,000 image-free LLM descriptions)",
   "classes": "in100",
   "record": "set",
   "shards": 2,
@@ -18535,7 +18535,7 @@
   }
  },
  "in100/llm_sdt_ad1": {
-  "description": "SD-Turbo's class-name adapter, E5's LLM-written prompts",
+  "description": "SD-Turbo's class-name adapter, LLM-written prompts",
   "classes": "in100",
   "record": "set",
   "shards": 1,
@@ -18584,7 +18584,7 @@
   }
  },
  "in100/llm_sdt_llm": {
-  "description": "LLM dataset 1 (E5's pool and seeds): SD-Turbo + `sdt_llm` (`sdt_ad1`'s recipe fitted on the same 16,000 descriptions)",
+  "description": "LLM dataset 1 (the first description pool and seeds): SD-Turbo + `sdt_llm` (`sdt_ad1`'s recipe fitted on the same 16,000 descriptions)",
   "classes": "in100",
   "record": "set",
   "shards": 1,
@@ -28022,7 +28022,7 @@
   }
  },
  "in100/sdxl": {
-  "description": "SDXL base at guidance 7 (the diffusers default is 5; E48), 30 steps, 1024 px",
+  "description": "SDXL base at guidance 7 (the diffusers default is 5), 30 steps, 1024 px",
   "classes": "in100",
   "record": "timing rerun",
   "shards": 24,
@@ -30548,7 +30548,7 @@
   }
  },
  "in1k/kb_dd2_g1_full": {
-  "description": "",
+  "description": "base-first FLUX.2-klein (the unguided base makes the first 2 of the released student's 4 predictions), 1,281 per class",
   "classes": "in1k",
   "record": "set",
   "shards": 20,
@@ -30669,7 +30669,7 @@
   }
  },
  "in1k/kb_g1_s20_full": {
-  "description": "",
+  "description": "the unguided FLUX.2-klein base at 20 steps, 1,281 per class on all 1,000 classes",
   "classes": "in1k",
   "record": "set",
   "shards": 48,
@@ -30778,7 +30778,7 @@
   }
  },
  "in1k/kd_ad2_full": {
-  "description": "",
+  "description": "the ImageNet-100-prompt FLUX.2-klein adapter (900 of the classes unseen), 1,281 per class",
   "classes": "in1k",
   "record": "set",
   "shards": 15,
@@ -30854,7 +30854,7 @@
   }
  },
  "in1k/klein_full": {
-  "description": "",
+  "description": "distilled FLUX.2-klein, its own 4 steps, 1,281 per class",
   "classes": "in1k",
   "record": "set",
   "shards": 20,
@@ -30943,7 +30943,7 @@
   }
  },
  "in1k/llm_kb_g1_s20": {
-  "description": "",
+  "description": "ImageNet-1k, 100 per class, LLM descriptions (`in1k_llm.json`): the unguided klein base, 20 steps",
   "classes": "in1k",
   "record": "set",
   "shards": 8,
@@ -31011,7 +31011,7 @@
   }
  },
  "in1k/llm_kd_ad2": {
-  "description": "FLUX.2-klein's class-name adapter, E5's LLM-written prompts",
+  "description": "FLUX.2-klein's class-name adapter, LLM-written prompts",
   "classes": "in1k",
   "record": "set",
   "shards": 2,
@@ -31054,7 +31054,7 @@
   }
  },
  "in1k/llm_kd_llm": {
-  "description": "LLM dataset 1 (E5's pool and seeds): FLUX.2-klein + `kd_llm` (`kd_ad2`'s recipe fitted on 16,000 image-free LLM descriptions)",
+  "description": "LLM dataset 1 (the first description pool and seeds): FLUX.2-klein + `kd_llm` (`kd_ad2`'s recipe fitted on 16,000 image-free LLM descriptions)",
   "classes": "in1k",
   "record": "set",
   "shards": 2,
@@ -31132,7 +31132,7 @@
   }
  },
  "in1k/llm_sd21_g1": {
-  "description": "",
+  "description": "ImageNet-1k, 100 per class, LLM descriptions (`in1k_llm.json`): unguided SD 2.1, 30 steps",
   "classes": "in1k",
   "record": "set",
   "shards": 2,
@@ -31311,7 +31311,7 @@
   }
  },
  "in1k/llm_sdt_ad1": {
-  "description": "SD-Turbo's class-name adapter, E5's LLM-written prompts",
+  "description": "SD-Turbo's class-name adapter, LLM-written prompts",
   "classes": "in1k",
   "record": "set",
   "shards": 1,
@@ -31447,7 +31447,7 @@
   }
  },
  "in1k/sd21_g1_full": {
-  "description": "",
+  "description": "the unguided SD 2.1 base at 30 steps, 1,281 per class on all 1,000 classes",
   "classes": "in1k",
   "record": "set",
   "shards": 10,
@@ -31534,7 +31534,7 @@
   }
  },
  "in1k/sdt4_dd2_g1_full": {
-  "description": "",
+  "description": "base-first SD-Turbo (unguided SD 2.1 makes the first 2 of SD-Turbo's 4 predictions), 1,281 per class",
   "classes": "in1k",
   "record": "set",
   "shards": 5,
@@ -31588,7 +31588,7 @@
   }
  },
  "in1k/sdt4_full": {
-  "description": "",
+  "description": "SD-Turbo, 4 steps, 1,281 per class",
   "classes": "in1k",
   "record": "set",
   "shards": 5,
@@ -31671,7 +31671,7 @@
   }
  },
  "in1k/sdt_ad1_full": {
-  "description": "",
+  "description": "the ImageNet-100-prompt SD-Turbo adapter, 1,281 per class",
   "classes": "in1k",
   "record": "set",
   "shards": 4,

@@ -68,6 +68,7 @@ def trace(target):
             FIGURES[name](R, d)
     elif name == "numbers":
         numbers.build(R, STUB_STUDY, STUB_WEIGHTING)
+        R.needs["study"] = True   # the text quotes the metric study (its set count and the family-weighting gap)
     else:
         raise SystemExit(f"unknown target {target}: a table ({', '.join(TABLES)}, {', '.join(STUDY)}), a figure "
                          f"({', '.join(FIGURES)}), a label (tab:..., fig:...), numbers, or all")
@@ -114,6 +115,11 @@ def repos(sets, pairs_cfg, pairs, needs, metric_sets):
     return sorted(out)
 
 
+def traced(record):
+    """The run groups of a tracer record: groups, or (group, column / test / target) cells."""
+    return {x if isinstance(x, str) else x[0] for x in record}
+
+
 def loop(cmd, flag, values):
     """A command once per value (shards, seeds): a shell loop, or the command itself for a single shard."""
     values = list(values)
@@ -133,12 +139,12 @@ def main():
     a = ap.parse_args()
     targets = [*TABLES, *STUDY, *FIGURES, "numbers"] if a.targets == ["all"] else a.targets
     runs_cfg, sets_cfg, ads_cfg, pairs_cfg = cfg("runs"), cfg("sets"), cfg("adapters"), cfg("pairs")
-    groups, needs = set(), dict(ood=set(), transfer=set(), metrics=set(), study=False, relay=False, recall=False)
+    groups, needs = set(), dict(ood=set(), transfer=set(), metrics=set(), timing=set(), study=False, relay=False, recall=False)
     for t in targets:
-        R = trace(t)
-        groups |= {g for g in R.used if g in runs_cfg}
-        for k, v in R.needs.items():
-            needs[k] = needs[k] | v
+        R = trace(t)   # groups whose accuracy the target reads, or whose classifiers it evaluates (OOD, transfer)
+        groups |= {g for g in R.needs["top1"] | traced(R.needs["ood"]) | traced(R.needs["transfer"]) if g in runs_cfg}
+        for k in needs:   # the groups behind the evaluations and the measured generation times
+            needs[k] = needs[k] | (traced(R.needs[k]) if isinstance(needs[k], set) else R.needs[k])
     study_sets = list(json.loads((ROOT / "results" / "metric_study.json").read_text())["sets"]) if needs["study"] else []
     groups |= {g for g in study_sets if g in runs_cfg}
     members = {m for g in groups for m in {**POOLED, **POOLED_DATASETS}.get(g, [g])}
@@ -152,12 +158,16 @@ def main():
             kind, name = src.split(":")[:2]
             (sets.setdefault(name, g) if kind == "set" else real.add(name))
         real.add(runs_cfg[g]["val"])
-    metric_sets = sorted({f"in100/{s}" for s in study_sets} | {runs_cfg[g]["train"][0].split(":")[1] for g in needs["metrics"]
-                                                                if "train" in runs_cfg.get(g, {}) and runs_cfg[g]["train"][0].startswith("set:")})
+
+    def train_set(g):   # the generated set a run group trains on
+        src = runs_cfg.get(g, {}).get("train", [""])[0]
+        return src.split(":")[1] if src.startswith("set:") else None
+    metric_sets = sorted(({f"in100/{s}" for s in study_sets} | {train_set(g) for g in needs["metrics"]}) - {None})
     if needs["recall"]:
         metric_sets = sorted(set(metric_sets) | {f"in100/{s}" for s in ("klein", "kd_ad2", "sdt4", "sdt_ad1")})
     relay_sets = [f"in100/{s}" for s in RELAY_SETS] if needs["relay"] else []
-    for s in [*metric_sets, *relay_sets]:
+    timed_sets = sorted({train_set(g) for g in needs["timing"]} - {None})   # generated to measure their time per image
+    for s in [*metric_sets, *relay_sets, *timed_sets]:
         sets.setdefault(s, None)
     if metric_sets or relay_sets:
         real.add("in100_train")
@@ -175,15 +185,19 @@ def main():
         return float(rows[g]["images"]) * float(rows[g]["sec"]) / 3600 if g else None
     gen = {s: set_hours(s) for s in sets}
     train = {(g, s): minutes.get((g, s), 0) / 60 for g in sorted(members) for s in runs_cfg[g]["seeds"]}
-    costs = json.loads((ROOT / "results" / "costs.json").read_text())["preparation"]
-    prep = {x: sum(costs[x].values()) for x in adapters if x in costs}
+    costs = json.loads((ROOT / "results" / "costs.json").read_text())["preparation"]   # keyed by the adapter's set
+    prep = {x: sum(v.values()) for k, v in costs.items() for x in [sets_cfg[f"in100/{k}"]["args"]["other"].split(":")[1]]
+            if x in adapters}
     total = sum(v for v in gen.values() if v) + sum(train.values()) + sum(prep.values())
     unknown = [s for s, v in gen.items() if v is None]
     print(f"# {' '.join(targets) if len(targets) < 6 else 'all'}: {len(members)} run groups ({len(train)} classifier runs), "
           f"{len(sets)} generated sets, {len(adapters)} adapters on {len(pairs)} teacher-pair sets; about {total:.0f} H100-hours "
           f"recorded (generation {sum(v for v in gen.values() if v):.0f}, classifiers {sum(train.values()):.0f}, adapter "
-          f"preparation {sum(prep.values()):.0f}" + (f"; {len(unknown)} sets without a recorded time" if unknown else "") + ")")
+          f"preparation {sum(prep.values()):.0f}" + (f"; {len(unknown)} set{'s' * (len(unknown) > 1)} without a recorded time" if unknown else "") + ")")
     if a.summary:
+        return
+    if not sets:
+        print("\nNothing to generate or train: python -m fau.paper rebuilds this target from configs/ and results/.")
         return
 
     print("\n## 1. Models and data (python -m fau.hub check lists what is missing)")
@@ -206,7 +220,7 @@ def main():
         for p in pairs:
             print(loop(f"python -m fau.adapter pairs --config {p}", "--shard", range(pairs_cfg[p]["shards"])))
         for x in adapters:
-            print(f"python -m fau.adapter train --config {x}" + (f"   # {prep[x]:.1f} h with its pairs" if x in prep else ""))
+            print(f"python -m fau.adapter train --config {x}" + (f"   # {prep[x]:.1f} h of recorded preparation" if x in prep else ""))
     if any(sets_cfg[s]["args"].get("model") == "srpo" or sets_cfg[s]["args"].get("other") == "srpo" for s in sets):
         print("python -m fau.srpo   # SRPO's transformer in bfloat16, once")
     print("\n## 3. Generated sets (one GPU per shard)")
@@ -214,11 +228,13 @@ def main():
         c = sets_cfg[s]
         module = "baselines" if c["generator"] == "baselines" else "generate"
         print(loop(f"python -m fau.{module} --set {s}", "--shard", range(c["shards"])) + (f"   # {gen[s]:.1f} h" if gen[s] else ""))
-    print("\n## 4. Classifiers (one GPU per run)")
+    if members:
+        print("\n## 4. Classifiers (one GPU per run)")
     for g in sorted(members):
         seeds = runs_cfg[g]["seeds"]
         print(loop(f"python -m fau.train --config {g}", "--seed", seeds) + f"   # {sum(train[(g, s)] for s in seeds):.1f} h")
-    print("\n## 5. Evaluations")
+    if needs["ood"] or needs["transfer"] or metric_sets or relay_sets:
+        print("\n## 5. Evaluations")
     run_names = lambda gs: " ".join(f"{m}_s{s}" for g in sorted(gs) for m in {**POOLED}.get(g, [g]) for s in runs_cfg[m]["seeds"])
     if needs["ood"]:
         print(f"python -m fau.ood eval --runs {run_names(needs['ood'])}")

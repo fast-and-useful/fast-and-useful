@@ -13,7 +13,7 @@ finish. The base supplies training targets and is absent at inference.
 |---|---|
 | `src/fau/` | the method and the experiments (modules listed below) |
 | `configs/` | the exact settings behind every number: 345 generated sets (`sets.json`), 43 adapters (`adapters.json`), 15 teacher-pair sets (`pairs.json`), 417 classifier run groups (`runs.json`), and the pinned revision of every model (`models.json`) |
-| `results/` | the recorded measurements: 1,203 classifier runs with per-class accuracies, set metrics, OOD and transfer accuracies, the metric study's inputs, preparation costs |
+| `results/` | the recorded measurements the paper reads: 1,203 classifier runs with per-class accuracies, the set metrics and OOD and transfer accuracies it quotes, the metric study's inputs, the adapters' preparation costs; and the measured generation and training times behind `fau.plan`'s costs |
 | `paper/` | the paper's tables (`tables/*.tex`), the numbers quoted in its text (`numbers.tex`) and its figures, rebuilt from `results/` |
 | `data/` | class lists and the prompt files of the paper's sets (real-image captions, LLM descriptions, COCO captions) |
 
@@ -119,27 +119,30 @@ Recorded cost per target (H100-hours: generation, classifiers and adapter prepar
 
 | Target (`fau.plan` name) | In the paper | H100-hours |
 |---|---|---|
-| `t0-method-config` | teacher targets and adapted schedules | 10 |
-| `t1-scale-transfer` | 200 classes and full ImageNet-1k | 770 |
-| `t2-ablation` | target guidance, endpoint, placement, rank, training-free baselines | 89 |
-| `t3-finegrained` | Food-101, Cars, Pets | 145 |
-| `t5-learners` | RandAugment, the prior recipe, ConvNeXt-T, ViT-S/16 | 27 |
-| `t6-prompts` | prompt regimes, ImageNet-100 and ImageNet-1k | 100 |
-| `f3-comparison`, `f4-generation-cost` | main comparison and generation cost | 127, 123 |
-| `f5-method` | the method figure | 21 |
-| `t1-main` | complete primary results (supplement) | 1,125 |
-| `s3-metrics`, `s11-heldout`, `s13-family-weighting` | the metric study (186 sets) | 1,735 |
-| `s14-deployment`, `s-e50-costs` | preparation and generation costs | 634, 61 |
-| `s6-ood`, `s15-contrasts` | shifted test sets, real-data mixtures | 519, 448 |
-| `s5-captions` | templates, real-image captions, LLM descriptions | 363 |
-| `s12-unseen-fullscale`, `s9-transfer` | unseen ImageNet classes, feature transfer | 370, 35 |
+| `t0-method-config` | teacher targets and adapted schedules | none: follows from `configs/` |
+| `t1-scale-transfer` | 200 classes and full ImageNet-1k | 776 |
+| `t2-ablation` | target guidance, endpoint, placement, rank, training-free baselines | 96 |
+| `t3-finegrained` | Food-101, Cars, Pets | 152 |
+| `t5-learners` | RandAugment, the prior recipe, ConvNeXt-T, ViT-S/16 | 34 |
+| `t6-prompts` | prompt regimes, ImageNet-100 and ImageNet-1k | 107 |
+| `f3-comparison`, `f4-generation-cost` | main comparison and generation cost | 134, 129 |
+| `f5-method` | the method figure | none: recorded images |
+| `t1-main` | complete primary results (supplement) | 1,132 |
+| `s3-metrics`, `s11-heldout`, `s13-family-weighting` | the metric study (186 sets) | 1,741 |
+| `s14-deployment`, `s-e50-costs` | preparation and generation costs | 640, 42 |
+| `s6-ood`, `s15-contrasts` | shifted test sets, real-data mixtures | 526, 454 |
+| `s5-captions` | templates, real-image captions, LLM descriptions | 369 |
+| `s12-unseen-fullscale`, `s9-transfer` | unseen ImageNet classes, feature transfer | 376, 41 |
 | `f3a-guidance-window`, `f3b-handoff` | guidance windows and hand-offs | 369, 289 |
-| `numbers` | every number quoted in the text | 1,709 |
-| `all` | everything: 1,203 classifier runs on 345 sets, 43 adapters | 3,683 |
+| `numbers` | every number quoted in the text (the metric study's included) | 3,051 |
+| `all` | everything: 1,203 classifier runs on 345 sets, 43 adapters | 3,690 |
 
 Targets share most of their runs, so their costs do not add up. Adapter preparation is counted for the four adapters
-whose cost the paper reports (`results/costs.json`: 5.7 H100-hours for klein's, 0.9 for SD-Turbo's); `fau.plan` lists
-the other adapters' pair and fit commands without a cost.
+whose cost the paper reports (`results/costs.json`: 5.7 H100-hours for klein's, 0.9 for SD-Turbo's, 7.9 and 1.2 for
+their counterparts fitted on LLM descriptions); `fau.plan` lists the other adapters' pair and fit commands without a
+cost. Eight sets have no recorded generation time and are not counted: seven early FLUX.2-klein sets of the metric
+study (`klein_all50`, `klein_b2d*`, `klein_d2b*`) and `kd_ad2_ext`. The method figure composes twelve recorded images
+(`results/figure-images`: images 0, 5, 9 and 15 of class 54 in the sets `kb_or34_d1`, `kd_ad2` and `klein`).
 
 ## Conventions
 
