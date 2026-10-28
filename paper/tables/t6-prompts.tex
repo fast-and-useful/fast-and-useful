@@ -1,0 +1,16 @@
+% Written by `python -m fau.paper` from results/. Do not edit.
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Comparison & FLUX.2-klein & SD-Turbo \\
+\midrule
+\multicolumn{3}{@{}l}{\emph{ImageNet-100: adapted $-$ released}} \\
+Templates / templates & \textbf{+26.9}\,{\tableuncert[+23.5, +30.4]} & \textbf{+25.0}\,{\tableuncert[+21.9, +28.1]} \\
+Captions / templates & \textbf{+6.4}\,{\tableuncert[+4.3, +8.6]} & \textbf{+20.7}\,{\tableuncert[+17.7, +23.8]} \\
+LLM / templates & \textbf{+2.1}\,{\tableuncert[+0.2, +4.0]} & \textbf{+16.7}\,{\tableuncert[+14.1, +19.4]} \\
+LLM / LLM & \textbf{+5.4}\,{\tableuncert[+3.4, +7.3]} & \textbf{+15.6}\,{\tableuncert[+12.9, +18.5]} \\
+\midrule
+\multicolumn{3}{@{}l}{\emph{ImageNet-1k: vs. released with LLM prompts}} \\
+\shortstack[l]{Template-based\\procedure} & \textbf{+2.7}\,{\tableuncert[+2.0, +3.4]} & \textbf{+7.1}\,{\tableuncert[+6.3, +7.9]} \\
+\shortstack[l]{LLM-prompt\\procedure} & $-$1.5\,{\tableuncert[$-$2.0, $-$1.0]} & \textbf{+6.9}\,{\tableuncert[+6.2, +7.7]} \\
+\bottomrule
+\end{tabular}

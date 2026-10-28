@@ -1,0 +1,245 @@
+% Every number the paper's text quotes; written by `python -m fau.paper` from results/. Do not edit.
+\makeatletter
+\newcommand{\tp}[1]{\@ifundefined{tp@#1}{\textbf{??#1}}{\csname tp@#1\endcsname}}
+\newcommand{\tpsd}[1]{\@ifundefined{tpsd@#1}{\textbf{??#1}}{\csname tpsd@#1\endcsname}}
+\newcommand{\tpsec}[1]{\@ifundefined{tpsec@#1}{\textbf{??#1}}{\csname tpsec@#1\endcsname}}
+\newcommand{\gp}[1]{\@ifundefined{gp@#1}{\textbf{??#1}}{\csname gp@#1\endcsname}}
+\newcommand{\gpci}[1]{\@ifundefined{gpci@#1}{\textbf{??#1}}{\csname gpci@#1\endcsname}}
+\newcommand{\gpa}[1]{\@ifundefined{gpa@#1}{\textbf{??#1}}{\csname gpa@#1\endcsname}}
+\newcommand{\gpcia}[1]{\@ifundefined{gpcia@#1}{\textbf{??#1}}{\csname gpcia@#1\endcsname}}
+\newcommand{\nm}[1]{\@ifundefined{nm@#1}{\textbf{??#1}}{\csname nm@#1\endcsname}}
+\expandafter\def\csname gp@capDistSDXL\endcsname{$-$2.2}
+\expandafter\def\csname gp@distSDXL\endcsname{$-$15.6}
+\expandafter\def\csname gp@dpdmdAd\endcsname{+7.7}
+\expandafter\def\csname gp@dpdmdAdDeep\endcsname{+13.4}
+\expandafter\def\csname gp@dpdmdAdVsBf\endcsname{+5.9}
+\expandafter\def\csname gp@dpdmdAdVsBfTin\endcsname{+6.7}
+\expandafter\def\csname gp@e49native\endcsname{+11.4}
+\expandafter\def\csname gp@e49resolutionAdapted\endcsname{$-$0.1}
+\expandafter\def\csname gp@e49resolutionReleased\endcsname{+1.9}
+\expandafter\def\csname gp@e52KleinLlm100\endcsname{$-$4.6}
+\expandafter\def\csname gp@e52KleinLlm500\endcsname{+5.2}
+\expandafter\def\csname gp@inkAdVsBaseHundred\endcsname{+1.1}
+\expandafter\def\csname gp@inkAdVsBfKlein\endcsname{+3.5}
+\expandafter\def\csname gp@inkAdVsBfSD\endcsname{+5.4}
+\expandafter\def\csname gp@inkMixAdOverDist\endcsname{+0.5}
+\expandafter\def\csname gp@inkMixAdOverReal\endcsname{$-$0.2}
+\expandafter\def\csname gp@inkMixDistOverReal\endcsname{$-$0.7}
+\expandafter\def\csname gp@inkMixOodRAdOverReal\endcsname{+2.5}
+\expandafter\def\csname gp@inkMixOodRDistOverReal\endcsname{$-$0.5}
+\expandafter\def\csname gp@inkMixOodSketchAdOverReal\endcsname{+3.3}
+\expandafter\def\csname gp@inkMixOodSketchDistOverReal\endcsname{$-$0.4}
+\expandafter\def\csname gp@inkSdtAdVsBase\endcsname{+0.4}
+\expandafter\def\csname gp@loTwentyKlein\endcsname{+0.3}
+\expandafter\def\csname gp@lowAdKlein\endcsname{+12.1}
+\expandafter\def\csname gp@lowAdSD\endcsname{+13.1}
+\expandafter\def\csname gp@lowAdVsBaseKlein\endcsname{+1.9}
+\expandafter\def\csname gp@lowAdVsBaseSD\endcsname{+3.0}
+\expandafter\def\csname gp@mixAdKlein\endcsname{+1.8}
+\expandafter\def\csname gp@mixAdKleinOverReal\endcsname{+1.7}
+\expandafter\def\csname gp@mixAdSD\endcsname{+2.9}
+\expandafter\def\csname gp@mixAdSDOverReal\endcsname{+3.4}
+\expandafter\def\csname gp@mixBfOverReal\endcsname{+1.9}
+\expandafter\def\csname gp@mixKlein\endcsname{+2.0}
+\expandafter\def\csname gp@mixKleinOverReal\endcsname{$-$0.1}
+\expandafter\def\csname gp@mixSDOne\endcsname{+0.6}
+\expandafter\def\csname gp@srpo\endcsname{+3.1}
+\expandafter\def\csname gpa@capDistKlein\endcsname{8.0}
+\expandafter\def\csname gpa@capGuideSD\endcsname{13.8}
+\expandafter\def\csname gpa@distKleinUnguided\endcsname{27.9}
+\expandafter\def\csname gpa@dpdmdGuide\endcsname{23.8}
+\expandafter\def\csname gpa@dpdmdVsTeacher\endcsname{7.2}
+\expandafter\def\csname gpa@guideKlein\endcsname{21.4}
+\expandafter\def\csname gpa@guideSDTwo\endcsname{19.5}
+\expandafter\def\csname gpa@hiNineSD\endcsname{16.5}
+\expandafter\def\csname gpa@hiTenKlein\endcsname{17.5}
+\expandafter\def\csname gpa@llmGapKlein\endcsname{5.0}
+\expandafter\def\csname gpa@tgFourKlein\endcsname{23.1}
+\expandafter\def\csname gpa@tgFourKleinTin\endcsname{25.4}
+\expandafter\def\csname gpa@tgSevenSD\endcsname{13.2}
+\expandafter\def\csname gpa@tgSevenSDTin\endcsname{8.7}
+\expandafter\def\csname gpa@tgZ\endcsname{18.8}
+\expandafter\def\csname gpa@tgZTin\endcsname{18.1}
+\expandafter\def\csname gpci@capDistSDXL\endcsname{[$-$4.9, +0.6]}
+\expandafter\def\csname gpci@distSDXL\endcsname{[$-$17.9, $-$13.3]}
+\expandafter\def\csname gpci@dpdmdAd\endcsname{[+6.2, +9.3]}
+\expandafter\def\csname gpci@dpdmdAdDeep\endcsname{[+11.1, +15.7]}
+\expandafter\def\csname gpci@dpdmdAdVsBf\endcsname{[+4.4, +7.4]}
+\expandafter\def\csname gpci@dpdmdAdVsBfTin\endcsname{[+5.5, +7.9]}
+\expandafter\def\csname gpci@e49native\endcsname{[+9.1, +13.8]}
+\expandafter\def\csname gpci@e49resolutionAdapted\endcsname{[$-$1.7, +1.6]}
+\expandafter\def\csname gpci@e49resolutionReleased\endcsname{[+0.8, +3.0]}
+\expandafter\def\csname gpci@e52KleinLlm100\endcsname{[$-$6.2, $-$3.0]}
+\expandafter\def\csname gpci@e52KleinLlm500\endcsname{[+3.0, +7.5]}
+\expandafter\def\csname gpci@inkAdVsBaseHundred\endcsname{[+0.7, +1.4]}
+\expandafter\def\csname gpci@inkAdVsBfKlein\endcsname{[+2.9, +4.1]}
+\expandafter\def\csname gpci@inkAdVsBfSD\endcsname{[+5.0, +5.8]}
+\expandafter\def\csname gpci@inkMixAdOverDist\endcsname{[+0.3, +0.7]}
+\expandafter\def\csname gpci@inkMixAdOverReal\endcsname{[$-$0.4, 0.0]}
+\expandafter\def\csname gpci@inkMixDistOverReal\endcsname{[$-$0.9, $-$0.5]}
+\expandafter\def\csname gpci@inkMixOodRAdOverReal\endcsname{[+2.0, +3.0]}
+\expandafter\def\csname gpci@inkMixOodRDistOverReal\endcsname{[$-$0.9, $-$0.2]}
+\expandafter\def\csname gpci@inkMixOodSketchAdOverReal\endcsname{[+2.9, +3.7]}
+\expandafter\def\csname gpci@inkMixOodSketchDistOverReal\endcsname{[$-$0.7, $-$0.1]}
+\expandafter\def\csname gpci@inkSdtAdVsBase\endcsname{[$-$0.2, +0.9]}
+\expandafter\def\csname gpci@loTwentyKlein\endcsname{[$-$1.1, +1.6]}
+\expandafter\def\csname gpci@lowAdKlein\endcsname{[+10.3, +14.1]}
+\expandafter\def\csname gpci@lowAdSD\endcsname{[+11.7, +14.6]}
+\expandafter\def\csname gpci@lowAdVsBaseKlein\endcsname{[+0.8, +3.1]}
+\expandafter\def\csname gpci@lowAdVsBaseSD\endcsname{[+1.8, +4.2]}
+\expandafter\def\csname gpci@mixAdKlein\endcsname{[+1.1, +2.5]}
+\expandafter\def\csname gpci@mixAdKleinOverReal\endcsname{[+0.9, +2.5]}
+\expandafter\def\csname gpci@mixAdSD\endcsname{[+2.1, +3.6]}
+\expandafter\def\csname gpci@mixAdSDOverReal\endcsname{[+2.6, +4.2]}
+\expandafter\def\csname gpci@mixBfOverReal\endcsname{[+1.2, +2.7]}
+\expandafter\def\csname gpci@mixKlein\endcsname{[+1.4, +2.7]}
+\expandafter\def\csname gpci@mixKleinOverReal\endcsname{[$-$0.7, +0.5]}
+\expandafter\def\csname gpci@mixSDOne\endcsname{[+0.1, +1.2]}
+\expandafter\def\csname gpci@srpo\endcsname{[+1.6, +4.7]}
+\expandafter\def\csname gpcia@capDistKlein\endcsname{[5.6, 10.3]}
+\expandafter\def\csname gpcia@capGuideSD\endcsname{[11.3, 16.3]}
+\expandafter\def\csname gpcia@distKleinUnguided\endcsname{[24.3, 31.5]}
+\expandafter\def\csname gpcia@dpdmdGuide\endcsname{[20.6, 27.0]}
+\expandafter\def\csname gpcia@dpdmdVsTeacher\endcsname{[5.5, 8.9]}
+\expandafter\def\csname gpcia@guideKlein\endcsname{[18.4, 24.8]}
+\expandafter\def\csname gpcia@guideSDTwo\endcsname{[17.0, 21.9]}
+\expandafter\def\csname gpcia@hiNineSD\endcsname{[14.3, 18.8]}
+\expandafter\def\csname gpcia@hiTenKlein\endcsname{[14.7, 20.3]}
+\expandafter\def\csname gpcia@llmGapKlein\endcsname{[2.6, 7.5]}
+\expandafter\def\csname gpcia@tgFourKlein\endcsname{[20.2, 26.2]}
+\expandafter\def\csname gpcia@tgFourKleinTin\endcsname{[23.4, 27.5]}
+\expandafter\def\csname gpcia@tgSevenSD\endcsname{[10.5, 16.1]}
+\expandafter\def\csname gpcia@tgSevenSDTin\endcsname{[6.9, 10.5]}
+\expandafter\def\csname gpcia@tgZ\endcsname{[16.4, 21.3]}
+\expandafter\def\csname gpcia@tgZTin\endcsname{[16.4, 19.9]}
+\expandafter\def\csname nm@adKleinRange\endcsname{43.6--44.1}
+\expandafter\def\csname nm@adSDRange\endcsname{43.3--44.0}
+\expandafter\def\csname nm@adZRange\endcsname{35.1--35.2}
+\expandafter\def\csname nm@anchorShareKlein\endcsname{57}
+\expandafter\def\csname nm@anchorShareSD\endcsname{55}
+\expandafter\def\csname nm@anchorVendiKlein\endcsname{22}
+\expandafter\def\csname nm@anchorVendiSD\endcsname{39}
+\expandafter\def\csname nm@breakEvenBaseFirstKlein\endcsname{399,000}
+\expandafter\def\csname nm@breakEvenBaseFirstSD\endcsname{807,000}
+\expandafter\def\csname nm@breakEvenKlein\endcsname{44,000}
+\expandafter\def\csname nm@breakEvenSD\endcsname{38,000}
+\expandafter\def\csname nm@capShareKlein\endcsname{81}
+\expandafter\def\csname nm@capShareSD\endcsname{98}
+\expandafter\def\csname nm@dpdmdAdDeepShare\endcsname{43}
+\expandafter\def\csname nm@dpdmdAdShare\endcsname{25}
+\expandafter\def\csname nm@e50LlmBaseFirstKlein\endcsname{+0.3}
+\expandafter\def\csname nm@e50LlmBaseFirstKleinCI\endcsname{[$-$0.7, +1.3]}
+\expandafter\def\csname nm@e50LlmVsTemplateAtScale\endcsname{+1.9}
+\expandafter\def\csname nm@e50LlmVsTemplateAtScaleCI\endcsname{[+1.6, +2.2]}
+\expandafter\def\csname nm@e50NineHundredkd_llm\endcsname{$-$1.6}
+\expandafter\def\csname nm@e50NineHundredkd_llmCI\endcsname{[$-$2.1, $-$1.0]}
+\expandafter\def\csname nm@e50NineHundredsdt_ad1\endcsname{+6.9}
+\expandafter\def\csname nm@e50NineHundredsdt_ad1CI\endcsname{[+6.1, +7.7]}
+\expandafter\def\csname nm@e50OriginalKleinVsLlmReleased\endcsname{+2.7}
+\expandafter\def\csname nm@e50OriginalKleinVsLlmReleasedCI\endcsname{[+2.0, +3.4]}
+\expandafter\def\csname nm@e50OriginalSDVsLlmReleased\endcsname{+7.1}
+\expandafter\def\csname nm@e50OriginalSDVsLlmReleasedCI\endcsname{[+6.3, +7.9]}
+\expandafter\def\csname nm@e50OtherRunOne\endcsname{43.3}
+\expandafter\def\csname nm@e50OtherRunTwo\endcsname{42.5}
+\expandafter\def\csname nm@e50PoorRun\endcsname{35.9}
+\expandafter\def\csname nm@e50PostHocKleinNineHundred\endcsname{$-$3.4}
+\expandafter\def\csname nm@e50PostHocKleinNineHundredCI\endcsname{[$-$4.0, $-$2.9]}
+\expandafter\def\csname nm@e50PostHocKleinVsBaseFirst\endcsname{$-$4.2}
+\expandafter\def\csname nm@e50PostHocKleinVsBaseFirstCI\endcsname{[$-$4.7, $-$3.8]}
+\expandafter\def\csname nm@e50PostHocKleinVsReleased\endcsname{$-$3.3}
+\expandafter\def\csname nm@e50PostHocKleinVsReleasedCI\endcsname{[$-$3.9, $-$2.8]}
+\expandafter\def\csname nm@e50Sensitivity\endcsname{$-$0.5}
+\expandafter\def\csname nm@e50SensitivityCI\endcsname{[$-$1.5, +0.6]}
+\expandafter\def\csname nm@e51CrossoverMillionKlein\endcsname{0.4}
+\expandafter\def\csname nm@e51CrossoverMillionSD\endcsname{1.1}
+\expandafter\def\csname nm@e52KleinBaseLoss\endcsname{2.4}
+\expandafter\def\csname nm@e52SDBaseGain\endcsname{1.5}
+\expandafter\def\csname nm@eNSets\endcsname{186}
+\expandafter\def\csname nm@equalFamilyFdMinusRecall\endcsname{+0.04}
+\expandafter\def\csname nm@equalFamilyFdMinusRecallCI\endcsname{[$-$0.10, +0.21]}
+\expandafter\def\csname nm@fullTotalAdKlein\endcsname{41.4}
+\expandafter\def\csname nm@fullTotalAdSD\endcsname{10.2}
+\expandafter\def\csname nm@fullTotalBfKlein\endcsname{54.5}
+\expandafter\def\csname nm@fullTotalBfSD\endcsname{10.4}
+\expandafter\def\csname nm@inkFullShareKlein\endcsname{90}
+\expandafter\def\csname nm@inkFullShareSD\endcsname{62}
+\expandafter\def\csname nm@llmShareKlein\endcsname{35}
+\expandafter\def\csname nm@llmShareSD\endcsname{78}
+\expandafter\def\csname nm@pcRecallChangeKlein\endcsname{+0.21 [0.00, +0.40]}
+\expandafter\def\csname nm@pcRecallChangeSD\endcsname{$-$0.21 [$-$0.39, $-$0.01]}
+\expandafter\def\csname nm@prepHoursKlein\endcsname{5.7}
+\expandafter\def\csname nm@prepHoursSD\endcsname{0.9}
+\expandafter\def\csname nm@qFidBetter\endcsname{all three}
+\expandafter\def\csname nm@qRecogLower\endcsname{all three}
+\expandafter\def\csname nm@regenMax\endcsname{1.2}
+\expandafter\def\csname nm@relayAdKlein\endcsname{0.32}
+\expandafter\def\csname nm@relayAdSD\endcsname{0.33}
+\expandafter\def\csname nm@relayBfKlein\endcsname{0.27}
+\expandafter\def\csname nm@relayBfSD\endcsname{0.27}
+\expandafter\def\csname nm@relayDistKlein\endcsname{0.05}
+\expandafter\def\csname nm@relayDistSD\endcsname{0.08}
+\expandafter\def\csname nm@tgRecallKlein\endcsname{2}
+\expandafter\def\csname nm@tgRecallMax\endcsname{25}
+\expandafter\def\csname nm@tgRecallSD\endcsname{25}
+\expandafter\def\csname nm@tgRecallZ\endcsname{23}
+\expandafter\def\csname nm@tgShareKlein\endcsname{11}
+\expandafter\def\csname nm@tgShareSD\endcsname{48}
+\expandafter\def\csname nm@tgShareZ\endcsname{11}
+\expandafter\def\csname nm@tgVendiKlein\endcsname{8}
+\expandafter\def\csname nm@tgVendiMax\endcsname{32}
+\expandafter\def\csname nm@tgVendiSD\endcsname{20}
+\expandafter\def\csname nm@tgVendiZ\endcsname{32}
+\expandafter\def\csname nm@trGainMax\endcsname{28.5}
+\expandafter\def\csname nm@trGainMin\endcsname{10.7}
+\expandafter\def\csname tp@dpdmd\endcsname{13.9}
+\expandafter\def\csname tp@dpdmd_ad1\endcsname{27.3}
+\expandafter\def\csname tp@dpdmd_dd1_g1\endcsname{15.8}
+\expandafter\def\csname tp@in1k_kb_g1_s20\endcsname{17.6}
+\expandafter\def\csname tp@in1k_kd_ad2\endcsname{18.6}
+\expandafter\def\csname tp@in1k_kd_ad2_full\endcsname{34.2}
+\expandafter\def\csname tp@in1k_klein\endcsname{8.4}
+\expandafter\def\csname tp@in1k_klein_full\endcsname{8.4}
+\expandafter\def\csname tp@in1k_sd21_g1\endcsname{18.8}
+\expandafter\def\csname tp@in1k_sdt4_full\endcsname{12.7}
+\expandafter\def\csname tp@in1k_sdt_ad1\endcsname{19.1}
+\expandafter\def\csname tp@in1k_sdt_ad1_full\endcsname{32.1}
+\expandafter\def\csname tp@kb_b2d25_g1\endcsname{43.5}
+\expandafter\def\csname tp@kb_d2b25_g1\endcsname{26.1}
+\expandafter\def\csname tp@kb_dd2_g1\endcsname{39.9}
+\expandafter\def\csname tp@kb_interval_g4\endcsname{45.9}
+\expandafter\def\csname tp@kb_or10_d3\endcsname{32.8}
+\expandafter\def\csname tp@kb_or21_d2\endcsname{43.5}
+\expandafter\def\csname tp@kb_or35_d1_g4\endcsname{23.6}
+\expandafter\def\csname tp@kd_ad0\endcsname{32.1}
+\expandafter\def\csname tp@kd_ad2_tg4\endcsname{20.1}
+\expandafter\def\csname tp@kd_ad2_x3\endcsname{43.8}
+\expandafter\def\csname tp@kd_ad2x\endcsname{43.2}
+\expandafter\def\csname tp@kd_ad3\endcsname{40.0}
+\expandafter\def\csname tp@klein\endcsname{17.1}
+\expandafter\def\csname tp@low_real50\endcsname{34.0}
+\expandafter\def\csname tp@scale_kd_ad2_100\endcsname{24.4}
+\expandafter\def\csname tp@scale_kd_ad2_3000\endcsname{57.0}
+\expandafter\def\csname tp@scale_klein_100\endcsname{12.6}
+\expandafter\def\csname tp@scale_klein_3000\endcsname{19.5}
+\expandafter\def\csname tp@sd21\endcsname{30.0}
+\expandafter\def\csname tp@sd21_g1\endcsname{49.8}
+\expandafter\def\csname tp@sd21_g2\endcsname{49.5}
+\expandafter\def\csname tp@sd21_interval75\endcsname{40.7}
+\expandafter\def\csname tp@sdt4\endcsname{18.3}
+\expandafter\def\csname tp@sdt4_dd2_g1\endcsname{36.4}
+\expandafter\def\csname tp@sdt_ad0\endcsname{32.2}
+\expandafter\def\csname tp@sdt_ad1_x3\endcsname{43.7}
+\expandafter\def\csname tp@sdt_ad2\endcsname{41.2}
+\expandafter\def\csname tp@sdt_or15_d3\endcsname{32.5}
+\expandafter\def\csname tp@sdt_or30_d2\endcsname{47.1}
+\expandafter\def\csname tp@sdt_or30_d2_g75\endcsname{30.5}
+\expandafter\def\csname tp@zt_ad2_x3\endcsname{35.1}
+\expandafter\def\csname tp@zt_sda_all\endcsname{25.1}
+\expandafter\def\csname tpsd@kd_ad2_x3\endcsname{43.8$\pm$0.4}
+\expandafter\def\csname tpsd@klein\endcsname{17.1$\pm$0.4}
+\expandafter\def\csname tpsd@zimage_turbo_s8\endcsname{13.8$\pm$0.4}
+\expandafter\def\csname tpsd@zt_sda_all\endcsname{25.1$\pm$0.1}
+\expandafter\def\csname tpsd@zt_sda_first2\endcsname{20.9$\pm$0.2}
+\expandafter\def\csname tpsec@kb_g1_s20\endcsname{0.57}
+\expandafter\def\csname tpsec@kd_ad2_x3\endcsname{0.10}
+\makeatother

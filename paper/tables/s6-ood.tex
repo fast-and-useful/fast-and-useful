@@ -1,0 +1,37 @@
+% Written by `python -m fau.paper` from results/. Do not edit.
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+training set & in distribution & V2 & Sketch & R & A \\
+\midrule
+\multicolumn{6}{@{}l}{\emph{ImageNet-100, generated only}} \\
+real images, 500 per class & 77.1\,{\tableuncert$\pm$0.2} & 66.1\,{\tableuncert$\pm$1.4} & 21.1\,{\tableuncert$\pm$1.1} & 30.8\,{\tableuncert$\pm$1.1} & 4.3\,{\tableuncert$\pm$0.7} \\
+FLUX.2-klein, distilled & 17.1\,{\tableuncert$\pm$0.4} & 15.4\,{\tableuncert$\pm$0.8} & 5.0\,{\tableuncert$\pm$0.1} & 6.8\,{\tableuncert$\pm$0.5} & 0.5\,{\tableuncert$\pm$0.2} \\
+\quad base-first & 39.9\,{\tableuncert$\pm$0.3} & 34.9\,{\tableuncert$\pm$0.2} & 16.3\,{\tableuncert$\pm$0.4} & 22.6\,{\tableuncert$\pm$0.3} & 2.8\,{\tableuncert$\pm$0.1} \\
+\quad + adapter (ours) & 43.8\,{\tableuncert$\pm$0.4} & 37.4\,{\tableuncert$\pm$0.9} & 22.5\,{\tableuncert$\pm$0.7} & 27.9\,{\tableuncert$\pm$0.8} & 3.6\,{\tableuncert$\pm$0.4} \\
+\quad base, no guidance & 45.1\,{\tableuncert$\pm$0.0} & 37.4\,{\tableuncert$\pm$1.0} & 23.0\,{\tableuncert$\pm$0.7} & 30.3\,{\tableuncert$\pm$1.8} & 3.7\,{\tableuncert$\pm$0.4} \\
+SD-Turbo, distilled & 18.3\,{\tableuncert$\pm$0.3} & 14.9\,{\tableuncert$\pm$0.4} & 4.9\,{\tableuncert$\pm$0.4} & 4.6\,{\tableuncert$\pm$0.5} & 2.2\,{\tableuncert$\pm$0.5} \\
+\quad base-first & 36.4\,{\tableuncert$\pm$0.9} & 28.8\,{\tableuncert$\pm$1.4} & 11.1\,{\tableuncert$\pm$0.6} & 13.7\,{\tableuncert$\pm$0.1} & 3.8\,{\tableuncert$\pm$0.4} \\
+\quad + adapter (ours) & 43.7\,{\tableuncert$\pm$0.6} & 36.8\,{\tableuncert$\pm$1.4} & 12.7\,{\tableuncert$\pm$1.4} & 16.4\,{\tableuncert$\pm$0.4} & 2.6\,{\tableuncert$\pm$0.4} \\
+\quad SD 2.1, no guidance & 49.8\,{\tableuncert$\pm$0.7} & 41.0\,{\tableuncert$\pm$0.6} & 18.6\,{\tableuncert$\pm$1.8} & 26.4\,{\tableuncert$\pm$0.7} & 2.8\,{\tableuncert$\pm$0.3} \\
+Z-Image-Turbo, distilled & 14.0\,{\tableuncert$\pm$0.0} & 12.0\,{\tableuncert$\pm$0.3} & 5.7\,{\tableuncert$\pm$0.4} & 6.0\,{\tableuncert$\pm$0.1} & 0.9\,{\tableuncert$\pm$0.1} \\
+\quad + adapter (ours) & 35.1\,{\tableuncert$\pm$0.5} & 30.0\,{\tableuncert$\pm$1.2} & 12.9\,{\tableuncert$\pm$0.6} & 13.2\,{\tableuncert$\pm$0.6} & 2.1\,{\tableuncert$\pm$0.5} \\
+\midrule
+\multicolumn{6}{@{}l}{\emph{ImageNet-100, 500 real + 500 generated}} \\
+real only, trained as long & 78.8\,{\tableuncert$\pm$0.0} & 67.0\,{\tableuncert$\pm$0.9} & 21.6\,{\tableuncert$\pm$0.4} & 31.0\,{\tableuncert$\pm$0.9} & 3.8\,{\tableuncert$\pm$0.7} \\
++ FLUX.2-klein, distilled & 78.7\,{\tableuncert$\pm$0.4} & 67.8\,{\tableuncert$\pm$1.6} & 23.7\,{\tableuncert$\pm$0.6} & 33.3\,{\tableuncert$\pm$0.9} & 5.1\,{\tableuncert$\pm$0.3} \\
++ FLUX.2-klein adapter & 80.4\,{\tableuncert$\pm$0.1} & 70.1\,{\tableuncert$\pm$1.6} & 31.8\,{\tableuncert$\pm$0.8} & 38.6\,{\tableuncert$\pm$1.3} & 5.1\,{\tableuncert$\pm$0.5} \\
++ SD-Turbo, distilled & 79.3\,{\tableuncert$\pm$0.2} & 69.0\,{\tableuncert$\pm$0.8} & 25.9\,{\tableuncert$\pm$0.9} & 33.9\,{\tableuncert$\pm$0.9} & 5.1\,{\tableuncert$\pm$0.5} \\
++ SD-Turbo adapter & 82.2\,{\tableuncert$\pm$0.3} & 70.1\,{\tableuncert$\pm$0.9} & 29.0\,{\tableuncert$\pm$0.3} & 36.9\,{\tableuncert$\pm$0.5} & 4.9\,{\tableuncert$\pm$0.4} \\
+\midrule
+\multicolumn{6}{@{}l}{\emph{ImageNet-1k, 1,281 per class}} \\
+FLUX.2-klein, distilled & 8.4\,{\tableuncert$\pm$0.1} & 7.1\,{\tableuncert$\pm$0.1} & 2.2\,{\tableuncert$\pm$0.1} & 1.8\,{\tableuncert$\pm$0.1} & 0.1\,{\tableuncert$\pm$0.0} \\
+\quad + adapter (ours) & 34.2\,{\tableuncert$\pm$0.1} & 29.0\,{\tableuncert$\pm$0.1} & 13.6\,{\tableuncert$\pm$0.1} & 15.0\,{\tableuncert$\pm$0.0} & 1.3\,{\tableuncert$\pm$0.1} \\
+SD-Turbo, distilled & 12.7\,{\tableuncert$\pm$0.2} & 10.5\,{\tableuncert$\pm$0.1} & 2.9\,{\tableuncert$\pm$0.2} & 4.2\,{\tableuncert$\pm$0.0} & 0.5\,{\tableuncert$\pm$0.1} \\
+\quad + adapter (ours) & 32.1\,{\tableuncert$\pm$0.3} & 27.1\,{\tableuncert$\pm$0.4} & 7.4\,{\tableuncert$\pm$0.1} & 10.1\,{\tableuncert$\pm$0.1} & 1.2\,{\tableuncert$\pm$0.1} \\
+\midrule
+\multicolumn{6}{@{}l}{\emph{ImageNet-1k, all 1.28M real + 1.28M generated}} \\
+real only, trained as long & 76.7\,{\tableuncert$\pm$0.2} & 65.2\,{\tableuncert$\pm$0.3} & 24.4\,{\tableuncert$\pm$0.1} & 25.4\,{\tableuncert$\pm$0.2} & 2.5\,{\tableuncert$\pm$0.1} \\
++ FLUX.2-klein, distilled & 76.0\,{\tableuncert$\pm$0.0} & 64.5\,{\tableuncert$\pm$0.2} & 24.0\,{\tableuncert$\pm$0.5} & 24.8\,{\tableuncert$\pm$0.5} & 1.7\,{\tableuncert$\pm$0.1} \\
++ FLUX.2-klein adapter & 76.5\,{\tableuncert$\pm$0.2} & 65.0\,{\tableuncert$\pm$0.2} & 27.7\,{\tableuncert$\pm$0.6} & 27.9\,{\tableuncert$\pm$0.4} & 2.6\,{\tableuncert$\pm$0.1} \\
+\bottomrule
+\end{tabular}

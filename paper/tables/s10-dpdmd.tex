@@ -1,0 +1,16 @@
+% Written by `python -m fau.paper` from results/. Do not edit.
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Sampler & Pixels & NFE & s/img & ImageNet-100 & 200 classes \\
+\midrule
+SD3.5-Medium, guidance 3.5 & 512 & 56 & 0.613 & 21.1\,{\tableuncert$\pm$0.5} & 25.1\,{\tableuncert$\pm$0.4} \\
+SD3.5-Medium, no guidance & 512 & 28 & 0.326 & 44.9\,{\tableuncert$\pm$0.3} & 44.7\,{\tableuncert$\pm$0.4} \\
+DP-DMD's student & 512 & 4 & 0.071 & 13.9\,{\tableuncert$\pm$0.2} & 15.3\,{\tableuncert$\pm$0.3} \\
+\quad base-first, first level & 512 & 4 & 0.091 & 15.8\,{\tableuncert$\pm$0.1} & 17.5\,{\tableuncert$\pm$0.4} \\
+\quad + adapter, first level & 512 & 4 & 0.083 & 21.6\,{\tableuncert$\pm$0.3} & \textbf{24.2}\,{\tableuncert$\pm$0.1} \\
+\quad + adapter, second level & 512 & 3 & 0.072 & \textbf{27.3}\,{\tableuncert$\pm$0.2} & -- \\
+\midrule
+DP-DMD's student & 1024 & 4 & 0.266 & 15.8\,{\tableuncert$\pm$0.6} & -- \\
+\quad + adapter, second level & 1024 & 3 & 0.238 & \textbf{27.2}\,{\tableuncert$\pm$0.6} & -- \\
+\bottomrule
+\end{tabular}

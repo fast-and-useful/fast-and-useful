@@ -1,0 +1,31 @@
+% Written by `python -m fau.paper` from results/. Do not edit.
+\begin{tabular}{@{}lrrrrrl@{}}
+\toprule
+Sampler & \multicolumn{2}{c}{One-time preparation (h)} & Generation & Total & Top-1 & Base at \\
+\cmidrule(lr){2-3}
+ & Targets & Fit & s/image & H100-hours & (\%) & inference \\
+\midrule
+\multicolumn{7}{@{}l}{\emph{FLUX.2-klein, ImageNet-100 (total for 50,000 images)}} \\
+Released student & -- & -- & 0.140 & 1.9 & 17.1\,{\tableuncert$\pm$0.4} & No \\
+Base-first & -- & -- & 0.152 & 2.1 & 39.9\,{\tableuncert$\pm$0.3} & Yes \\
++ adapter (first run) & 4.6 & 1.1 & 0.101 & 7.1 & \textbf{44.1}\,{\tableuncert$\pm$0.5} & No \\
+Unguided base, 20 steps & -- & -- & 0.570 & 7.9 & 44.7\,{\tableuncert$\pm$0.9} & Yes \\
+\midrule
+\multicolumn{7}{@{}l}{\emph{SD-Turbo / SD 2.1, ImageNet-100 (total for 50,000 images)}} \\
+Released student & -- & -- & 0.029 & 0.4 & 18.3\,{\tableuncert$\pm$0.3} & No \\
+Base-first & -- & -- & 0.030 & 0.4 & 36.4\,{\tableuncert$\pm$0.9} & Yes \\
++ adapter (first run) & 0.7 & 0.2 & 0.026 & 1.3 & \textbf{43.3}\,{\tableuncert$\pm$0.2} & No \\
+Unguided base, 30 steps & -- & -- & 0.111 & 1.5 & 49.8\,{\tableuncert$\pm$0.7} & Yes \\
+\midrule
+\multicolumn{7}{@{}l}{\emph{FLUX.2-klein, ImageNet-1k (total for 1,281,000 images)}} \\
+Released student & -- & -- & 0.139 & 49.6 & 8.4\,{\tableuncert$\pm$0.1} & No \\
+Base-first & -- & -- & 0.153 & 54.5 & 30.8\,{\tableuncert$\pm$0.1} & Yes \\
++ adapter (first run) & 4.6 & 1.1 & 0.101 & 41.4 & \textbf{34.2}\,{\tableuncert$\pm$0.1} & No \\
+Unguided base, 20 steps & -- & -- & 0.571 & 203.3 & 37.2\,{\tableuncert$\pm$0.1} & Yes \\
+\midrule
+\multicolumn{7}{@{}l}{\emph{SD-Turbo, ImageNet-1k (total for 1,281,000 images)}} \\
+Released student & -- & -- & 0.029 & 10.3 & 12.7\,{\tableuncert$\pm$0.2} & No \\
+Base-first & -- & -- & 0.029 & 10.4 & 26.7\,{\tableuncert$\pm$0.3} & Yes \\
++ adapter (first run) & 0.7 & 0.2 & 0.026 & 10.2 & \textbf{32.1}\,{\tableuncert$\pm$0.3} & No \\
+\bottomrule
+\end{tabular}

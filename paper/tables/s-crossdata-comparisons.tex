@@ -1,0 +1,23 @@
+% Written by `python -m fau.paper` from results/. Do not edit.
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Mean-class accuracy gain [95\% CI] & Food-101 & Cars & Pets \\
+\midrule
+SDA $-$ released Z-Image-Turbo & \textbf{+7.7}\,{\tableuncert[+5.7, +9.6]} & \textbf{+27.1}\,{\tableuncert[+24.9, +29.4]} & \textbf{+22.3}\,{\tableuncert[+18.6, +26.3]} \\
+Ours $-$ released Z-Image-Turbo & \textbf{+14.2}\,{\tableuncert[+11.3, +17.0]} & \textbf{+32.4}\,{\tableuncert[+29.8, +34.9]} & \textbf{+33.9}\,{\tableuncert[+27.9, +40.0]} \\
+Ours $-$ SDA & \textbf{+6.5}\,{\tableuncert[+4.3, +8.8]} & \textbf{+5.3}\,{\tableuncert[+3.9, +6.7]} & \textbf{+11.6}\,{\tableuncert[+7.6, +15.3]} \\
+DP-DMD + ours $-$ DP-DMD & \textbf{+15.0}\,{\tableuncert[+12.6, +17.6]} & \textbf{+10.8}\,{\tableuncert[+9.0, +12.7]} & \textbf{+34.1}\,{\tableuncert[+28.9, +39.3]} \\
+\bottomrule
+\end{tabular}
+\par\medskip
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+H100 seconds/image & NFE & Food-101 & Cars & Pets \\
+\midrule
+Z-Image-Turbo, released & 9 & 0.369 & 0.370 & 0.369 \\
++ SDA & 8 & 0.706 & 0.707 & 0.705 \\
++ ours & 7 & 0.295 & 0.294 & 0.293 \\
+DP-DMD's student & 4 & 0.071 & 0.072 & 0.071 \\
++ ours & 3 & 0.073 & 0.072 & 0.073 \\
+\bottomrule
+\end{tabular}

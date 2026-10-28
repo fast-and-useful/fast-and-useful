@@ -1,0 +1,30 @@
+% Written by `python -m fau.paper` from results/. Do not edit.
+\begin{tabular}{@{}llrrrrrr@{}}
+\toprule
+Sampler & Prompts & Prep. h & 50k & 500k & 1.28M & $N^*_{\rm BF}$ & $N^*_{\rm base}$ \\
+\midrule
+\multicolumn{8}{@{}l}{\emph{FLUX.2-klein}} \\
+released & Templates & 0.00 & 1.9 & 19.4 & 49.8 & -- & -- \\
+released & LLM & 0.00 & 1.9 & 19.4 & 49.8 & -- & -- \\
+base-first & Templates & 0.00 & 2.1 & 21.1 & 54.2 & -- & -- \\
+base-first & LLM & 0.00 & 2.1 & 21.2 & 54.3 & -- & -- \\
+template adapter & Templates & 5.68 & 7.1 & 19.7 & 41.6 & 399k & 44k \\
+template adapter & LLM & 5.68 & 7.2 & 20.5 & 43.5 & 442k & 44k \\
+LLM adapter & Templates & 7.88 & 9.2 & 21.6 & 43.0 & 531k & 60k \\
+LLM adapter & LLM & 7.88 & 9.2 & 21.5 & 42.9 & 521k & 60k \\
+Unguided base & Templates & 0.00 & 7.9 & 79.2 & 202.8 & -- & -- \\
+Unguided base & LLM & 0.00 & 7.9 & 79.2 & 202.8 & -- & -- \\
+\midrule
+\multicolumn{8}{@{}l}{\emph{SD-Turbo}} \\
+released & Templates & 0.00 & 0.4 & 4.0 & 10.4 & -- & -- \\
+released & LLM & 0.00 & 0.4 & 4.1 & 10.5 & -- & -- \\
+base-first & Templates & 0.00 & 0.4 & 4.2 & 10.8 & -- & -- \\
+base-first & LLM & 0.00 & 0.4 & 4.2 & 10.6 & -- & -- \\
+template adapter & Templates & 0.90 & 1.3 & 4.5 & 10.3 & 807k & 38k \\
+template adapter & LLM & 0.90 & 1.3 & 4.6 & 10.5 & 1076k & 39k \\
+LLM adapter & Templates & 1.16 & 1.5 & 4.8 & 10.6 & 1072k & 50k \\
+LLM adapter & LLM & 1.16 & 1.5 & 4.9 & 10.8 & 1442k & 50k \\
+unguided base & Templates & 0.00 & 1.5 & 15.4 & 39.4 & -- & -- \\
+unguided base & LLM & 0.00 & 1.5 & 15.4 & 39.4 & -- & -- \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,33 @@
+% Written by `python -m fau.paper` from results/. Do not edit.
+\begin{tabular}{@{}lrrrrrrr@{}}
+\toprule
+metric & within families & pooled & FLUX.2-klein & SD 2.1 & Z-Image & SDXL & held-out family \\
+\midrule
+recall, DINOv3 & +0.87 {\tableuncert[+0.81, +0.93]} & +0.91 & +0.95 & +0.91 & +0.97 & +0.20 & +0.85 \\
+recall, CLIP & +0.86 {\tableuncert[+0.79, +0.91]} & +0.89 & +0.94 & +0.86 & +0.98 & +0.24 & +0.83 \\
+Fr\'echet distance, CLIP & $-$0.86 {\tableuncert[$-$0.91, $-$0.79]} & $-$0.88 & $-$0.92 & $-$0.85 & $-$0.98 & $-$0.44 & +0.84 \\
+Fr\'echet distance, DINOv3 & $-$0.74 {\tableuncert[$-$0.82, $-$0.63]} & $-$0.72 & $-$0.90 & $-$0.60 & $-$0.98 & $-$0.05 & +0.62 \\
+coverage, DINOv3 & +0.30 {\tableuncert[+0.15, +0.45]} & +0.03 & +0.34 & +0.22 & +0.76 & +0.21 & $-$0.28 \\
+coverage, CLIP & +0.63 {\tableuncert[+0.52, +0.72]} & +0.60 & +0.75 & +0.51 & +0.82 & +0.22 & +0.45 \\
+precision, DINOv3 & $-$0.57 {\tableuncert[$-$0.69, $-$0.42]} & $-$0.58 & $-$0.61 & $-$0.47 & $-$0.97 & $-$0.26 & +0.49 \\
+density, DINOv3 & $-$0.59 {\tableuncert[$-$0.70, $-$0.45]} & $-$0.57 & $-$0.64 & $-$0.49 & $-$0.93 & $-$0.23 & +0.44 \\
+Vendi, DINOv3 & +0.78 {\tableuncert[+0.68, +0.86]} & +0.82 & +0.83 & +0.78 & +0.99 & +0.21 & +0.78 \\
+Vendi, CLIP & +0.76 {\tableuncert[+0.65, +0.83]} & +0.79 & +0.84 & +0.68 & +0.98 & +0.28 & +0.73 \\
+FID (Inception) & $-$0.66 {\tableuncert[$-$0.76, $-$0.55]} & $-$0.60 & $-$0.83 & $-$0.38 & $-$0.91 & $-$0.54 & +0.47 \\
+Inception Score & $-$0.34 {\tableuncert[$-$0.48, $-$0.17]} & $-$0.48 & $-$0.44 & $-$0.25 & $-$0.36 & +0.17 & +0.38 \\
+recognizability & $-$0.54 {\tableuncert[$-$0.66, $-$0.39]} & $-$0.43 & $-$0.65 & $-$0.41 & $-$0.87 & $-$0.01 & +0.21 \\
+frozen DINOv3, linear probe & +0.69 {\tableuncert[+0.58, +0.76]} & +0.41 & +0.65 & +0.77 & +0.73 & +0.59 & +0.13 \\
+frozen DINOv3, $k$-NN & +0.33 {\tableuncert[+0.18, +0.46]} & +0.21 & +0.42 & +0.04 & +0.73 & +0.63 & +0.02 \\
+contrast & $-$0.49 {\tableuncert[$-$0.59, $-$0.36]} & $-$0.40 & $-$0.48 & $-$0.63 & $-$0.18 & $-$0.14 & +0.24 \\
+sharpness & $-$0.30 {\tableuncert[$-$0.42, $-$0.16]} & +0.01 & $-$0.40 & $-$0.49 & +0.74 & +0.48 & $-$0.42 \\
+saturation & $-$0.32 {\tableuncert[$-$0.43, $-$0.18]} & $-$0.37 & $-$0.36 & $-$0.36 & +0.50 & $-$0.35 & +0.31 \\
+colorfulness & $-$0.41 {\tableuncert[$-$0.52, $-$0.28]} & $-$0.36 & $-$0.64 & $-$0.23 & +0.15 & $-$0.24 & +0.27 \\
+high-frequency share & +0.01 {\tableuncert[$-$0.15, +0.15]} & +0.25 & +0.06 & $-$0.41 & +0.66 & +0.66 & +0.27 \\
+spectral slope & +0.08 {\tableuncert[$-$0.08, +0.23]} & +0.27 & +0.18 & $-$0.24 & +0.67 & +0.42 & +0.32 \\
+aesthetic score & $-$0.46 {\tableuncert[$-$0.58, $-$0.31]} & $-$0.32 & $-$0.56 & $-$0.35 & $-$0.90 & +0.26 & +0.09 \\
+PickScore & $-$0.55 {\tableuncert[$-$0.69, $-$0.39]} & $-$0.59 & $-$0.67 & $-$0.43 & $-$0.49 & $-$0.21 & +0.58 \\
+\midrule
+aesthetic score given recall & +0.26 {\tableuncert[+0.08, +0.39]} & & & & & & \\
+PickScore given recall & +0.11 {\tableuncert[$-$0.10, +0.30]} & & & & & & \\
+\bottomrule
+\end{tabular}

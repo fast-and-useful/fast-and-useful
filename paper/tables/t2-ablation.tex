@@ -1,0 +1,27 @@
+% Written by `python -m fau.paper` from results/. Do not edit.
+\begin{tabular}{@{}lrr@{}}
+\toprule
+variant & FLUX.2-klein & SD-Turbo \\
+\midrule
+ours: unguided, step 1, rank 32 & 43.8\,{\tableuncert$\pm$0.4} & 43.7\,{\tableuncert$\pm$0.6} \\
+\quad same, finer teacher grid & 43.2\,{\tableuncert$\pm$0.7} & -- \\
+\addlinespace[2pt]
+target at guidance 2 & 31.5\,{\tableuncert$\pm$0.7} & 41.2\,{\tableuncert$\pm$0.9} \\
+target at default guidance & 20.1\,{\tableuncert$\pm$0.4} & 30.4\,{\tableuncert$\pm$0.4} \\
+\addlinespace[2pt]
+adapter in every step & 41.4\,{\tableuncert$\pm$0.3} & 38.8\,{\tableuncert$\pm$0.8} \\
+every weight fine-tuned & 43.2\,{\tableuncert$\pm$1.0} & 43.4\,{\tableuncert$\pm$0.3} \\
+rank 8 & 43.4\,{\tableuncert$\pm$0.3} & 43.3\,{\tableuncert$\pm$0.3} \\
+rank 128 & \textbf{44.1}\,{\tableuncert$\pm$0.4} & \textbf{44.4}\,{\tableuncert$\pm$0.6} \\
+\addlinespace[2pt]
+jump to the first level only & 32.1\,{\tableuncert$\pm$0.6} & 32.2\,{\tableuncert$\pm$0.4} \\
+jump to a deeper level & 40.0\,{\tableuncert$\pm$0.5} & 41.2\,{\tableuncert$\pm$0.7} \\
+\addlinespace[2pt]
+FSG & 20.7\,{\tableuncert$\pm$0.7} & -- \\
+MoNO, 4 images per basis & 26.8\,{\tableuncert$\pm$0.3} & -- \\
+MoNO, 32 images per basis & 29.9\,{\tableuncert$\pm$0.3} & -- \\
+\addlinespace[2pt]
+skip first step (no training) & 31.8\,{\tableuncert$\pm$0.3} & 14.4\,{\tableuncert$\pm$0.7} \\
+distilled model alone & 17.1\,{\tableuncert$\pm$0.4} & 18.3\,{\tableuncert$\pm$0.3} \\
+\bottomrule
+\end{tabular}

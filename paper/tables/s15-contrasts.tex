@@ -1,0 +1,38 @@
+% Written by `python -m fau.paper` from results/. Do not edit.
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Comparison & Gain & 95\% CI \\
+\midrule
+\multicolumn{3}{@{}l}{\emph{ImageNet-100: generator and dataset-size comparisons}} \\
+SRPO versus FLUX.1-dev & \textbf{+3.1} & [+1.6, +4.7] \\
+FLUX.2-klein: adapter versus base-first & \textbf{+3.9} & [+2.2, +5.7] \\
+SD-Turbo: adapter versus base-first & \textbf{+7.3} & [+5.3, +9.3] \\
+Z-Image-Turbo: adapter versus base-first & \textbf{+2.4} & [+1.4, +3.4] \\
+FLUX.2-klein: 100 adapted versus 3,000 released images/class & \textbf{+4.9} & [+2.2, +7.6] \\
+\midrule
+\multicolumn{3}{@{}l}{\emph{ImageNet-100: 500 real images/class, synthetic augmentation}} \\
+SD 1.5: guidance 2 versus 7.5 & \textbf{+0.6} & [+0.1, +1.2] \\
+klein: base-first versus released & \textbf{+2.0} & [+1.4, +2.7] \\
+klein: released augmentation versus real-only & $-$0.1 & [$-$0.7, +0.5] \\
+klein: base-first augmentation versus real-only & \textbf{+1.9} & [+1.2, +2.7] \\
+klein: adapted versus released augmentation & \textbf{+1.8} & [+1.1, +2.5] \\
+SD-Turbo: adapted versus released augmentation & \textbf{+2.9} & [+2.1, +3.6] \\
+klein: adapted augmentation versus real-only & \textbf{+1.7} & [+0.9, +2.5] \\
+SD-Turbo: adapted augmentation versus real-only & \textbf{+3.4} & [+2.6, +4.2] \\
+\midrule
+\multicolumn{3}{@{}l}{\emph{ImageNet-100: 50 real images/class, synthetic augmentation}} \\
+klein: adapted versus released augmentation & \textbf{+12.1} & [+10.3, +14.1] \\
+SD-Turbo: adapted versus released augmentation & \textbf{+13.1} & [+11.7, +14.6] \\
+klein: adapted versus unguided-base augmentation & \textbf{+1.9} & [+0.8, +3.1] \\
+SD-Turbo: adapted versus unguided-base augmentation & \textbf{+3.0} & [+1.8, +4.2] \\
+\midrule
+\multicolumn{3}{@{}l}{\emph{ImageNet-1k: full real-data training, klein augmentation}} \\
+Adapted versus real-only: in distribution & $-$0.2 & [$-$0.4, 0.0] \\
+Released versus real-only: in distribution & $-$0.7 & [$-$0.9, $-$0.5] \\
+Adapted versus released: in distribution & \textbf{+0.5} & [+0.3, +0.7] \\
+Adapted versus real-only: ImageNet-Sketch & \textbf{+3.3} & [+2.9, +3.7] \\
+Adapted versus real-only: ImageNet-R & \textbf{+2.5} & [+2.0, +3.0] \\
+Released versus real-only: ImageNet-Sketch & $-$0.4 & [$-$0.7, $-$0.1] \\
+Released versus real-only: ImageNet-R & $-$0.5 & [$-$0.9, $-$0.2] \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,18 @@
+% Written by `python -m fau.paper` from results/. Do not edit.
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+training source & Food-101 & Cars & Pets & IN-900 \\
+\midrule
+\multicolumn{5}{@{}l}{\emph{FLUX.2-klein}} \\
+distilled & 31.9\,{\tableuncert$\pm$0.4} & 11.9\,{\tableuncert$\pm$0.6} & 38.5\,{\tableuncert$\pm$0.2} & 15.3\,{\tableuncert$\pm$0.1} \\
++ adapter (ours) & \textbf{45.8}\,{\tableuncert$\pm$0.8} & \textbf{24.7}\,{\tableuncert$\pm$1.4} & \textbf{67.0}\,{\tableuncert$\pm$0.2} & \textbf{30.3}\,{\tableuncert$\pm$0.3} \\
+base, no guidance & 45.1\,{\tableuncert$\pm$0.3} & 23.7\,{\tableuncert$\pm$0.1} & 65.9\,{\tableuncert$\pm$0.4} & 30.1\,{\tableuncert$\pm$0.1} \\
+\midrule
+\multicolumn{5}{@{}l}{\emph{SD-Turbo}} \\
+distilled & 33.7\,{\tableuncert$\pm$0.9} & 14.0\,{\tableuncert$\pm$1.1} & 40.4\,{\tableuncert$\pm$0.8} & 16.8\,{\tableuncert$\pm$0.2} \\
++ adapter (ours) & \textbf{47.7}\,{\tableuncert$\pm$0.3} & \textbf{24.8}\,{\tableuncert$\pm$0.3} & \textbf{63.0}\,{\tableuncert$\pm$0.7} & \textbf{28.7}\,{\tableuncert$\pm$0.4} \\
+SD 2.1, no guidance & 51.0\,{\tableuncert$\pm$0.7} & 28.6\,{\tableuncert$\pm$0.6} & 67.9\,{\tableuncert$\pm$0.3} & 33.3\,{\tableuncert$\pm$0.5} \\
+\midrule
+real, 500 per class & 50.3\,{\tableuncert$\pm$0.9} & 24.4\,{\tableuncert$\pm$1.0} & 70.1\,{\tableuncert$\pm$0.5} & 33.4\,{\tableuncert$\pm$0.5} \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,16 @@
+% Written by `python -m fau.paper` from results/. Do not edit.
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Adapter comparison & FLUX.2-klein & SD-Turbo \\
+\midrule
+\multicolumn{3}{@{}l}{\emph{LLM generation prompts: three datasets, three classifier seeds each}} \\
+LLM-fitted $-$ template-fitted & \textbf{+3.3}\,{\tableuncert[+2.4, +4.2]} & $-$1.1\,{\tableuncert[$-$1.6, $-$0.5]} \\
+LLM-fitted $-$ released & \textbf{+5.4}\,{\tableuncert[+3.4, +7.3]} & \textbf{+15.6}\,{\tableuncert[+12.9, +18.5]} \\
+LLM-fitted $-$ base-first & +0.3\,{\tableuncert[$-$0.7, +1.3]} & \textbf{+7.0}\,{\tableuncert[+5.6, +8.3]} \\
+Template-fitted $-$ released & \textbf{+2.1}\,{\tableuncert[+0.2, +4.0]} & \textbf{+16.7}\,{\tableuncert[+14.1, +19.4]} \\
+Template-fitted $-$ base-first & $-$3.0\,{\tableuncert[$-$4.2, $-$1.9]} & \textbf{+8.0}\,{\tableuncert[+6.6, +9.5]} \\
+\midrule
+\multicolumn{3}{@{}l}{\emph{Template generation prompts: one dataset, three classifier seeds}} \\
+LLM-fitted $-$ template-fitted & $-$1.4\,{\tableuncert[$-$2.8, $-$0.1]} & $-$1.1\,{\tableuncert[$-$2.0, $-$0.2]} \\
+\bottomrule
+\end{tabular}

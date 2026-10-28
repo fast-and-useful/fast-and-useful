@@ -1,0 +1,24 @@
+% Written by `python -m fau.paper` from results/. Do not edit.
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+sampler & top-1 & FID & aesthetic & PickScore & recognized & recall \\
+\midrule
+\multicolumn{7}{@{}l}{\emph{FLUX.2-klein}} \\
+distilled & 17.1\,{\tableuncert$\pm$0.4} & 47.6 & 5.28 & 22.06 & 0.83 & 0.009 \\
+\quad + adapter (ours) & 44.1\,{\tableuncert$\pm$0.5} & 34.8 & 4.80 & 20.25 & 0.66 & 0.275 \\
+base, no guidance & 45.1\,{\tableuncert$\pm$0.0} & 33.0 & 4.81 & 20.12 & 0.61 & 0.492 \\
+base, default guidance & 23.6\,{\tableuncert$\pm$0.5} & 42.6 & 5.28 & 21.79 & 0.79 & 0.037 \\
+\midrule
+\multicolumn{7}{@{}l}{\emph{SD-Turbo}} \\
+distilled & 18.3\,{\tableuncert$\pm$0.3} & 37.5 & 5.35 & 21.62 & 0.88 & 0.017 \\
+\quad + adapter (ours) & 43.3\,{\tableuncert$\pm$0.2} & 30.2 & 5.21 & 20.94 & 0.80 & 0.164 \\
+SD 2.1, no guidance & 49.8\,{\tableuncert$\pm$0.7} & 50.2 & 5.01 & 19.72 & 0.60 & 0.331 \\
+SD 2.1, default guidance & 30.0\,{\tableuncert$\pm$0.1} & 28.0 & 5.44 & 21.46 & 0.91 & 0.039 \\
+\midrule
+\multicolumn{7}{@{}l}{\emph{Z-Image-Turbo}} \\
+distilled & 14.0\,{\tableuncert$\pm$0.0} & 56.2 & 5.28 & 19.66 & 0.89 & 0.003 \\
+\quad + adapter (ours) & 35.2\,{\tableuncert$\pm$0.6} & 24.9 & 5.19 & 21.54 & 0.87 & 0.081 \\
+Z-Image, no guidance & 45.6\,{\tableuncert$\pm$0.7} & 29.4 & 4.92 & 18.56 & 0.69 & 0.386 \\
+Z-Image, default guidance & 17.6\,{\tableuncert$\pm$0.3} & 34.6 & 5.34 & 19.32 & 0.89 & 0.033 \\
+\bottomrule
+\end{tabular}
