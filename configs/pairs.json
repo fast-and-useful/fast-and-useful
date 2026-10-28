@@ -1,77 +1,152 @@
 {
  "pairs_in100_x": {
   "family": "klein",
+  "guidance": 1.0,
+  "grid": "fine",
+  "classes": "in100",
+  "per_class": 160,
   "prompts": null,
-  "shards": 8
+  "shards": 8,
+  "pairs": 16000
  },
  "pairs_in100": {
   "family": "klein",
+  "guidance": 1.0,
+  "grid": "v1",
+  "classes": "in100",
+  "per_class": 160,
   "prompts": null,
-  "shards": 4
+  "shards": 4,
+  "pairs": 16000
  },
  "pairs_in100_g4": {
   "family": "klein",
+  "guidance": 4.0,
+  "grid": "fine",
+  "classes": "in100",
+  "per_class": 160,
   "prompts": null,
-  "shards": 12
+  "shards": 12,
+  "pairs": 16000
  },
  "pairs_in100_g2": {
   "family": "klein",
+  "guidance": 2.0,
+  "grid": "fine",
+  "classes": "in100",
+  "per_class": 160,
   "prompts": null,
-  "shards": 12
+  "shards": 12,
+  "pairs": 16000
  },
  "pairs_coco_klein_x": {
   "family": "klein",
+  "guidance": 1.0,
+  "grid": "fine",
+  "classes": "in100",
+  "per_class": 1,
   "prompts": "coco_16000",
-  "shards": 8
+  "shards": 8,
+  "pairs": 16000
  },
  "pairs_llm_klein": {
   "family": "klein",
+  "guidance": 1.0,
+  "grid": "fine",
+  "classes": "in100",
+  "per_class": 1,
   "prompts": "in100_llm_adapt",
-  "shards": 8
+  "shards": 8,
+  "pairs": 16000
  },
  "pairs_sd35m_in100": {
   "family": "sd35m",
+  "guidance": 1.0,
+  "grid": "default",
+  "classes": "in100",
+  "per_class": 160,
   "prompts": null,
-  "shards": 4
+  "shards": 4,
+  "pairs": 16000
  },
  "pairs_sd_in100_x": {
   "family": "sd",
+  "guidance": 1.0,
+  "grid": "default",
+  "classes": "in100",
+  "per_class": 160,
   "prompts": null,
-  "shards": 2
+  "shards": 2,
+  "pairs": 16000
  },
  "pairs_sd_in100": {
   "family": "sd",
+  "guidance": 1.0,
+  "grid": "default",
+  "classes": "in100",
+  "per_class": 160,
   "prompts": null,
-  "shards": 2
+  "shards": 2,
+  "pairs": 16000
  },
  "pairs_sd_in100_g2": {
   "family": "sd",
+  "guidance": 2.0,
+  "grid": "default",
+  "classes": "in100",
+  "per_class": 160,
   "prompts": null,
-  "shards": 4
+  "shards": 4,
+  "pairs": 16000
  },
  "pairs_sd_in100_g75": {
   "family": "sd",
+  "guidance": 7.5,
+  "grid": "default",
+  "classes": "in100",
+  "per_class": 160,
   "prompts": null,
-  "shards": 4
+  "shards": 4,
+  "pairs": 16000
  },
  "pairs_coco_sd_x": {
   "family": "sd",
+  "guidance": 1.0,
+  "grid": "default",
+  "classes": "in100",
+  "per_class": 1,
   "prompts": "coco_16000",
-  "shards": 2
+  "shards": 2,
+  "pairs": 16000
  },
  "pairs_llm_sd": {
   "family": "sd",
+  "guidance": 1.0,
+  "grid": "default",
+  "classes": "in100",
+  "per_class": 1,
   "prompts": "in100_llm_adapt",
-  "shards": 2
+  "shards": 2,
+  "pairs": 16000
  },
  "pairs_zimage_in100": {
   "family": "zimage",
+  "guidance": 1.0,
+  "grid": "default",
+  "classes": "in100",
+  "per_class": 160,
   "prompts": null,
-  "shards": 4
+  "shards": 4,
+  "pairs": 16000
  },
  "pairs_zimage_in100_g5": {
   "family": "zimage",
+  "guidance": 5.0,
+  "grid": "default",
+  "classes": "in100",
+  "per_class": 160,
   "prompts": null,
-  "shards": 4
+  "shards": 4,
+  "pairs": 16000
  }
 }
