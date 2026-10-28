@@ -259,6 +259,32 @@
   "full": false,
   "prompts": null
  },
+ "sd35m_ad0_s1": {
+  "family": "sd35m",
+  "pairs": "pairs_sd35m_in100",
+  "target": "858",
+  "rank": 32,
+  "alpha": 32.0,
+  "steps": 3000,
+  "bs": 8,
+  "lr": 0.0001,
+  "seed": 1,
+  "full": false,
+  "prompts": null
+ },
+ "sd35m_ad0_s2": {
+  "family": "sd35m",
+  "pairs": "pairs_sd35m_in100",
+  "target": "858",
+  "rank": 32,
+  "alpha": 32.0,
+  "steps": 3000,
+  "bs": 8,
+  "lr": 0.0001,
+  "seed": 2,
+  "full": false,
+  "prompts": null
+ },
  "sd35m_ad1": {
   "family": "sd35m",
   "pairs": "pairs_sd35m_in100",

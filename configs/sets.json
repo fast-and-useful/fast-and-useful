@@ -2857,6 +2857,168 @@
    ]
   }
  },
+ "in100/dpdmd_ad0": {
+  "description": "DP-DMD's student with our adapter in its first step (unguided SD3.5-Medium target at 0.858), then its last 3 steps",
+  "classes": "in100",
+  "record": "set",
+  "shards": 1,
+  "generator": "generate",
+  "args": {
+   "model": "dpdmd_sd35m",
+   "other": "sd35m_ad:sd35m_ad0",
+   "stages": "other:1:0-1,base:1:1-4",
+   "steps": 4,
+   "res": 512,
+   "bs": 8,
+   "per_class": 500,
+   "start": 0,
+   "seed_offset": 0
+  },
+  "schedule": {
+   "sigmas": [
+    1.0,
+    0.85769,
+    0.60215,
+    0.00893,
+    0.0
+   ],
+   "timesteps": [
+    1000.0,
+    857.6923,
+    602.1506,
+    8.9286
+   ],
+   "plan": [
+    [
+     "other",
+     1.0
+    ],
+    [
+     "base",
+     1.0
+    ],
+    [
+     "base",
+     1.0
+    ],
+    [
+     "base",
+     1.0
+    ]
+   ],
+   "nfe": [
+    4.0
+   ]
+  }
+ },
+ "in100/dpdmd_ad0_s1": {
+  "description": "`dpdmd_ad0` retrained with training seed 1",
+  "classes": "in100",
+  "record": "set",
+  "shards": 1,
+  "generator": "generate",
+  "args": {
+   "model": "dpdmd_sd35m",
+   "other": "sd35m_ad:sd35m_ad0_s1",
+   "stages": "other:1:0-1,base:1:1-4",
+   "steps": 4,
+   "res": 512,
+   "bs": 8,
+   "per_class": 500,
+   "start": 0,
+   "seed_offset": 0
+  },
+  "schedule": {
+   "sigmas": [
+    1.0,
+    0.85769,
+    0.60215,
+    0.00893,
+    0.0
+   ],
+   "timesteps": [
+    1000.0,
+    857.6923,
+    602.1506,
+    8.9286
+   ],
+   "plan": [
+    [
+     "other",
+     1.0
+    ],
+    [
+     "base",
+     1.0
+    ],
+    [
+     "base",
+     1.0
+    ],
+    [
+     "base",
+     1.0
+    ]
+   ],
+   "nfe": [
+    4.0
+   ]
+  }
+ },
+ "in100/dpdmd_ad0_s2": {
+  "description": "`dpdmd_ad0` retrained with training seed 2",
+  "classes": "in100",
+  "record": "set",
+  "shards": 1,
+  "generator": "generate",
+  "args": {
+   "model": "dpdmd_sd35m",
+   "other": "sd35m_ad:sd35m_ad0_s2",
+   "stages": "other:1:0-1,base:1:1-4",
+   "steps": 4,
+   "res": 512,
+   "bs": 8,
+   "per_class": 500,
+   "start": 0,
+   "seed_offset": 0
+  },
+  "schedule": {
+   "sigmas": [
+    1.0,
+    0.85769,
+    0.60215,
+    0.00893,
+    0.0
+   ],
+   "timesteps": [
+    1000.0,
+    857.6923,
+    602.1506,
+    8.9286
+   ],
+   "plan": [
+    [
+     "other",
+     1.0
+    ],
+    [
+     "base",
+     1.0
+    ],
+    [
+     "base",
+     1.0
+    ],
+    [
+     "base",
+     1.0
+    ]
+   ],
+   "nfe": [
+    4.0
+   ]
+  }
+ },
  "in100/dpdmd_ad1": {
   "description": "our adapter on DP-DMD's student to its second level (0.602), then its last 2 steps (the level ablation)",
   "classes": "in100",

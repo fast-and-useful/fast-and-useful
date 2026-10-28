@@ -1,6 +1,6 @@
 # Fast and Useful: Adapting Distilled Generators for Visual Learning
 
-Code to reproduce every table, figure and number of the paper.
+Code to reproduce the tables, figures and numbers of the paper.
 
 Distilled text-to-image generators are fast, but classifiers trained on their images perform worse than classifiers
 trained on images from their slower base models. We fit a low-rank update to the released student's first prediction
@@ -12,7 +12,7 @@ finish. The base supplies training targets and is absent at inference.
 | Path | What it holds |
 |---|---|
 | `src/fau/` | the method and the experiments (modules listed below) |
-| `configs/` | the exact settings behind every number: 342 generated sets (`sets.json`), 41 adapters (`adapters.json`), 15 teacher-pair sets (`pairs.json`), 414 classifier run groups (`runs.json`), and the pinned revision of every model (`models.json`) |
+| `configs/` | the exact settings behind every number: 345 generated sets (`sets.json`), 43 adapters (`adapters.json`), 15 teacher-pair sets (`pairs.json`), 417 classifier run groups (`runs.json`), and the pinned revision of every model (`models.json`) |
 | `results/` | the recorded measurements: 1,203 classifier runs with per-class accuracies, set metrics, OOD and transfer accuracies, the metric study's inputs, preparation costs |
 | `paper/` | the paper's tables (`tables/*.tex`), the numbers quoted in its text (`numbers.tex`) and its figures, rebuilt from `results/` |
 | `data/` | class lists and the prompt files of the paper's sets (real-image captions, LLM descriptions, COCO captions) |
@@ -52,7 +52,9 @@ Every table is the LaTeX the paper inputs and every number of the text is a macr
 (`\tp{group}`: a run group's top-1; `\gp{name}`: a paired gap; `\nm{name}`: a derived number). The paired gaps
 average each class over the classifier runs and bootstrap the classes (10,000 resamples). The metric study's
 bootstrap takes most of the time; `--workers 8` parallelizes it. The opening teaser is a designed illustration and is
-not rebuilt; its numbers are `\tpsd{klein}` and `\tpsd{kd_ad2_x3}`.
+not rebuilt; its numbers are `\tpsd{klein}` and `\tpsd{kd_ad2_x3}`. `python tests/test_release.py` checks that the
+configs reference each other completely, that the recorded schedules follow from them, and that the rebuild matches
+`paper/` exactly.
 
 ## 2. Fit and apply an adapter
 
@@ -115,7 +117,29 @@ variation the paper reports (mean and SD over three seeds).
 
 Recorded cost per target (H100-hours: generation, classifiers and adapter preparation; model loading excluded):
 
-COSTS_TABLE
+| Target (`fau.plan` name) | In the paper | H100-hours |
+|---|---|---|
+| `t0-method-config` | teacher targets and adapted schedules | 10 |
+| `t1-scale-transfer` | 200 classes and full ImageNet-1k | 770 |
+| `t2-ablation` | target guidance, endpoint, placement, rank, training-free baselines | 89 |
+| `t3-finegrained` | Food-101, Cars, Pets | 145 |
+| `t5-learners` | RandAugment, the prior recipe, ConvNeXt-T, ViT-S/16 | 27 |
+| `t6-prompts` | prompt regimes, ImageNet-100 and ImageNet-1k | 100 |
+| `f3-comparison`, `f4-generation-cost` | main comparison and generation cost | 127, 123 |
+| `f5-method` | the method figure | 21 |
+| `t1-main` | complete primary results (supplement) | 1,125 |
+| `s3-metrics`, `s11-heldout`, `s13-family-weighting` | the metric study (186 sets) | 1,735 |
+| `s14-deployment`, `s-e50-costs` | preparation and generation costs | 634, 61 |
+| `s6-ood`, `s15-contrasts` | shifted test sets, real-data mixtures | 519, 448 |
+| `s5-captions` | templates, real-image captions, LLM descriptions | 363 |
+| `s12-unseen-fullscale`, `s9-transfer` | unseen ImageNet classes, feature transfer | 370, 35 |
+| `f3a-guidance-window`, `f3b-handoff` | guidance windows and hand-offs | 369, 289 |
+| `numbers` | every number quoted in the text | 1,709 |
+| `all` | everything: 1,203 classifier runs on 345 sets, 43 adapters | 3,683 |
+
+Targets share most of their runs, so their costs do not add up. Adapter preparation is counted for the four adapters
+whose cost the paper reports (`results/costs.json`: 5.7 H100-hours for klein's, 0.9 for SD-Turbo's); `fau.plan` lists
+the other adapters' pair and fit commands without a cost.
 
 ## Conventions
 
@@ -128,7 +152,8 @@ COSTS_TABLE
   `wp_`: the prior recipe, `cnx_`: ConvNeXt-T, `vits_`: ViT-S/16), real data added (`mix_`: 500 real images per
   class, `low_`: 50) or subsets (`scale_`). `_x3` and `llmx_` pool three adapter trainings or three datasets.
 - **Samplers**: `klein` and `sdt4` are the released FLUX.2-klein and SD-Turbo (4 steps); `kb_*` and `sd21*` their
-  bases (`kb_g1`, `sd21_g1`: unguided); `*_dd2_g1` base-first; `kd_ad2`, `sdt_ad1`, `zt_ad2` our adapters; `zt_sda_*`
+  bases (`kb_g1`, `sd21_g1`: unguided); `*_dd<k>_g1` base-first (the unguided base draws the first k steps);
+  `kd_ad2`, `sdt_ad1`, `zt_ad2` our adapters; `zt_sda_*`
   the public SDA adapter; `dpdmd*` DP-DMD's student. Every set and run group has a one-line `description` in
   `configs/`.
 

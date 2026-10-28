@@ -1024,6 +1024,81 @@
    2
   ]
  },
+ "dpdmd_ad0": {
+  "description": "DP-DMD's student with our adapter in its first step (unguided SD3.5-Medium target at 0.858), then its last 3 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/dpdmd_ad0:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "dpdmd_ad0_s1": {
+  "description": "`dpdmd_ad0` retrained with training seed 1",
+  "trainer": "standard",
+  "train": [
+   "set:in100/dpdmd_ad0_s1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "dpdmd_ad0_s2": {
+  "description": "`dpdmd_ad0` retrained with training seed 2",
+  "trainer": "standard",
+  "train": [
+   "set:in100/dpdmd_ad0_s2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
  "dpdmd_ad0_x3": {
   "pooled": [
    "dpdmd_ad0",

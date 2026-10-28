@@ -41,48 +41,50 @@ def write(out, tabs, nums):
     (out / "numbers.tex").write_text("\n".join(lines + [r"\makeatother"]) + "\n")
 
 
-def read_macros(tree):
-    """{kind@name: value} of a build (numbers.tex) or of a LaTeX tree (its numbers*.tex in main.tex's input order)."""
-    tree = Path(tree)
-    docs = [tree / f"{d}.tex" for d in ("main", "supp") if (tree / f"{d}.tex").exists()]
-    files = list(dict.fromkeys(f for d in docs for f in re.findall(r"\\input\{(numbers[^}]*)\}", d.read_text()))) or ["numbers"]
-    out = {}
-    for f in files:
-        for line in (tree / f"{f}.tex").read_text().splitlines():
-            m = MACRO.search(line)
-            if m:
-                out[m[1]] = m[2]   # a later file overrides an earlier one, as in LaTeX
-    return out
-
-
-def table_rows(path):
-    """A table's lines without comments, for a cell-by-cell comparison."""
-    return [line for line in Path(path).read_text().splitlines() if line.strip() and not line.lstrip().startswith("%")]
-
-
 QUALITATIVE = {"s-method-positioning"}   # tables without measurements
 
 
-def paper_inputs(tree):
-    """The number macros and tables the documents of a LaTeX tree use: main.tex (and supp.tex) and every file they
-    input, comments ignored -> ({kind@name}, {table name})."""
-    tree, out, tables, seen = Path(tree), set(), set(), set()
+def walk(tree):
+    """The documents of a LaTeX tree (main.tex, supp.tex and every file they input, comments ignored) -> (number files in
+    input order, number macros used in the text and tables, tables input)."""
+    tree, files, uses, tables, seen = Path(tree), [], set(), set(), set()
 
     def visit(name):
         f = tree / (name if name.endswith(".tex") else name + ".tex")
         if f in seen or not f.exists():
             return
         seen.add(f)
+        if f.name.startswith("numbers"):
+            files.append(f)
+            return
         text = re.sub(r"(?<!\\)%.*", "", f.read_text(errors="ignore"))
-        if not f.name.startswith("numbers"):
-            out.update(f"{k}@{n}" for k, n in USE.findall(text))
+        uses.update(f"{k}@{n}" for k, n in USE.findall(text))
         for child in re.findall(r"\\input\{([^}]+)\}", text):
             if child.startswith("tables/"):
                 tables.add(Path(child).stem)
             visit(child)
     for doc in ("main", "supp"):
         visit(doc)
-    return out, tables - QUALITATIVE
+    return files, uses, tables - QUALITATIVE
+
+
+def read_macros(tree):
+    """{kind@name: value} of a build (numbers.tex) or of a LaTeX tree (its number files in input order: a later
+    definition overrides an earlier one, as in LaTeX)."""
+    tree = Path(tree)
+    files = walk(tree)[0] if (tree / "main.tex").exists() else [tree / "numbers.tex"]
+    out = {}
+    for f in files:
+        for line in f.read_text().splitlines():
+            m = MACRO.search(line)
+            if m:
+                out[m[1]] = m[2]
+    return out
+
+
+def table_rows(path):
+    """A table's lines without comments, for a cell-by-cell comparison."""
+    return [line for line in Path(path).read_text().splitlines() if line.strip() and not line.lstrip().startswith("%")]
 
 
 def compare(build, other, names):
@@ -102,7 +104,7 @@ def compare(build, other, names):
         print(f"NUMBER {k}: {v} vs {w}")
     missing = []
     if (other / "main.tex").exists():
-        macros, tables = paper_inputs(other)
+        _, macros, tables = walk(other)
         missing = sorted(macros - set(ours)) + sorted(f"table {t}" for t in tables - set(names))
     for k in missing:
         print(f"MISSING {k}: used by the paper, not built")
