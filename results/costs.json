@@ -1,0 +1,23 @@
+{
+ "description": "One-time preparation of each adapter in H100-hours (elapsed time x GPUs of its jobs, from the scheduler): its teacher pairs, its fit and, for the adapters fitted on LLM descriptions, the description pool, which serves both families and is charged in full to each.",
+ "preparation": {
+  "kd_ad2": {
+   "pairs": 4.5645,
+   "fit": 1.1169
+  },
+  "sdt_ad1": {
+   "pairs": 0.68,
+   "fit": 0.2169
+  },
+  "kd_llm": {
+   "prompts": 0.2725,
+   "pairs": 6.2398,
+   "fit": 1.3681
+  },
+  "sdt_llm": {
+   "prompts": 0.2725,
+   "pairs": 0.6557999999999999,
+   "fit": 0.2333
+  }
+ }
+}

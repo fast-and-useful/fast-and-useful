@@ -1,0 +1,77 @@
+{
+ "pairs_in100_x": {
+  "family": "klein",
+  "prompts": null,
+  "shards": 8
+ },
+ "pairs_in100": {
+  "family": "klein",
+  "prompts": null,
+  "shards": 4
+ },
+ "pairs_in100_g4": {
+  "family": "klein",
+  "prompts": null,
+  "shards": 12
+ },
+ "pairs_in100_g2": {
+  "family": "klein",
+  "prompts": null,
+  "shards": 12
+ },
+ "pairs_coco_klein_x": {
+  "family": "klein",
+  "prompts": "coco_16000",
+  "shards": 8
+ },
+ "pairs_llm_klein": {
+  "family": "klein",
+  "prompts": "in100_llm_adapt",
+  "shards": 8
+ },
+ "pairs_sd35m_in100": {
+  "family": "sd35m",
+  "prompts": null,
+  "shards": 4
+ },
+ "pairs_sd_in100_x": {
+  "family": "sd",
+  "prompts": null,
+  "shards": 2
+ },
+ "pairs_sd_in100": {
+  "family": "sd",
+  "prompts": null,
+  "shards": 2
+ },
+ "pairs_sd_in100_g2": {
+  "family": "sd",
+  "prompts": null,
+  "shards": 4
+ },
+ "pairs_sd_in100_g75": {
+  "family": "sd",
+  "prompts": null,
+  "shards": 4
+ },
+ "pairs_coco_sd_x": {
+  "family": "sd",
+  "prompts": "coco_16000",
+  "shards": 2
+ },
+ "pairs_llm_sd": {
+  "family": "sd",
+  "prompts": "in100_llm_adapt",
+  "shards": 2
+ },
+ "pairs_zimage_in100": {
+  "family": "zimage",
+  "prompts": null,
+  "shards": 4
+ },
+ "pairs_zimage_in100_g5": {
+  "family": "zimage",
+  "prompts": null,
+  "shards": 4
+ }
+}

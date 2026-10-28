@@ -1,0 +1,10105 @@
+{
+ "cap_kb_dd2_g1": {
+  "description": "the unguided klein base draws the first 2 of distilled klein's 4 steps, real-image captions as prompts",
+  "trainer": "standard",
+  "train": [
+   "set:in100/cap_kb_dd2_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cap_kb_g1": {
+  "description": "klein base without guidance, real-image captions as prompts",
+  "trainer": "standard",
+  "train": [
+   "set:in100/cap_kb_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cap_kd_ad2": {
+  "description": "the FLUX.2-klein class-name adapter, E5's real-image captions as prompts",
+  "trainer": "standard",
+  "train": [
+   "set:in100/cap_kd_ad2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cap_klein": {
+  "description": "distilled klein, its own 4 steps, real-image captions as prompts",
+  "trainer": "standard",
+  "train": [
+   "set:in100/cap_klein:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cap_klein_base": {
+  "description": "klein base at its default guidance 4, real-image captions as prompts",
+  "trainer": "standard",
+  "train": [
+   "set:in100/cap_klein_base:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cap_klein_base_g2": {
+  "description": "klein base at guidance 2, real-image captions as prompts",
+  "trainer": "standard",
+  "train": [
+   "set:in100/cap_klein_base_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cap_sd15": {
+  "description": "SD 1.5 at its default guidance 7.5, real-image captions as prompts",
+  "trainer": "standard",
+  "train": [
+   "set:in100/cap_sd15:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cap_sd15_g2": {
+  "description": "SD 1.5 at guidance 2, real-image captions as prompts",
+  "trainer": "standard",
+  "train": [
+   "set:in100/cap_sd15_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cap_sd21": {
+  "description": "SD 2.1 at its default guidance 7.5, real-image captions as prompts",
+  "trainer": "standard",
+  "train": [
+   "set:in100/cap_sd21:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cap_sd21_g1": {
+  "description": "SD 2.1 without guidance, real-image captions as prompts",
+  "trainer": "standard",
+  "train": [
+   "set:in100/cap_sd21_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cap_sd21_g2": {
+  "description": "SD 2.1 at guidance 2, real-image captions as prompts",
+  "trainer": "standard",
+  "train": [
+   "set:in100/cap_sd21_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cap_sd_turbo": {
+  "description": "SD-Turbo, 1 step, real-image captions as prompts",
+  "trainer": "standard",
+  "train": [
+   "set:in100/cap_sd_turbo:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cap_sdt4": {
+  "description": "SD-Turbo alone on its own 4 steps, real-image captions as prompts (the schedule of `cap_sdt4_dd2_g1`)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/cap_sdt4:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cap_sdt4_dd2_g1": {
+  "description": "unguided SD 2.1 draws the first 2 of SD-Turbo's 4 steps, real-image captions as prompts",
+  "trainer": "standard",
+  "train": [
+   "set:in100/cap_sdt4_dd2_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cap_sdt_ad1": {
+  "description": "the SD-Turbo class-name adapter, E5's real-image captions as prompts",
+  "trainer": "standard",
+  "train": [
+   "set:in100/cap_sdt_ad1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cap_sdxl_g5": {
+  "description": "SDXL at guidance 5 (the diffusers default), real-image captions as prompts",
+  "trainer": "standard",
+  "train": [
+   "set:in100/cap_sdxl_g5:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cap_sdxl_turbo": {
+  "description": "SDXL-Turbo, 1 step, real-image captions as prompts",
+  "trainer": "standard",
+  "train": [
+   "set:in100/cap_sdxl_turbo:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cars_dpdmd": {
+  "description": "Stanford Cars, 500 per class: DP-DMD's released SD3.5-Medium student, 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:cars/dpdmd:1"
+  ],
+  "val": "cars_test",
+  "ncls": 196,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cars_dpdmd_ad1": {
+  "description": "Stanford Cars, 500 per class: DP-DMD's student + our deeper-target adapter `sd35m_ad1` (jump to 0.602, last 2 steps)",
+  "trainer": "standard",
+  "train": [
+   "set:cars/dpdmd_ad1:1"
+  ],
+  "val": "cars_test",
+  "ncls": 196,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cars_kb_dd2_g1": {
+  "description": "base-first: the unguided klein base draws the first 2 of the distilled model's 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:cars/kb_dd2_g1:1"
+  ],
+  "val": "cars_test",
+  "ncls": 196,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cars_kb_g1_s20": {
+  "description": "the unguided klein base, 20 steps",
+  "trainer": "standard",
+  "train": [
+   "set:cars/kb_g1_s20:1"
+  ],
+  "val": "cars_test",
+  "ncls": 196,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cars_kd_ad2": {
+  "description": "the ImageNet-100-prompt FLUX.2-klein adapter, unchanged",
+  "trainer": "standard",
+  "train": [
+   "set:cars/kd_ad2:1"
+  ],
+  "val": "cars_test",
+  "ncls": 196,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cars_kd_coco": {
+  "description": "E25's COCO-caption FLUX.2-klein adapter, unchanged, on Cars",
+  "trainer": "standard",
+  "train": [
+   "set:cars/kd_coco:1"
+  ],
+  "val": "cars_test",
+  "ncls": 196,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cars_klein": {
+  "description": "distilled FLUX.2-klein, its own 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:cars/klein:1"
+  ],
+  "val": "cars_test",
+  "ncls": 196,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cars_real": {
+  "description": "every real Cars training image (8,144), trained for the steps of a 98,000-image run",
+  "trainer": "standard",
+  "train": [
+   "real:cars_train:0"
+  ],
+  "val": "cars_test",
+  "ncls": 196,
+  "recipe": {
+   "epochs": 1203,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 60,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cars_sd21_g1": {
+  "description": "SD 2.1 unguided, 30 steps",
+  "trainer": "standard",
+  "train": [
+   "set:cars/sd21_g1:1"
+  ],
+  "val": "cars_test",
+  "ncls": 196,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cars_sdt4": {
+  "description": "SD-Turbo, 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:cars/sdt4:1"
+  ],
+  "val": "cars_test",
+  "ncls": 196,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cars_sdt4_dd2_g1": {
+  "description": "base-first: unguided SD 2.1 draws the first 2 of SD-Turbo's 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:cars/sdt4_dd2_g1:1"
+  ],
+  "val": "cars_test",
+  "ncls": 196,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cars_sdt_ad1": {
+  "description": "the ImageNet-100-prompt SD-Turbo adapter, unchanged",
+  "trainer": "standard",
+  "train": [
+   "set:cars/sdt_ad1:1"
+  ],
+  "val": "cars_test",
+  "ncls": 196,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cars_sdt_coco": {
+  "description": "E25's COCO-caption SD-Turbo adapter, unchanged, on Cars",
+  "trainer": "standard",
+  "train": [
+   "set:cars/sdt_coco:1"
+  ],
+  "val": "cars_test",
+  "ncls": 196,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cars_zimage_turbo": {
+  "description": "Stanford Cars, 500 per class: Z-Image-Turbo released, 9 steps",
+  "trainer": "standard",
+  "train": [
+   "set:cars/zimage_turbo:1"
+  ],
+  "val": "cars_test",
+  "ncls": 196,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cars_zt_ad2": {
+  "description": "Stanford Cars, 500 per class: Z-Image-Turbo + our adapter `zt_ad2` (jump to 0.857, last 6 of 9 steps)",
+  "trainer": "standard",
+  "train": [
+   "set:cars/zt_ad2:1"
+  ],
+  "val": "cars_test",
+  "ncls": 196,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cars_zt_sda_all": {
+  "description": "Stanford Cars, 500 per class: Z-Image-Turbo + the public SDA LoKr in all 8 steps (E46's setting)",
+  "trainer": "standard",
+  "train": [
+   "set:cars/zt_sda_all:1"
+  ],
+  "val": "cars_test",
+  "ncls": 196,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cnx_kb_g1": {
+  "description": "ConvNeXt-T from scratch (AdamW 5e-4, wd 0.05, 10 warmup epochs, RandAugment) on the unguided klein base",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.0005,
+   "wd": 0.05,
+   "warmup": 10,
+   "ls": 0.1,
+   "arch": "convnext_tiny",
+   "opt": "adamw",
+   "randaug": true
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cnx_kd_ad2": {
+  "description": "ConvNeXt-T from scratch (AdamW 5e-4, wd 0.05, 10 warmup epochs, RandAugment) on the FLUX.2-klein adapter (first training run)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_ad2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.0005,
+   "wd": 0.05,
+   "warmup": 10,
+   "ls": 0.1,
+   "arch": "convnext_tiny",
+   "opt": "adamw",
+   "randaug": true
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cnx_klein": {
+  "description": "ConvNeXt-T from scratch (AdamW 5e-4, wd 0.05, 10 warmup epochs, RandAugment) on distilled FLUX.2-klein",
+  "trainer": "standard",
+  "train": [
+   "set:in100/klein:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.0005,
+   "wd": 0.05,
+   "warmup": 10,
+   "ls": 0.1,
+   "arch": "convnext_tiny",
+   "opt": "adamw",
+   "randaug": true
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cnx_real500": {
+  "description": "ConvNeXt-T from scratch (AdamW 5e-4, wd 0.05, 10 warmup epochs, RandAugment) on 500 real images per class",
+  "trainer": "standard",
+  "train": [
+   "real:in100_train:0:500"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.0005,
+   "wd": 0.05,
+   "warmup": 10,
+   "ls": 0.1,
+   "arch": "convnext_tiny",
+   "opt": "adamw",
+   "randaug": true
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cnx_sd21_g1": {
+  "description": "ConvNeXt-T from scratch (AdamW 5e-4, wd 0.05, 10 warmup epochs, RandAugment) on unguided SD 2.1",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.0005,
+   "wd": 0.05,
+   "warmup": 10,
+   "ls": 0.1,
+   "arch": "convnext_tiny",
+   "opt": "adamw",
+   "randaug": true
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cnx_sdt4": {
+  "description": "ConvNeXt-T from scratch (AdamW 5e-4, wd 0.05, 10 warmup epochs, RandAugment) on SD-Turbo at 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt4:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.0005,
+   "wd": 0.05,
+   "warmup": 10,
+   "ls": 0.1,
+   "arch": "convnext_tiny",
+   "opt": "adamw",
+   "randaug": true
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "cnx_sdt_ad1": {
+  "description": "ConvNeXt-T from scratch (AdamW 5e-4, wd 0.05, 10 warmup epochs, RandAugment) on the SD-Turbo adapter (first training run)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt_ad1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.0005,
+   "wd": 0.05,
+   "warmup": 10,
+   "ls": 0.1,
+   "arch": "convnext_tiny",
+   "opt": "adamw",
+   "randaug": true
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "dpdmd": {
+  "description": "DP-DMD's released SD3.5-Medium student (TianheWu/dpdmd), 4 steps, guidance 1",
+  "trainer": "standard",
+  "train": [
+   "set:in100/dpdmd:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "dpdmd_ad0_x3": {
+  "pooled": [
+   "dpdmd_ad0",
+   "dpdmd_ad0_s1",
+   "dpdmd_ad0_s2"
+  ]
+ },
+ "dpdmd_ad1": {
+  "description": "our adapter on DP-DMD's student to its second level (0.602), then its last 2 steps (the level ablation)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/dpdmd_ad1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "dpdmd_ad1_r1024": {
+  "description": "ImageNet-100 at 1024 px: DP-DMD's student + `sd35m_ad1` unchanged (jump to 0.602, last 2 steps)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/dpdmd_ad1_r1024:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "dpdmd_dd1_g1": {
+  "description": "base-first: the unguided SD3.5-Medium draws the first of DP-DMD's 4 steps (1 -> 0.858), the student the rest",
+  "trainer": "standard",
+  "train": [
+   "set:in100/dpdmd_dd1_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "dpdmd_r1024": {
+  "description": "ImageNet-100 at 1024 px: DP-DMD's released student, its documented 4 steps, guidance 1",
+  "trainer": "standard",
+  "train": [
+   "set:in100/dpdmd_r1024:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "flux_dev": {
+  "description": "FLUX.1-dev (guidance-distilled), 28 steps, its distilled guidance input at the default 3.5",
+  "trainer": "standard",
+  "train": [
+   "set:in100/flux_dev:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "flux_dev_g1": {
+  "description": "FLUX.1-dev with its distilled guidance input at 1 (default 3.5)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/flux_dev_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "flux_dev_g2": {
+  "description": "FLUX.1-dev with its distilled guidance input at 2 (default 3.5)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/flux_dev_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "flux_schnell": {
+  "description": "FLUX.1-schnell, 4 steps: distilled, no base released",
+  "trainer": "standard",
+  "train": [
+   "set:in100/flux_schnell:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "food101_dpdmd": {
+  "description": "Food-101, 500 per class: DP-DMD's released SD3.5-Medium student, 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:food101/dpdmd:1"
+  ],
+  "val": "food101_test",
+  "ncls": 101,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "food101_dpdmd_ad1": {
+  "description": "Food-101, 500 per class: DP-DMD's student + our deeper-target adapter `sd35m_ad1` (jump to 0.602, last 2 steps)",
+  "trainer": "standard",
+  "train": [
+   "set:food101/dpdmd_ad1:1"
+  ],
+  "val": "food101_test",
+  "ncls": 101,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "food101_kb_dd2_g1": {
+  "description": "base-first: the unguided klein base draws the first 2 of the distilled model's 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:food101/kb_dd2_g1:1"
+  ],
+  "val": "food101_test",
+  "ncls": 101,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "food101_kb_g1_s20": {
+  "description": "the unguided klein base, 20 steps",
+  "trainer": "standard",
+  "train": [
+   "set:food101/kb_g1_s20:1"
+  ],
+  "val": "food101_test",
+  "ncls": 101,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "food101_kd_ad2": {
+  "description": "the ImageNet-100-prompt FLUX.2-klein adapter, unchanged",
+  "trainer": "standard",
+  "train": [
+   "set:food101/kd_ad2:1"
+  ],
+  "val": "food101_test",
+  "ncls": 101,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "food101_kd_coco": {
+  "description": "E25's COCO-caption FLUX.2-klein adapter, unchanged, on Food-101",
+  "trainer": "standard",
+  "train": [
+   "set:food101/kd_coco:1"
+  ],
+  "val": "food101_test",
+  "ncls": 101,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "food101_klein": {
+  "description": "distilled FLUX.2-klein, its own 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:food101/klein:1"
+  ],
+  "val": "food101_test",
+  "ncls": 101,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "food101_real500": {
+  "description": "500 real Food-101 training images per class",
+  "trainer": "standard",
+  "train": [
+   "real:food101_train:0:500"
+  ],
+  "val": "food101_test",
+  "ncls": 101,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "food101_sd21_g1": {
+  "description": "SD 2.1 unguided, 30 steps",
+  "trainer": "standard",
+  "train": [
+   "set:food101/sd21_g1:1"
+  ],
+  "val": "food101_test",
+  "ncls": 101,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "food101_sdt4": {
+  "description": "SD-Turbo, 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:food101/sdt4:1"
+  ],
+  "val": "food101_test",
+  "ncls": 101,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "food101_sdt4_dd2_g1": {
+  "description": "base-first: unguided SD 2.1 draws the first 2 of SD-Turbo's 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:food101/sdt4_dd2_g1:1"
+  ],
+  "val": "food101_test",
+  "ncls": 101,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "food101_sdt_ad1": {
+  "description": "the ImageNet-100-prompt SD-Turbo adapter, unchanged",
+  "trainer": "standard",
+  "train": [
+   "set:food101/sdt_ad1:1"
+  ],
+  "val": "food101_test",
+  "ncls": 101,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "food101_sdt_coco": {
+  "description": "E25's COCO-caption SD-Turbo adapter, unchanged, on Food-101",
+  "trainer": "standard",
+  "train": [
+   "set:food101/sdt_coco:1"
+  ],
+  "val": "food101_test",
+  "ncls": 101,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "food101_zimage_turbo": {
+  "description": "Food-101, 500 per class: Z-Image-Turbo released, 9 steps",
+  "trainer": "standard",
+  "train": [
+   "set:food101/zimage_turbo:1"
+  ],
+  "val": "food101_test",
+  "ncls": 101,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "food101_zt_ad2": {
+  "description": "Food-101, 500 per class: Z-Image-Turbo + our adapter `zt_ad2` (jump to 0.857, last 6 of 9 steps)",
+  "trainer": "standard",
+  "train": [
+   "set:food101/zt_ad2:1"
+  ],
+  "val": "food101_test",
+  "ncls": 101,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "food101_zt_sda_all": {
+  "description": "Food-101, 500 per class: Z-Image-Turbo + the public SDA LoKr in all 8 steps (E46's setting)",
+  "trainer": "standard",
+  "train": [
+   "set:food101/zt_sda_all:1"
+  ],
+  "val": "food101_test",
+  "ncls": 101,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "in1k_kb_dd2_g1_full": {
+  "description": "base-first FLUX.2-klein (the unguided base makes the first 2 of the released student's 4 predictions), 1,281 per class",
+  "trainer": "standard",
+  "train": [
+   "set:in1k/kb_dd2_g1_full:1"
+  ],
+  "val": "in1k_val",
+  "ncls": 1000,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "in1k_kb_g1_s20": {
+  "description": "1,000 classes, 100 per class: klein base without guidance on 20 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in1k/kb_g1_s20:1"
+  ],
+  "val": "in1k_val",
+  "ncls": 1000,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "in1k_kb_g1_s20_full": {
+  "description": "the unguided FLUX.2-klein base at 20 steps, 1,281 per class on all 1,000 classes",
+  "trainer": "standard",
+  "train": [
+   "set:in1k/kb_g1_s20_full:1"
+  ],
+  "val": "in1k_val",
+  "ncls": 1000,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "in1k_kd_ad2": {
+  "description": "1,000 classes (900 unseen by the adapter), 100 per class: the ImageNet-100-trained `kd_ad2` adapter",
+  "trainer": "standard",
+  "train": [
+   "set:in1k/kd_ad2:1"
+  ],
+  "val": "in1k_val",
+  "ncls": 1000,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "in1k_kd_ad2_full": {
+  "description": "the ImageNet-100-prompt FLUX.2-klein adapter (900 of the classes unseen), 1,281 per class",
+  "trainer": "standard",
+  "train": [
+   "set:in1k/kd_ad2_full:1"
+  ],
+  "val": "in1k_val",
+  "ncls": 1000,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "in1k_klein": {
+  "description": "1,000 classes, 100 per class: distilled klein, its own 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in1k/klein:1"
+  ],
+  "val": "in1k_val",
+  "ncls": 1000,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "in1k_klein_full": {
+  "description": "distilled FLUX.2-klein, its own 4 steps, 1,281 per class",
+  "trainer": "standard",
+  "train": [
+   "set:in1k/klein_full:1"
+  ],
+  "val": "in1k_val",
+  "ncls": 1000,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "in1k_llm_kb_dd2_g1": {
+  "description": "ImageNet-1k, 100 per class, LLM descriptions (`in1k_llm.json`): base-first on klein",
+  "trainer": "standard",
+  "train": [
+   "set:in1k/llm_kb_dd2_g1:1"
+  ],
+  "val": "in1k_val",
+  "ncls": 1000,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "in1k_llm_kb_g1_s20": {
+  "description": "ImageNet-1k, 100 per class, LLM descriptions (`in1k_llm.json`): the unguided klein base, 20 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in1k/llm_kb_g1_s20:1"
+  ],
+  "val": "in1k_val",
+  "ncls": 1000,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "in1k_llm_kd_ad2": {
+  "description": "ImageNet-1k, 100 per class, LLM descriptions: klein + the template adapter `kd_ad2` (E50's post-hoc arm, 2026-10-23)",
+  "trainer": "standard",
+  "train": [
+   "set:in1k/llm_kd_ad2:1"
+  ],
+  "val": "in1k_val",
+  "ncls": 1000,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "in1k_llm_kd_llm": {
+  "description": "ImageNet-1k, 100 per class, LLM descriptions: klein + `kd_llm` (chosen on Part 1)",
+  "trainer": "standard",
+  "train": [
+   "set:in1k/llm_kd_llm:1"
+  ],
+  "val": "in1k_val",
+  "ncls": 1000,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "in1k_llm_klein": {
+  "description": "ImageNet-1k, 100 per class, LLM descriptions (`in1k_llm.json`): distilled FLUX.2-klein, its 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in1k/llm_klein:1"
+  ],
+  "val": "in1k_val",
+  "ncls": 1000,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "in1k_llm_sd21_g1": {
+  "description": "ImageNet-1k, 100 per class, LLM descriptions (`in1k_llm.json`): unguided SD 2.1, 30 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in1k/llm_sd21_g1:1"
+  ],
+  "val": "in1k_val",
+  "ncls": 1000,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "in1k_llm_sdt4": {
+  "description": "ImageNet-1k, 100 per class, LLM descriptions (`in1k_llm.json`): SD-Turbo, 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in1k/llm_sdt4:1"
+  ],
+  "val": "in1k_val",
+  "ncls": 1000,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "in1k_llm_sdt4_dd2_g1": {
+  "description": "ImageNet-1k, 100 per class, LLM descriptions (`in1k_llm.json`): base-first on SD-Turbo",
+  "trainer": "standard",
+  "train": [
+   "set:in1k/llm_sdt4_dd2_g1:1"
+  ],
+  "val": "in1k_val",
+  "ncls": 1000,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "in1k_llm_sdt_ad1": {
+  "description": "ImageNet-1k, 100 per class, LLM descriptions: SD-Turbo + the template adapter `sdt_ad1` (chosen on Part 1)",
+  "trainer": "standard",
+  "train": [
+   "set:in1k/llm_sdt_ad1:1"
+  ],
+  "val": "in1k_val",
+  "ncls": 1000,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "in1k_mix_kd_ad2": {
+  "description": "the real ImageNet-1k images plus 1.28M FLUX.2-klein adapter images (in1k/kd_ad2_full), 100 epochs",
+  "trainer": "standard",
+  "train": [
+   "real:in1k_train:0",
+   "set:in1k/kd_ad2_full:1"
+  ],
+  "val": "in1k_val",
+  "ncls": 1000,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "in1k_mix_klein": {
+  "description": "the real ImageNet-1k images plus 1.28M distilled FLUX.2-klein images (in1k/klein_full), 100 epochs",
+  "trainer": "standard",
+  "train": [
+   "real:in1k_train:0",
+   "set:in1k/klein_full:1"
+  ],
+  "val": "in1k_val",
+  "ncls": 1000,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "in1k_real_e200": {
+  "description": "all 1,281,167 real ImageNet-1k training images for 200 epochs (real-only, as long as a mix)",
+  "trainer": "standard",
+  "train": [
+   "real:in1k_train:0"
+  ],
+  "val": "in1k_val",
+  "ncls": 1000,
+  "recipe": {
+   "epochs": 200,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "in1k_sd21_g1": {
+  "description": "SD 2.1 without guidance, 30 steps, 100 per class on all 1,000 classes",
+  "trainer": "standard",
+  "train": [
+   "set:in1k/sd21_g1:1"
+  ],
+  "val": "in1k_val",
+  "ncls": 1000,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "in1k_sd21_g1_full": {
+  "description": "the unguided SD 2.1 base at 30 steps, 1,281 per class on all 1,000 classes",
+  "trainer": "standard",
+  "train": [
+   "set:in1k/sd21_g1_full:1"
+  ],
+  "val": "in1k_val",
+  "ncls": 1000,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "in1k_sdt4_dd2_g1_full": {
+  "description": "base-first SD-Turbo (unguided SD 2.1 makes the first 2 of SD-Turbo's 4 predictions), 1,281 per class",
+  "trainer": "standard",
+  "train": [
+   "set:in1k/sdt4_dd2_g1_full:1"
+  ],
+  "val": "in1k_val",
+  "ncls": 1000,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "in1k_sdt4_full": {
+  "description": "SD-Turbo, 4 steps, 1,281 per class",
+  "trainer": "standard",
+  "train": [
+   "set:in1k/sdt4_full:1"
+  ],
+  "val": "in1k_val",
+  "ncls": 1000,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "in1k_sdt_ad1": {
+  "description": "SD-Turbo with its ImageNet-100 adapter (first training run), 100 per class on all 1,000 classes",
+  "trainer": "standard",
+  "train": [
+   "set:in1k/sdt_ad1:1"
+  ],
+  "val": "in1k_val",
+  "ncls": 1000,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "in1k_sdt_ad1_full": {
+  "description": "the ImageNet-100-prompt SD-Turbo adapter, 1,281 per class",
+  "trainer": "standard",
+  "train": [
+   "set:in1k/sdt_ad1_full:1"
+  ],
+  "val": "in1k_val",
+  "ncls": 1000,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_b2d25_g1": {
+  "description": "the unguided klein base draws steps 0-25 of 50 (to noise 0.85), distilled klein finishes",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_b2d25_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_b2d25_g2": {
+  "description": "klein base at guidance 2 draws steps 0-25 of 50 (to noise 0.85), distilled klein finishes",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_b2d25_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_b2d40_g1": {
+  "description": "the unguided klein base draws steps 0-40 of 50 (to noise 0.58), distilled klein finishes",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_b2d40_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_cads_g4": {
+  "description": "klein base at guidance 4 with CADS (condition noise 0.25, annealed between noise 0.9 and 0.6); its images are collages, so it is not a test of CADS on this model",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_cads_g4:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_cfg_early": {
+  "description": "klein base, guidance 4 in steps 0-25 of 50 (above noise 0.85, log-SNR -3.4), none after",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_cfg_early:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_cfg_gt51": {
+  "description": "klein base, guidance 4 in steps 0-42 of 50 (above noise 0.51, log-SNR -0.1), none after",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_cfg_gt51:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_cfg_late": {
+  "description": "klein base, no guidance in steps 0-25 of 50, guidance 4 after (below noise 0.85)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_cfg_late:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_cfg_lt51": {
+  "description": "klein base, no guidance in steps 0-42 of 50, guidance 4 in the last 8 (below noise 0.51)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_cfg_lt51:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_d2b10_g2": {
+  "description": "distilled klein draws steps 0-10 of 50 (to noise 0.96), klein base finishes at guidance 2",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_d2b10_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_d2b25_g1": {
+  "description": "distilled klein draws steps 0-25 of 50 (to noise 0.85), the unguided klein base finishes",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_d2b25_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_d2b25_g2": {
+  "description": "distilled klein draws steps 0-25 of 50 (to noise 0.85), klein base finishes at guidance 2",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_d2b25_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_d2b40_g1": {
+  "description": "distilled klein draws steps 0-40 of 50 (to noise 0.58), the unguided klein base finishes the last 10",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_d2b40_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_d2b40_g2": {
+  "description": "distilled klein draws steps 0-40 of 50 (to noise 0.58), klein base finishes the last 10 at guidance 2",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_d2b40_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_d2b45_g2": {
+  "description": "distilled klein draws steps 0-45 of 50 (to noise 0.38), klein base finishes the last 5 at guidance 2",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_d2b45_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_dd1_g1": {
+  "description": "the unguided klein base draws the first of distilled klein's 4 steps (noise 1 -> 0.96), distilled klein the rest (Diversity Distillation)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_dd1_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_dd2_g1": {
+  "description": "the unguided klein base draws the first 2 of distilled klein's 4 steps (to noise 0.88), distilled klein the last 2: the base-first fix",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_dd2_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_dd3_g1": {
+  "description": "the unguided klein base draws the first 3 of distilled klein's 4 steps (to noise 0.72), distilled klein only the final jump",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_dd3_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_df58_g1": {
+  "description": "distilled klein drafts in 3 steps down to noise 0.58, the unguided klein base finishes on 10 fine tail steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_df58_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_df58_g2": {
+  "description": "distilled klein drafts in 3 steps down to noise 0.58, klein base finishes on 10 fine tail steps at guidance 2",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_df58_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_df70_g1": {
+  "description": "distilled klein drafts in 3 steps down to noise 0.70, the unguided klein base finishes on 15 fine tail steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_df70_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_df70_g15": {
+  "description": "distilled klein drafts in 3 steps down to noise 0.70, klein base finishes on 15 fine tail steps at guidance 1.5",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_df70_g15:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_df70_g2": {
+  "description": "distilled klein drafts in 3 steps down to noise 0.70, klein base finishes on 15 fine tail steps at guidance 2",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_df70_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_g1": {
+  "description": "klein base without guidance, 50 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_g15": {
+  "description": "klein base at guidance 1.5, 50 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_g15:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_g1_s10": {
+  "description": "the unguided klein base on a 10-step schedule: a cheaper unguided base",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_g1_s10:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_g1_s20": {
+  "description": "the unguided klein base on a 20-step schedule: a cheaper unguided base",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_g1_s20:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_g2_s10": {
+  "description": "klein base at guidance 2 on a 10-step schedule: a cheaper base a hybrid must beat at equal cost",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_g2_s10:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_g2_s20": {
+  "description": "klein base at guidance 2 on a 20-step schedule: a cheaper base a hybrid must beat at equal cost",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_g2_s20:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_g3": {
+  "description": "klein base at guidance 3, 50 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_g3:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_hi10": {
+  "description": "klein base, guidance 4 in steps 0-10 of 50 (above noise 0.96, log-SNR -6.2), none after",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_hi10:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_hi20": {
+  "description": "klein base, guidance 4 in steps 0-20 of 50 (above noise 0.89, log-SNR -4.2), none after",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_hi20:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_interval_g4": {
+  "description": "klein base, published interval guidance: 4 for EDM sigma in (0.28, 5.42] (steps 26-47 of 50), none elsewhere",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_interval_g4:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_jump70_g2": {
+  "description": "no draft: klein base jumps from noise 1 to 0.70 in one step, then finishes on the same 15 tail steps at guidance 2",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_jump70_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_lo10": {
+  "description": "klein base, no guidance in steps 0-10 of 50, guidance 4 after (below noise 0.96)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_lo10:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_lo20": {
+  "description": "klein base, no guidance in steps 0-20 of 50, guidance 4 after (below noise 0.89)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_lo20:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_or10_d3": {
+  "description": "unguided klein base on 10 fine steps to 0.958, then distilled klein's last 3 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_or10_d3:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_or21_d2": {
+  "description": "the unguided klein base on its fine 50-step levels down to noise 0.884, then distilled klein's last 2 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_or21_d2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_or34_d1": {
+  "description": "the unguided klein base on its fine 50-step levels down to noise 0.7175, then distilled klein's last step",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_or34_d1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_or35_d1_g2": {
+  "description": "as `kb_or35_d1_g4` at guidance 2",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_or35_d1_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_or35_d1_g4": {
+  "description": "klein base at guidance 4 on the four-anchor grid to 0.7175 (35 steps), then distilled klein's last step: the guided teacher's own state",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_or35_d1_g4:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_or43_d1": {
+  "description": "unguided klein base on the four-anchor grid to 0.511 (43 steps), then one distilled step",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_or43_d1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_sw58_g1": {
+  "description": "all unguided: klein base draws the first of distilled klein's 4 steps, distilled klein the next 2 (to noise 0.58), klein base finishes on 10 fine steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_sw58_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kb_sw70_g1": {
+  "description": "all unguided: klein base draws the first of distilled klein's 4 steps, distilled klein the next 2 (to noise 0.70), klein base finishes on 15 fine steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_sw70_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_ad0": {
+  "description": "klein adapter jump 1 -> 0.958 (the distilled model's first level), then its last 3 steps; 4 evaluations",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_ad0:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_ad1": {
+  "description": "distilled klein with a low-rank adapter in its first step, trained to reach the unguided base's state at noise 0.884 in one jump, then the plain distilled model's last 2 steps; no base at generation",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_ad1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_ad1_s1": {
+  "description": "`kd_ad1` retrained with training seed 1 (initialization, batch order)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_ad1_s1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_ad1_s2": {
+  "description": "`kd_ad1` retrained with training seed 2",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_ad1_s2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_ad1_tg4": {
+  "description": "as `kd_ad1x` with the base at guidance 4 inside every teacher step",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_ad1_tg4:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_ad1x": {
+  "description": "klein adapter jump 1 -> 0.884 trained on the unguided base over the four-anchor grid, then distilled klein's last 2 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_ad1x:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_ad2": {
+  "description": "distilled klein with a low-rank adapter in its first step, trained to reach the unguided base's state at noise 0.7175 in one jump, then the plain distilled model's last step; no base at generation",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_ad2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_ad2_all": {
+  "description": "the `kd_ad2` adapter in both steps instead of step 1 only",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_ad2_all:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_ad2_full_lr1e5": {
+  "description": "every weight of distilled klein trained on `kd_ad2`'s loss (float32, lr 1e-5), used in step 1 only",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_ad2_full_lr1e5:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_ad2_full_lr3e6": {
+  "description": "as `kd_ad2_full_lr1e5` at lr 3e-6",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_ad2_full_lr3e6:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_ad2_ns1": {
+  "description": "the FLUX.2-klein adapter (first training run) regenerated with new initial noise",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_ad2_ns1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_ad2_r128": {
+  "description": "`kd_ad2` with rank 128 (alpha 128) on the E13 pairs",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_ad2_r128:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_ad2_r8": {
+  "description": "`kd_ad2` with rank 8 (alpha 8) on the E13 pairs",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_ad2_r8:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_ad2_s2": {
+  "description": "`kd_ad2` retrained with training seed 2 (`kd_ad2b` is seed 1)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_ad2_s2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_ad2_tg2": {
+  "description": "as `kd_ad2x` with the base at guidance 2 inside every teacher step",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_ad2_tg2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_ad2_tg4": {
+  "description": "as `kd_ad2x` with the base at guidance 4 inside every teacher step (a guided target, as in DP-DMD)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_ad2_tg4:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_ad2_x3": {
+  "pooled": [
+   "kd_ad2",
+   "kd_ad2b",
+   "kd_ad2_s2"
+  ]
+ },
+ "kd_ad2b": {
+  "description": "the `kd_ad2` adapter retrained with another seed (initialization and batch order) on the same teacher pairs",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_ad2b:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_ad2x": {
+  "description": "klein adapter jump 1 -> 0.7175 trained on the unguided base over the four-anchor grid, then distilled klein's last step; W1a's same-grid reference",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_ad2x:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_ad3": {
+  "description": "klein adapter jump 1 -> 0.511 (off the 4-step schedule), then one distilled step to 0; 2 evaluations",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_ad3:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_cads_s01": {
+  "description": "distilled klein, its own 4 steps, with CADS (condition noise 0.1, annealed between noise 0.9 and 0.6); its images are collages, so it is not a test of CADS on this model",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_cads_s01:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_cads_s025": {
+  "description": "distilled klein, its own 4 steps, with CADS (condition noise 0.25, annealed between noise 0.9 and 0.6); its images are collages, so it is not a test of CADS on this model",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_cads_s025:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_coco": {
+  "description": "the FLUX.2-klein adapter trained on 16,000 COCO captions instead of the class templates",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_coco:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_fsg": {
+  "description": "Feature Self-Guidance on distilled klein: block-1 image features of each 8-image batch dispersed at t >= 0.8 (steps 0-2), the paper's klein settings, Adam reading of its update",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_fsg:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_llm": {
+  "description": "FLUX.2-klein + `kd_llm`, the class-name templates",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_llm:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_mono1": {
+  "description": "MoNO, K = 1 at 30 degrees, 4 images per basis",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_mono1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_mono4": {
+  "description": "MoNO on distilled klein: each noise's low frequencies rotated 4 x 20 degrees against the DINOv2 patch features of the previous images of its class, 4 images per basis (the paper's set size)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_mono4:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_mono4_g32": {
+  "description": "MoNO with one basis per class and shard (31-32 images)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_mono4_g32:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_mono4_rand": {
+  "description": "MoNO's rotations in random directions: separates its objective from its noise geometry",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_mono4_rand:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_rep05": {
+  "description": "distilled klein, its own 4 steps, within-class repulsion of the 4 x 4 layouts in step 0, push 0.5 times the batch's spread",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_rep05:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_rep1": {
+  "description": "distilled klein, its own 4 steps, within-class repulsion of the 4 x 4 layouts in step 0, push 1 times the batch's spread",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_rep1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_rep1_01": {
+  "description": "distilled klein, its own 4 steps, within-class repulsion of the 4 x 4 layouts in steps 0 and 1, push 1 times the batch's spread",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_rep1_01:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_rep2": {
+  "description": "distilled klein, its own 4 steps, within-class repulsion of the 4 x 4 layouts in step 0, push 2 times the batch's spread",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_rep2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_rep2_01": {
+  "description": "distilled klein, its own 4 steps, within-class repulsion of the 4 x 4 layouts in steps 0 and 1, push 2 times the batch's spread",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_rep2_01:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_rep4_01": {
+  "description": "distilled klein, its own 4 steps, within-class repulsion of the 4 x 4 layouts in steps 0 and 1, push 4 times the batch's spread",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_rep4_01:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_self70": {
+  "description": "no base: distilled klein drafts in 3 steps down to noise 0.70 and finishes itself on the 15 fine tail steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_self70:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_sft": {
+  "description": "distilled FLUX.2-klein started at its second level (0.958) from pure noise, then its own levels (Skip-First-Timestep, 3 NFE)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_sft:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_skip3": {
+  "description": "distilled klein alone on `kd_ad1`'s schedule (noise 1 -> 0.884 -> 0.7175 -> 0), no adapter",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_skip3:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "kd_skip51": {
+  "description": "distilled klein alone on 1 -> 0.511 -> 0, the schedule of `kd_ad3` without the adapter",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_skip51:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "klein": {
+  "description": "FLUX.2-klein 4B step-distilled, its own 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/klein:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "klein_all50": {
+  "description": "distilled klein alone on the base's 50-step schedule, no guidance (the schedule without the model)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/klein_all50:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "klein_b2d10": {
+  "description": "klein base at guidance 4 draws steps 0-10 of its 50 (to noise 0.96), distilled klein finishes",
+  "trainer": "standard",
+  "train": [
+   "set:in100/klein_b2d10:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "klein_b2d25": {
+  "description": "klein base at guidance 4 draws steps 0-25 of its 50 (to noise 0.85), distilled klein finishes",
+  "trainer": "standard",
+  "train": [
+   "set:in100/klein_b2d25:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "klein_b2d5": {
+  "description": "klein base at guidance 4 draws steps 0-5 of its 50, distilled klein finishes",
+  "trainer": "standard",
+  "train": [
+   "set:in100/klein_b2d5:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "klein_base": {
+  "description": "FLUX.2-klein 4B base at its defaults (guidance 4, 50 steps)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/klein_base:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "klein_base_g2": {
+  "description": "klein base at guidance 2 (default 4), 50 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/klein_base_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "klein_d2b10": {
+  "description": "distilled klein draws steps 0-10 of the base's 50 (to noise 0.96), klein base finishes at guidance 4",
+  "trainer": "standard",
+  "train": [
+   "set:in100/klein_d2b10:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "klein_d2b25": {
+  "description": "distilled klein draws steps 0-25 of the base's 50 (to noise 0.85), klein base finishes at guidance 4",
+  "trainer": "standard",
+  "train": [
+   "set:in100/klein_d2b25:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "klein_d2b5": {
+  "description": "distilled klein draws steps 0-5 of the base's 50, klein base finishes at guidance 4",
+  "trainer": "standard",
+  "train": [
+   "set:in100/klein_d2b5:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "klein_ns1": {
+  "description": "distilled FLUX.2-klein regenerated with new initial noise (seed offset 300,000)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/klein_ns1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "llm2_kb_dd2_g1": {
+  "description": "LLM dataset 2 (its own description pool, seed offset 100,000): base-first on klein: the unguided base draws the first 2 of its 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/llm2_kb_dd2_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "llm2_kd_ad2": {
+  "description": "LLM dataset 2 (its own description pool, seed offset 100,000): klein + the template adapter `kd_ad2`",
+  "trainer": "standard",
+  "train": [
+   "set:in100/llm2_kd_ad2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "llm2_kd_llm": {
+  "description": "LLM dataset 2 (its own description pool, seed offset 100,000): klein + `kd_llm`, the adapter fitted on LLM descriptions",
+  "trainer": "standard",
+  "train": [
+   "set:in100/llm2_kd_llm:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "llm2_klein": {
+  "description": "LLM dataset 2 (its own description pool, seed offset 100,000): distilled FLUX.2-klein, its 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/llm2_klein:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "llm2_sdt4": {
+  "description": "LLM dataset 2 (its own description pool, seed offset 100,000): SD-Turbo, 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/llm2_sdt4:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "llm2_sdt4_dd2_g1": {
+  "description": "LLM dataset 2 (its own description pool, seed offset 100,000): base-first on SD-Turbo: unguided SD 2.1 draws the first 2 of its 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/llm2_sdt4_dd2_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "llm2_sdt_ad1": {
+  "description": "LLM dataset 2 (its own description pool, seed offset 100,000): SD-Turbo + the template adapter `sdt_ad1`",
+  "trainer": "standard",
+  "train": [
+   "set:in100/llm2_sdt_ad1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "llm2_sdt_llm": {
+  "description": "LLM dataset 2 (its own description pool, seed offset 100,000): SD-Turbo + `sdt_llm`, the adapter fitted on LLM descriptions",
+  "trainer": "standard",
+  "train": [
+   "set:in100/llm2_sdt_llm:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "llm3_kb_dd2_g1": {
+  "description": "LLM dataset 3 (its own description pool, seed offset 200,000): base-first on klein: the unguided base draws the first 2 of its 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/llm3_kb_dd2_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "llm3_kd_ad2": {
+  "description": "LLM dataset 3 (its own description pool, seed offset 200,000): klein + the template adapter `kd_ad2`",
+  "trainer": "standard",
+  "train": [
+   "set:in100/llm3_kd_ad2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "llm3_kd_llm": {
+  "description": "LLM dataset 3 (its own description pool, seed offset 200,000): klein + `kd_llm`, the adapter fitted on LLM descriptions",
+  "trainer": "standard",
+  "train": [
+   "set:in100/llm3_kd_llm:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "llm3_klein": {
+  "description": "LLM dataset 3 (its own description pool, seed offset 200,000): distilled FLUX.2-klein, its 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/llm3_klein:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "llm3_sdt4": {
+  "description": "LLM dataset 3 (its own description pool, seed offset 200,000): SD-Turbo, 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/llm3_sdt4:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "llm3_sdt4_dd2_g1": {
+  "description": "LLM dataset 3 (its own description pool, seed offset 200,000): base-first on SD-Turbo: unguided SD 2.1 draws the first 2 of its 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/llm3_sdt4_dd2_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "llm3_sdt_ad1": {
+  "description": "LLM dataset 3 (its own description pool, seed offset 200,000): SD-Turbo + the template adapter `sdt_ad1`",
+  "trainer": "standard",
+  "train": [
+   "set:in100/llm3_sdt_ad1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "llm3_sdt_llm": {
+  "description": "LLM dataset 3 (its own description pool, seed offset 200,000): SD-Turbo + `sdt_llm`, the adapter fitted on LLM descriptions",
+  "trainer": "standard",
+  "train": [
+   "set:in100/llm3_sdt_llm:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "llm_kb_dd2_g1": {
+  "description": "the unguided klein base draws the first 2 of distilled klein's 4 steps, LLM-written descriptions as prompts",
+  "trainer": "standard",
+  "train": [
+   "set:in100/llm_kb_dd2_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "llm_kb_g1": {
+  "description": "klein base without guidance, LLM-written descriptions as prompts (no real images)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/llm_kb_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "llm_kd_ad2": {
+  "description": "FLUX.2-klein's class-name adapter, E5's LLM-written prompts",
+  "trainer": "standard",
+  "train": [
+   "set:in100/llm_kd_ad2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "llm_kd_llm": {
+  "description": "LLM dataset 1 (E5's pool and seeds): FLUX.2-klein + `kd_llm` (`kd_ad2`'s recipe fitted on 16,000 image-free LLM descriptions)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/llm_kd_llm:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "llm_klein": {
+  "description": "distilled klein, its own 4 steps, LLM-written descriptions as prompts (no real images)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/llm_klein:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "llm_sd15_g2": {
+  "description": "SD 1.5 at guidance 2, LLM-written descriptions as prompts (no real images)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/llm_sd15_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "llm_sd21_g2": {
+  "description": "SD 2.1 at guidance 2, LLM-written descriptions as prompts (no real images)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/llm_sd21_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "llm_sd_turbo": {
+  "description": "SD-Turbo, 1 step, LLM-written descriptions as prompts (no real images)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/llm_sd_turbo:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "llm_sdt4": {
+  "description": "SD-Turbo alone on its own 4 steps, LLM-written descriptions as prompts (the matched baseline of `llm_sdt4_dd2_g1`)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/llm_sdt4:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "llm_sdt4_dd2_g1": {
+  "description": "unguided SD 2.1 draws the first 2 of SD-Turbo's 4 steps, LLM-written descriptions as prompts",
+  "trainer": "standard",
+  "train": [
+   "set:in100/llm_sdt4_dd2_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "llm_sdt_ad1": {
+  "description": "SD-Turbo's class-name adapter, E5's LLM-written prompts",
+  "trainer": "standard",
+  "train": [
+   "set:in100/llm_sdt_ad1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "llm_sdt_llm": {
+  "description": "LLM dataset 1 (E5's pool and seeds): SD-Turbo + `sdt_llm` (`sdt_ad1`'s recipe fitted on the same 16,000 descriptions)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/llm_sdt_llm:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "llmx_kb_dd2_g1": {
+  "pooled": [
+   "llm_kb_dd2_g1",
+   "llm2_kb_dd2_g1",
+   "llm3_kb_dd2_g1"
+  ]
+ },
+ "llmx_kd_ad2": {
+  "pooled": [
+   "llm_kd_ad2",
+   "llm2_kd_ad2",
+   "llm3_kd_ad2"
+  ]
+ },
+ "llmx_kd_llm": {
+  "pooled": [
+   "llm_kd_llm",
+   "llm2_kd_llm",
+   "llm3_kd_llm"
+  ]
+ },
+ "llmx_klein": {
+  "pooled": [
+   "llm_klein",
+   "llm2_klein",
+   "llm3_klein"
+  ]
+ },
+ "llmx_sdt4": {
+  "pooled": [
+   "llm_sdt4",
+   "llm2_sdt4",
+   "llm3_sdt4"
+  ]
+ },
+ "llmx_sdt4_dd2_g1": {
+  "pooled": [
+   "llm_sdt4_dd2_g1",
+   "llm2_sdt4_dd2_g1",
+   "llm3_sdt4_dd2_g1"
+  ]
+ },
+ "llmx_sdt_ad1": {
+  "pooled": [
+   "llm_sdt_ad1",
+   "llm2_sdt_ad1",
+   "llm3_sdt_ad1"
+  ]
+ },
+ "llmx_sdt_llm": {
+  "pooled": [
+   "llm_sdt_llm",
+   "llm2_sdt_llm",
+   "llm3_sdt_llm"
+  ]
+ },
+ "low_kb_g1": {
+  "description": "50 real + 500 images per class from the unguided klein base",
+  "trainer": "standard",
+  "train": [
+   "real:in100_train:0:50",
+   "set:in100/kb_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "low_kd_ad2": {
+  "description": "50 real + 500 images per class from the FLUX.2-klein adapter",
+  "trainer": "standard",
+  "train": [
+   "real:in100_train:0:50",
+   "set:in100/kd_ad2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "low_klein": {
+  "description": "50 real + 500 distilled FLUX.2-klein images per class",
+  "trainer": "standard",
+  "train": [
+   "real:in100_train:0:50",
+   "set:in100/klein:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "low_real50": {
+  "description": "50 real ImageNet-100 images per class alone, trained for the steps of a 55,000-image run",
+  "trainer": "standard",
+  "train": [
+   "real:in100_train:0:50"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 1100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 55,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "low_sd21_g1": {
+  "description": "50 real + 500 images per class from unguided SD 2.1",
+  "trainer": "standard",
+  "train": [
+   "real:in100_train:0:50",
+   "set:in100/sd21_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "low_sdt4": {
+  "description": "50 real + 500 SD-Turbo images per class",
+  "trainer": "standard",
+  "train": [
+   "real:in100_train:0:50",
+   "set:in100/sdt4:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "low_sdt_ad1": {
+  "description": "50 real + 500 images per class from the SD-Turbo adapter",
+  "trainer": "standard",
+  "train": [
+   "real:in100_train:0:50",
+   "set:in100/sdt_ad1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "mix_kb_dd2_g1": {
+  "description": "500 real + 500 `kb_dd2_g1` images per class (base-first klein)",
+  "trainer": "standard",
+  "train": [
+   "real:in100_train:0:500",
+   "set:in100/kb_dd2_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "mix_kd_ad2": {
+  "description": "500 real + 500 `kd_ad2` images per class (the FLUX.2-klein adapter)",
+  "trainer": "standard",
+  "train": [
+   "real:in100_train:0:500",
+   "set:in100/kd_ad2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "mix_klein": {
+  "description": "500 real + 500 `klein` images per class (distilled klein)",
+  "trainer": "standard",
+  "train": [
+   "real:in100_train:0:500",
+   "set:in100/klein:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "mix_sd15": {
+  "description": "500 real + 500 `sd15` images per class (SD 1.5, guidance 7.5)",
+  "trainer": "standard",
+  "train": [
+   "real:in100_train:0:500",
+   "set:in100/sd15:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "mix_sd15_g2": {
+  "description": "500 real + 500 `sd15_g2` images per class (SD 1.5, guidance 2)",
+  "trainer": "standard",
+  "train": [
+   "real:in100_train:0:500",
+   "set:in100/sd15_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "mix_sdt4": {
+  "description": "500 real + 500 `sdt4` images per class (SD-Turbo, 4 steps)",
+  "trainer": "standard",
+  "train": [
+   "real:in100_train:0:500",
+   "set:in100/sdt4:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "mix_sdt_ad1": {
+  "description": "500 real + 500 `sdt_ad1` images per class (the SD-Turbo adapter)",
+  "trainer": "standard",
+  "train": [
+   "real:in100_train:0:500",
+   "set:in100/sdt_ad1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "pets_dpdmd": {
+  "description": "Oxford-IIIT Pets, 500 per class: DP-DMD's released SD3.5-Medium student, 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:pets/dpdmd:1"
+  ],
+  "val": "pets_test",
+  "ncls": 37,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "pets_dpdmd_ad1": {
+  "description": "Oxford-IIIT Pets, 500 per class: DP-DMD's student + our deeper-target adapter `sd35m_ad1` (jump to 0.602, last 2 steps)",
+  "trainer": "standard",
+  "train": [
+   "set:pets/dpdmd_ad1:1"
+  ],
+  "val": "pets_test",
+  "ncls": 37,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "pets_kb_dd2_g1": {
+  "description": "Oxford Pets: base-first: the unguided klein base draws the first 2 of the distilled model's 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:pets/kb_dd2_g1:1"
+  ],
+  "val": "pets_test",
+  "ncls": 37,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "pets_kb_g1_s20": {
+  "description": "Oxford Pets: the unguided klein base, 20 steps",
+  "trainer": "standard",
+  "train": [
+   "set:pets/kb_g1_s20:1"
+  ],
+  "val": "pets_test",
+  "ncls": 37,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "pets_kd_ad2": {
+  "description": "Oxford Pets: the ImageNet-100-prompt FLUX.2-klein adapter, unchanged",
+  "trainer": "standard",
+  "train": [
+   "set:pets/kd_ad2:1"
+  ],
+  "val": "pets_test",
+  "ncls": 37,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "pets_klein": {
+  "description": "Oxford Pets: distilled FLUX.2-klein, its own 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:pets/klein:1"
+  ],
+  "val": "pets_test",
+  "ncls": 37,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "pets_real": {
+  "description": "every real Pets training image (3,680), trained as long as a 500-per-class run",
+  "trainer": "standard",
+  "train": [
+   "real:pets_train:0"
+  ],
+  "val": "pets_test",
+  "ncls": 37,
+  "recipe": {
+   "epochs": 503,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 25,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "pets_sd21_g1": {
+  "description": "Oxford Pets: SD 2.1 unguided, 30 steps",
+  "trainer": "standard",
+  "train": [
+   "set:pets/sd21_g1:1"
+  ],
+  "val": "pets_test",
+  "ncls": 37,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "pets_sdt4": {
+  "description": "Oxford Pets: SD-Turbo, 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:pets/sdt4:1"
+  ],
+  "val": "pets_test",
+  "ncls": 37,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "pets_sdt4_dd2_g1": {
+  "description": "Oxford Pets: base-first: unguided SD 2.1 draws the first 2 of SD-Turbo's 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:pets/sdt4_dd2_g1:1"
+  ],
+  "val": "pets_test",
+  "ncls": 37,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "pets_sdt_ad1": {
+  "description": "Oxford Pets: the ImageNet-100-prompt SD-Turbo adapter, unchanged",
+  "trainer": "standard",
+  "train": [
+   "set:pets/sdt_ad1:1"
+  ],
+  "val": "pets_test",
+  "ncls": 37,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "pets_zimage_turbo": {
+  "description": "Oxford-IIIT Pets, 500 per class: Z-Image-Turbo released, 9 steps",
+  "trainer": "standard",
+  "train": [
+   "set:pets/zimage_turbo:1"
+  ],
+  "val": "pets_test",
+  "ncls": 37,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "pets_zt_ad2": {
+  "description": "Oxford-IIIT Pets, 500 per class: Z-Image-Turbo + our adapter `zt_ad2` (jump to 0.857, last 6 of 9 steps)",
+  "trainer": "standard",
+  "train": [
+   "set:pets/zt_ad2:1"
+  ],
+  "val": "pets_test",
+  "ncls": 37,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "pets_zt_sda_all": {
+  "description": "Oxford-IIIT Pets, 500 per class: Z-Image-Turbo + the public SDA LoKr in all 8 steps (E46's setting)",
+  "trainer": "standard",
+  "train": [
+   "set:pets/zt_sda_all:1"
+  ],
+  "val": "pets_test",
+  "ncls": 37,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "ra_kb_g1": {
+  "description": "our ResNet-50 recipe with RandAugment (2, 9) on the unguided klein base",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": true
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "ra_kd_ad2": {
+  "description": "our ResNet-50 recipe with RandAugment (2, 9) on the FLUX.2-klein adapter (first training run)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_ad2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": true
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "ra_klein": {
+  "description": "our ResNet-50 recipe with RandAugment (2, 9) on distilled FLUX.2-klein",
+  "trainer": "standard",
+  "train": [
+   "set:in100/klein:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": true
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "ra_real500": {
+  "description": "our ResNet-50 recipe with RandAugment (2, 9) on 500 real images per class",
+  "trainer": "standard",
+  "train": [
+   "real:in100_train:0:500"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": true
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "ra_sd21_g1": {
+  "description": "our ResNet-50 recipe with RandAugment (2, 9) on unguided SD 2.1",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": true
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "ra_sdt4": {
+  "description": "our ResNet-50 recipe with RandAugment (2, 9) on SD-Turbo at 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt4:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": true
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "ra_sdt_ad1": {
+  "description": "our ResNet-50 recipe with RandAugment (2, 9) on the SD-Turbo adapter (first training run)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt_ad1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": true
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "real500": {
+  "description": "500 real ImageNet-100 training images per class",
+  "trainer": "standard",
+  "train": [
+   "real:in100_train:0:500"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "real500_e200": {
+  "description": "500 real images per class for 200 epochs: real-only training as long as the mixed runs",
+  "trainer": "standard",
+  "train": [
+   "real:in100_train:0:500"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 200,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "scale_kd_ad2_100": {
+  "description": "the FLUX.2-klein adapter, 100 images per class (`kd_ad2`'s lowest 100 indices)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_ad2:1:100"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1
+  ]
+ },
+ "scale_kd_ad2_1300": {
+  "description": "the FLUX.2-klein adapter, 1300 images per class (`kd_ad2` + 800 of `kd_ad2_ext`: trained before the 2026-10-15 fix, its 800 are every third index from 500, all templates)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_ad2:1",
+   "set:in100/kd_ad2_ext:1:800"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1
+  ]
+ },
+ "scale_kd_ad2_300": {
+  "description": "the FLUX.2-klein adapter, 300 images per class (`kd_ad2`'s lowest 300 indices)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_ad2:1:300"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1
+  ]
+ },
+ "scale_kd_ad2_3000": {
+  "description": "the FLUX.2-klein adapter, 3000 images per class (`kd_ad2` + `kd_ad2_ext`, the full 3,000)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_ad2:1",
+   "set:in100/kd_ad2_ext:1:2500"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1
+  ]
+ },
+ "scale_klein_100": {
+  "description": "distilled FLUX.2-klein, 100 images per class (`klein_x3000`'s lowest 100 indices)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/klein_x3000:1:100"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1
+  ]
+ },
+ "scale_klein_1300": {
+  "description": "distilled FLUX.2-klein, 1300 images per class (`klein_x3000`'s lowest 1300 indices)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/klein_x3000:1:1300"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1
+  ]
+ },
+ "scale_klein_300": {
+  "description": "distilled FLUX.2-klein, 300 images per class (`klein_x3000`'s lowest 300 indices)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/klein_x3000:1:300"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1
+  ]
+ },
+ "scale_klein_3000": {
+  "description": "distilled FLUX.2-klein, 3000 images per class (`klein_x3000`'s lowest 3000 indices) (the full set)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/klein_x3000:1:3000"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1
+  ]
+ },
+ "scale_klein_500": {
+  "description": "distilled FLUX.2-klein, 500 images per class (`klein_x3000`'s lowest 500 indices)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/klein_x3000:1:500"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1
+  ]
+ },
+ "scale_llm_kd_llm_100": {
+  "description": "ImageNet-100, LLM dataset 1, 100 per class: klein + `kd_llm` (`llm_kd_llm`'s lowest 100 indices)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/llm_kd_llm:1:100"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "scale_llm_klein_100": {
+  "description": "ImageNet-100, LLM dataset 1, 100 per class: released FLUX.2-klein (`llm_klein`'s lowest 100 indices)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/llm_klein:1:100"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd15": {
+  "description": "SD 1.5 at its defaults (guidance 7.5, 30 steps)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd15:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd15_g2": {
+  "description": "SD 1.5 at guidance 2 (default 7.5), 30 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd15_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21": {
+  "description": "SD 2.1 base at its defaults (guidance 7.5, 30 steps)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_b2d10_g2": {
+  "description": "SD 2.1 at guidance 2 draws steps 0-10 of its 30, SD-Turbo finishes",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_b2d10_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_b2d15_g2": {
+  "description": "SD 2.1 at guidance 2 draws steps 0-15 of its 30, SD-Turbo finishes",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_b2d15_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_b2d20_g2": {
+  "description": "SD 2.1 at guidance 2 draws steps 0-20 of its 30, SD-Turbo finishes",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_b2d20_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_b2d25_g2": {
+  "description": "SD 2.1 at guidance 2 draws steps 0-25 of its 30, SD-Turbo finishes",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_b2d25_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_b2d5_g2": {
+  "description": "SD 2.1 at guidance 2 draws steps 0-5 of its 30, SD-Turbo finishes",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_b2d5_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_cads75_s01": {
+  "description": "SD 2.1 at its default guidance 7.5 with CADS (condition noise 0.1, annealed between 0.9 and 0.6)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_cads75_s01:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_cads75_s025": {
+  "description": "SD 2.1 at its default guidance 7.5 with CADS (condition noise 0.25, annealed between 0.9 and 0.6)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_cads75_s025:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_cfg_early": {
+  "description": "SD 2.1, guidance 2 in steps 0-15 of 30, none after",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_cfg_early:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_cfg_late": {
+  "description": "SD 2.1, no guidance in steps 0-15 of 30, guidance 2 after",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_cfg_late:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_d2b10_g2": {
+  "description": "SD-Turbo draws steps 0-10 of SD 2.1's 30 unguided, SD 2.1 finishes at guidance 2",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_d2b10_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_d2b15_g2": {
+  "description": "SD-Turbo draws steps 0-15 of SD 2.1's 30 unguided, SD 2.1 finishes at guidance 2",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_d2b15_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_d2b20_g2": {
+  "description": "SD-Turbo draws steps 0-20 of SD 2.1's 30 unguided, SD 2.1 finishes at guidance 2",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_d2b20_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_d2b25_g2": {
+  "description": "SD-Turbo draws steps 0-25 of SD 2.1's 30 unguided, SD 2.1 finishes at guidance 2",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_d2b25_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_d2b5_g2": {
+  "description": "SD-Turbo draws steps 0-5 of SD 2.1's 30 unguided, SD 2.1 finishes at guidance 2",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_d2b5_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_g1": {
+  "description": "SD 2.1 without guidance, 30 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_g15": {
+  "description": "SD 2.1 at guidance 1.5, 30 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_g15:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_g1_s10": {
+  "description": "unguided SD 2.1 on 10 steps: the cheap-base comparator",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_g1_s10:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_g2": {
+  "description": "SD 2.1 at guidance 2 (default 7.5), 30 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_g4": {
+  "description": "SD 2.1 at guidance 4, 30 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_g4:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_g75early": {
+  "description": "SD 2.1, the default guidance 7.5 in steps 0-15 of 30, guidance 2 after",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_g75early:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_g75late": {
+  "description": "SD 2.1, guidance 2 in steps 0-15 of 30, the default 7.5 after",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_g75late:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_hi12": {
+  "description": "SD 2.1, guidance 7.5 in steps 0-12 of 30 (to log-SNR -1.7), guidance 2 after",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_hi12:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_hi18": {
+  "description": "SD 2.1, guidance 7.5 in steps 0-18 of 30 (to log-SNR -0.3), guidance 2 after",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_hi18:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_hi24": {
+  "description": "SD 2.1, guidance 7.5 in steps 0-24 of 30 (to log-SNR +1.1), guidance 2 after",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_hi24:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_hi3": {
+  "description": "SD 2.1, guidance 7.5 in steps 0-3 of 30 (to log-SNR -4.2), guidance 2 after",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_hi3:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_hi6": {
+  "description": "SD 2.1, guidance 7.5 in steps 0-6 of 30 (to log-SNR -3.3), guidance 2 after",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_hi6:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_hi9": {
+  "description": "SD 2.1, guidance 7.5 in steps 0-9 of 30 (to log-SNR -2.4), guidance 2 after",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_hi9:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_interval75": {
+  "description": "SD 2.1, published interval guidance: 7.5 for EDM sigma in (0.28, 5.42] (steps 6-27 of 30), none elsewhere",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_interval75:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_lo12": {
+  "description": "SD 2.1, guidance 2 in steps 0-12 of 30, guidance 7.5 after (from log-SNR -1.7)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_lo12:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_lo18": {
+  "description": "SD 2.1, guidance 2 in steps 0-18 of 30, guidance 7.5 after (from log-SNR -0.3)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_lo18:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_lo24": {
+  "description": "SD 2.1, guidance 2 in steps 0-24 of 30, guidance 7.5 after (from log-SNR +1.1)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_lo24:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_lo3": {
+  "description": "SD 2.1, guidance 2 in steps 0-3 of 30, guidance 7.5 after (from log-SNR -4.2)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_lo3:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_lo6": {
+  "description": "SD 2.1, guidance 2 in steps 0-6 of 30, guidance 7.5 after (from log-SNR -3.3)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_lo6:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_lo9": {
+  "description": "SD 2.1, guidance 2 in steps 0-9 of 30, guidance 7.5 after (from log-SNR -2.4)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_lo9:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd21_turbo_all30": {
+  "description": "SD-Turbo alone on SD 2.1's 30-step schedule (separates the schedule from the model)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_turbo_all30:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd35m": {
+  "description": "SD3.5-Medium at guidance 3.5, 28 steps (SD3.5-Large's text encoders)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd35m:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd35m_g1": {
+  "description": "SD3.5-Medium without guidance, 28 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd35m_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sd_turbo": {
+  "description": "SD-Turbo: SD 2.1 adversarially distilled to 1 step, no guidance",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd_turbo:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdt4": {
+  "description": "SD-Turbo alone on its own 4-step schedule (the schedule of the SD base-first arms)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt4:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdt4_dd1_g2": {
+  "description": "SD 2.1 at guidance 2 draws the first of SD-Turbo's 4 steps, SD-Turbo the rest",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt4_dd1_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdt4_dd2_g1": {
+  "description": "unguided SD 2.1 draws the first 2 of SD-Turbo's 4 steps, SD-Turbo the last 2: the SD base-first fix",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt4_dd2_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdt4_dd2_g2": {
+  "description": "SD 2.1 at guidance 2 draws the first 2 of SD-Turbo's 4 steps, SD-Turbo the last 2",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt4_dd2_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdt4_ns1": {
+  "description": "SD-Turbo at 4 steps regenerated with new initial noise",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt4_ns1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdt_ad0": {
+  "description": "SD-Turbo adapter jump 999 -> 749 trained on unguided SD 2.1, then SD-Turbo's last 3 steps; 4 evaluations",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt_ad0:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdt_ad1": {
+  "description": "SD-Turbo with a low-rank adapter in its first step, trained on unguided SD 2.1's states: one jump from timestep 999 to 499, then SD-Turbo's last 2 steps; no SD 2.1 at generation",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt_ad1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdt_ad1_all": {
+  "description": "the `sdt_ad1` adapter in all 3 steps instead of step 1 only",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt_ad1_all:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdt_ad1_full_lr1e5": {
+  "description": "every weight of SD-Turbo's UNet trained on `sdt_ad1`'s loss (float32, lr 1e-5), used in step 1 only",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt_ad1_full_lr1e5:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdt_ad1_full_lr3e6": {
+  "description": "as `sdt_ad1_full_lr1e5` at lr 3e-6",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt_ad1_full_lr3e6:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdt_ad1_ns1": {
+  "description": "the SD-Turbo adapter (first training run) regenerated with new initial noise",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt_ad1_ns1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdt_ad1_r128": {
+  "description": "`sdt_ad1` with rank 128 (alpha 128)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt_ad1_r128:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdt_ad1_r128_s1": {
+  "description": "`sdt_ad1_r128` retrained with training seed 1 (the rank rule on 3-seed means)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt_ad1_r128_s1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdt_ad1_r128_s2": {
+  "description": "`sdt_ad1_r128` retrained with training seed 2",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt_ad1_r128_s2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdt_ad1_r128_x3": {
+  "pooled": [
+   "sdt_ad1_r128",
+   "sdt_ad1_r128_s1",
+   "sdt_ad1_r128_s2"
+  ]
+ },
+ "sdt_ad1_r8": {
+  "description": "`sdt_ad1` with rank 8 (alpha 8)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt_ad1_r8:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdt_ad1_s1": {
+  "description": "`sdt_ad1` retrained with training seed 1",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt_ad1_s1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdt_ad1_s2": {
+  "description": "`sdt_ad1` retrained with training seed 2",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt_ad1_s2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdt_ad1_tg2": {
+  "description": "as `sdt_ad1` with SD 2.1 at guidance 2 inside every teacher step",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt_ad1_tg2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdt_ad1_tg75": {
+  "description": "as `sdt_ad1` with SD 2.1 at guidance 7.5 inside every teacher step (the default-guidance target)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt_ad1_tg75:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdt_ad1_x3": {
+  "pooled": [
+   "sdt_ad1",
+   "sdt_ad1_s1",
+   "sdt_ad1_s2"
+  ]
+ },
+ "sdt_ad2": {
+  "description": "SD-Turbo with a low-rank adapter in its first step, trained on unguided SD 2.1's states: one jump from timestep 999 to 249, then SD-Turbo's last step; no SD 2.1 at generation",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt_ad2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdt_coco": {
+  "description": "the SD-Turbo adapter trained on the same COCO captions",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt_coco:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdt_llm": {
+  "description": "SD-Turbo + `sdt_llm`, the class-name templates",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt_llm:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdt_or15_d3": {
+  "description": "unguided SD 2.1 on 15 fine steps to timestep 749, then SD-Turbo's last 3 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt_or15_d3:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdt_or30_d2": {
+  "description": "unguided SD 2.1's 30 fine steps down to timestep 499, then SD-Turbo's last 2 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt_or30_d2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdt_or30_d2_g2": {
+  "description": "as `sdt_or30_d2_g75` at guidance 2",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt_or30_d2_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdt_or30_d2_g75": {
+  "description": "SD 2.1 at guidance 7.5 on 30 fine steps to timestep 499, then SD-Turbo's last 2 steps: the guided teacher's own state",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt_or30_d2_g75:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdt_or45_d1": {
+  "description": "unguided SD 2.1's 45 fine steps down to timestep 249, then SD-Turbo's last step",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt_or45_d1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdt_sft": {
+  "description": "SD-Turbo started at timestep 749 from pure noise, then 499, 249 (Skip-First-Timestep, 3 NFE)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt_sft:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdt_skip2": {
+  "description": "SD-Turbo alone on `sdt_ad2`'s schedule (timesteps 999, 249), no adapter",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt_skip2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdt_skip3": {
+  "description": "SD-Turbo alone on `sdt_ad1`'s schedule (timesteps 999, 499, 249), no adapter",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt_skip3:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdxl": {
+  "description": "SDXL base at guidance 7 (the diffusers default is 5; E48), 30 steps, 1024 px",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdxl:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdxl_dmd2": {
+  "description": "SDXL distilled by distribution matching + GAN (DMD2), 4 steps, 1024 px",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdxl_dmd2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdxl_dmd2_dd": {
+  "description": "the unguided SDXL base draws the first of SDXL-DMD2's 4 steps (Diversity Distillation's own setting)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdxl_dmd2_dd:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdxl_dmd2_dd1_g2": {
+  "description": "SDXL base at guidance 2 draws the first of SDXL-DMD2's 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdxl_dmd2_dd1_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdxl_dmd2_dd2": {
+  "description": "the unguided SDXL base draws the first 2 of SDXL-DMD2's 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdxl_dmd2_dd2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdxl_dmd2_dd2_g2": {
+  "description": "SDXL base at guidance 2 draws the first 2 of SDXL-DMD2's 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdxl_dmd2_dd2_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdxl_g2": {
+  "description": "SDXL base at guidance 2 (the diffusers default is 5), 30 steps, 1024 px",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdxl_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdxl_g5": {
+  "description": "SDXL base at guidance 5 (the diffusers default), 30 DPM-Solver steps, 1024 px",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdxl_g5:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdxl_lcm": {
+  "description": "LCM-SDXL: consistency distillation, 4 steps, guidance input at its default 8",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdxl_lcm:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdxl_lcm_g1": {
+  "description": "LCM-SDXL with its guidance input at 1 (default 8), 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdxl_lcm_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdxl_lcm_g3": {
+  "description": "LCM-SDXL with its guidance input at 3 (default 8), 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdxl_lcm_g3:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdxl_lightning": {
+  "description": "SDXL-Lightning: progressive adversarial distillation, 4 steps, 1024 px",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdxl_lightning:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "sdxl_turbo": {
+  "description": "SDXL-Turbo: SDXL distilled by ADD, 1 step at 512 px",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdxl_turbo:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "srpo": {
+  "description": "FLUX.1-dev after SRPO preference tuning, 28 steps, distilled guidance input 3.5",
+  "trainer": "standard",
+  "train": [
+   "set:in100/srpo:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "srpo_g2": {
+  "description": "SRPO with its distilled guidance input at 2 (default 3.5)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/srpo_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "tin200_dpdmd": {
+  "description": "200 classes: DP-DMD's released SD3.5-Medium student, 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:tin200/dpdmd:1"
+  ],
+  "val": "tin200_val",
+  "ncls": 200,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "tin200_dpdmd_ad0": {
+  "description": "200 classes (186 unseen by the adapter): `dpdmd_ad0`",
+  "trainer": "standard",
+  "train": [
+   "set:tin200/dpdmd_ad0:1"
+  ],
+  "val": "tin200_val",
+  "ncls": 200,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "tin200_dpdmd_dd1_g1": {
+  "description": "200 classes: base-first on DP-DMD (the unguided SD3.5-Medium draws the first of its 4 steps)",
+  "trainer": "standard",
+  "train": [
+   "set:tin200/dpdmd_dd1_g1:1"
+  ],
+  "val": "tin200_val",
+  "ncls": 200,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "tin200_kb_dd2_g1": {
+  "description": "200 classes: the unguided klein base draws the first 2 of distilled klein's 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:tin200/kb_dd2_g1:1"
+  ],
+  "val": "tin200_val",
+  "ncls": 200,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "tin200_kb_g1": {
+  "description": "200 classes: klein base without guidance",
+  "trainer": "standard",
+  "train": [
+   "set:tin200/kb_g1:1"
+  ],
+  "val": "tin200_val",
+  "ncls": 200,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "tin200_kb_g1_s20": {
+  "description": "200 classes: the unguided klein base on the 20-step schedule (`tin200_kb_g1`'s set with 20 steps instead of 50)",
+  "trainer": "standard",
+  "train": [
+   "set:tin200/kb_g1_s20:1"
+  ],
+  "val": "tin200_val",
+  "ncls": 200,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "tin200_kd_ad2": {
+  "description": "200 classes (186 unseen by the adapter): the `kd_ad2` adapter, jump to noise 0.7175",
+  "trainer": "standard",
+  "train": [
+   "set:tin200/kd_ad2:1"
+  ],
+  "val": "tin200_val",
+  "ncls": 200,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "tin200_kd_ad2_tg4": {
+  "description": "200 classes (186 unseen by the adapter): the guided-target klein adapter `kd_ad2_tg4`",
+  "trainer": "standard",
+  "train": [
+   "set:tin200/kd_ad2_tg4:1"
+  ],
+  "val": "tin200_val",
+  "ncls": 200,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "tin200_kd_coco": {
+  "description": "`kd_coco`'s adapter, unchanged, on the 200-class protocol",
+  "trainer": "standard",
+  "train": [
+   "set:tin200/kd_coco:1"
+  ],
+  "val": "tin200_val",
+  "ncls": 200,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "tin200_klein": {
+  "description": "200 classes: distilled klein, its own 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:tin200/klein:1"
+  ],
+  "val": "tin200_val",
+  "ncls": 200,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "tin200_klein_base": {
+  "description": "200 classes: klein base at its default guidance 4",
+  "trainer": "standard",
+  "train": [
+   "set:tin200/klein_base:1"
+  ],
+  "val": "tin200_val",
+  "ncls": 200,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "tin200_sd21": {
+  "description": "200 classes: SD 2.1 at its default guidance 7.5, 30 steps",
+  "trainer": "standard",
+  "train": [
+   "set:tin200/sd21:1"
+  ],
+  "val": "tin200_val",
+  "ncls": 200,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "tin200_sd21_g1": {
+  "description": "200 classes: SD 2.1 unguided, 30 steps",
+  "trainer": "standard",
+  "train": [
+   "set:tin200/sd21_g1:1"
+  ],
+  "val": "tin200_val",
+  "ncls": 200,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "tin200_sd35m": {
+  "description": "200 classes: SD3.5-Medium at guidance 3.5, 28 steps",
+  "trainer": "standard",
+  "train": [
+   "set:tin200/sd35m:1"
+  ],
+  "val": "tin200_val",
+  "ncls": 200,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "tin200_sd35m_g1": {
+  "description": "200 classes: SD3.5-Medium without guidance, 28 steps",
+  "trainer": "standard",
+  "train": [
+   "set:tin200/sd35m_g1:1"
+  ],
+  "val": "tin200_val",
+  "ncls": 200,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "tin200_sdt4": {
+  "description": "200 classes: SD-Turbo alone on its own 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:tin200/sdt4:1"
+  ],
+  "val": "tin200_val",
+  "ncls": 200,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "tin200_sdt4_dd2_g1": {
+  "description": "200 classes: unguided SD 2.1 draws the first 2 of SD-Turbo's 4 steps",
+  "trainer": "standard",
+  "train": [
+   "set:tin200/sdt4_dd2_g1:1"
+  ],
+  "val": "tin200_val",
+  "ncls": 200,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "tin200_sdt_ad1": {
+  "description": "200 classes (186 unseen by the adapter): the `sdt_ad1` adapter, jump to timestep 499",
+  "trainer": "standard",
+  "train": [
+   "set:tin200/sdt_ad1:1"
+  ],
+  "val": "tin200_val",
+  "ncls": 200,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "tin200_sdt_ad1_tg75": {
+  "description": "200 classes (186 unseen by the adapter): the guided-target SD-Turbo adapter `sdt_ad1_tg75`",
+  "trainer": "standard",
+  "train": [
+   "set:tin200/sdt_ad1_tg75:1"
+  ],
+  "val": "tin200_val",
+  "ncls": 200,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "tin200_sdt_coco": {
+  "description": "`sdt_coco`'s adapter, unchanged, on the 200-class protocol",
+  "trainer": "standard",
+  "train": [
+   "set:tin200/sdt_coco:1"
+  ],
+  "val": "tin200_val",
+  "ncls": 200,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "tin200_zimage_turbo": {
+  "description": "200 classes: Z-Image-Turbo at its default (9 steps)",
+  "trainer": "standard",
+  "train": [
+   "set:tin200/zimage_turbo:1"
+  ],
+  "val": "tin200_val",
+  "ncls": 200,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "tin200_zt_ad2": {
+  "description": "200 classes (186 unseen by the adapter): `zt_ad2`",
+  "trainer": "standard",
+  "train": [
+   "set:tin200/zt_ad2:1"
+  ],
+  "val": "tin200_val",
+  "ncls": 200,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "tin200_zt_ad2_tg5": {
+  "description": "200 classes: the default-guidance Z-Image adapter `zt_ad2_tg5`",
+  "trainer": "standard",
+  "train": [
+   "set:tin200/zt_ad2_tg5:1"
+  ],
+  "val": "tin200_val",
+  "ncls": 200,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "tin200_zt_dd3_g1": {
+  "description": "200 classes: Z-Image base-first (the unguided Z-Image draws the first 3 of Turbo's 9 steps)",
+  "trainer": "standard",
+  "train": [
+   "set:tin200/zt_dd3_g1:1"
+  ],
+  "val": "tin200_val",
+  "ncls": 200,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "vits_kb_g1": {
+  "description": "ViT-S/16 from scratch on `kb_g1` (unguided klein base)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kb_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.0005,
+   "wd": 0.05,
+   "warmup": 10,
+   "ls": 0.1,
+   "arch": "vit_s16",
+   "opt": "adamw",
+   "randaug": true
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "vits_kd_ad2": {
+  "description": "ViT-S/16 from scratch on `kd_ad2` (the FLUX.2-klein adapter)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/kd_ad2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.0005,
+   "wd": 0.05,
+   "warmup": 10,
+   "ls": 0.1,
+   "arch": "vit_s16",
+   "opt": "adamw",
+   "randaug": true
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "vits_klein": {
+  "description": "ViT-S/16 from scratch on `klein` (distilled klein)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/klein:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.0005,
+   "wd": 0.05,
+   "warmup": 10,
+   "ls": 0.1,
+   "arch": "vit_s16",
+   "opt": "adamw",
+   "randaug": true
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "vits_real500": {
+  "description": "ViT-S/16 from scratch (AdamW, RandAugment, 100 epochs) on 500 real images per class",
+  "trainer": "standard",
+  "train": [
+   "real:in100_train:0:500"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.0005,
+   "wd": 0.05,
+   "warmup": 10,
+   "ls": 0.1,
+   "arch": "vit_s16",
+   "opt": "adamw",
+   "randaug": true
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "vits_sd21_g1": {
+  "description": "ViT-S/16 from scratch on `sd21_g1` (SD 2.1 unguided)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sd21_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.0005,
+   "wd": 0.05,
+   "warmup": 10,
+   "ls": 0.1,
+   "arch": "vit_s16",
+   "opt": "adamw",
+   "randaug": true
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "vits_sdt4": {
+  "description": "ViT-S/16 from scratch on `sdt4` (SD-Turbo, 4 steps)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt4:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.0005,
+   "wd": 0.05,
+   "warmup": 10,
+   "ls": 0.1,
+   "arch": "vit_s16",
+   "opt": "adamw",
+   "randaug": true
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "vits_sdt_ad1": {
+  "description": "ViT-S/16 from scratch on `sdt_ad1` (the SD-Turbo adapter)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/sdt_ad1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.0005,
+   "wd": 0.05,
+   "warmup": 10,
+   "ls": 0.1,
+   "arch": "vit_s16",
+   "opt": "adamw",
+   "randaug": true
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "wp_kb_g1": {
+  "description": "When Pretty's recipe (train_whenpretty) on the unguided klein base",
+  "trainer": "prior",
+  "train": [
+   "set:in100/kb_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 80,
+   "bs": 1024,
+   "lr": 0.001,
+   "warmup": 5,
+   "clip": 1.0,
+   "accum": 1
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "wp_kd_ad2": {
+  "description": "When Pretty's recipe (train_whenpretty) on the FLUX.2-klein adapter (first training run)",
+  "trainer": "prior",
+  "train": [
+   "set:in100/kd_ad2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 80,
+   "bs": 1024,
+   "lr": 0.001,
+   "warmup": 5,
+   "clip": 1.0,
+   "accum": 1
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "wp_klein": {
+  "description": "When Pretty's recipe (train_whenpretty) on distilled FLUX.2-klein",
+  "trainer": "prior",
+  "train": [
+   "set:in100/klein:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 80,
+   "bs": 1024,
+   "lr": 0.001,
+   "warmup": 5,
+   "clip": 1.0,
+   "accum": 1
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "wp_real500": {
+  "description": "When Pretty's recipe (train_whenpretty) on 500 real images per class",
+  "trainer": "prior",
+  "train": [
+   "real:in100_train:0:500"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 80,
+   "bs": 1024,
+   "lr": 0.001,
+   "warmup": 5,
+   "clip": 1.0,
+   "accum": 1
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "wp_sd21_g1": {
+  "description": "When Pretty's recipe (train_whenpretty) on unguided SD 2.1",
+  "trainer": "prior",
+  "train": [
+   "set:in100/sd21_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 80,
+   "bs": 1024,
+   "lr": 0.001,
+   "warmup": 5,
+   "clip": 1.0,
+   "accum": 1
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "wp_sdt4": {
+  "description": "When Pretty's recipe (train_whenpretty) on SD-Turbo at 4 steps",
+  "trainer": "prior",
+  "train": [
+   "set:in100/sdt4:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 80,
+   "bs": 1024,
+   "lr": 0.001,
+   "warmup": 5,
+   "clip": 1.0,
+   "accum": 1
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "wp_sdt_ad1": {
+  "description": "When Pretty's recipe (train_whenpretty) on the SD-Turbo adapter (first training run)",
+  "trainer": "prior",
+  "train": [
+   "set:in100/sdt_ad1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 80,
+   "bs": 1024,
+   "lr": 0.001,
+   "warmup": 5,
+   "clip": 1.0,
+   "accum": 1
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "zimage": {
+  "description": "Z-Image base, 50 steps, guidance 5 (4 on Z-Image's own scale)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/zimage:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "zimage_g1": {
+  "description": "Z-Image without guidance, 50 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/zimage_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "zimage_g2": {
+  "description": "Z-Image at guidance 2 (default 5 in the standard convention), 50 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/zimage_g2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "zimage_turbo": {
+  "description": "Z-Image-Turbo: Z-Image distilled, 9 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/zimage_turbo:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "zimage_turbo_s8": {
+  "description": "Z-Image-Turbo at 8 steps (SDA's card), no adapter",
+  "trainer": "standard",
+  "train": [
+   "set:in100/zimage_turbo_s8:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "zt_ad1": {
+  "description": "Z-Image-Turbo with an adapter in its first step, trained on the unguided Z-Image base: one jump to 0.913 (the Turbo's level after 2 steps), then the Turbo's last 7 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/zt_ad1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "zt_ad2": {
+  "description": "Z-Image-Turbo adapter jump to 0.857 (after 3 steps), then the Turbo's last 6 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/zt_ad2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "zt_ad2_s1": {
+  "description": "Z-Image-Turbo's adapter as `zt_ad2`, training seed 1",
+  "trainer": "standard",
+  "train": [
+   "set:in100/zt_ad2_s1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "zt_ad2_s2": {
+  "description": "Z-Image-Turbo's adapter as `zt_ad2`, training seed 2",
+  "trainer": "standard",
+  "train": [
+   "set:in100/zt_ad2_s2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "zt_ad2_tg5": {
+  "description": "Z-Image-Turbo's adapter as `zt_ad2`, fitted to Z-Image at its default guidance (w = 5) inside every teacher step",
+  "trainer": "standard",
+  "train": [
+   "set:in100/zt_ad2_tg5:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "zt_ad2_x3": {
+  "pooled": [
+   "zt_ad2",
+   "zt_ad2_s1",
+   "zt_ad2_s2"
+  ]
+ },
+ "zt_dd1_g1": {
+  "description": "the unguided Z-Image base draws the first of Z-Image-Turbo's 9 steps, Z-Image-Turbo the rest",
+  "trainer": "standard",
+  "train": [
+   "set:in100/zt_dd1_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "zt_dd2_g1": {
+  "description": "the unguided Z-Image base draws the first 2 of Z-Image-Turbo's 9 steps, Z-Image-Turbo the rest",
+  "trainer": "standard",
+  "train": [
+   "set:in100/zt_dd2_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "zt_dd3_g1": {
+  "description": "the unguided Z-Image base draws the first 3 of Z-Image-Turbo's 9 steps, Z-Image-Turbo the rest",
+  "trainer": "standard",
+  "train": [
+   "set:in100/zt_dd3_g1:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "zt_or19_d7": {
+  "description": "the unguided Z-Image base on its fine levels to 0.913 (19 steps), then the Turbo's last 7 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/zt_or19_d7:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "zt_or26_d6": {
+  "description": "the unguided Z-Image base on its fine levels to 0.857 (26 steps), then the Turbo's last 6 steps",
+  "trainer": "standard",
+  "train": [
+   "set:in100/zt_or26_d6:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "zt_sda_all": {
+  "description": "Z-Image-Turbo at 8 steps with the public SDA LoKr (F16/z-image-turbo-sda) in every step",
+  "trainer": "standard",
+  "train": [
+   "set:in100/zt_sda_all:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "zt_sda_first2": {
+  "description": "Z-Image-Turbo at 8 steps with the SDA LoKr in the first 2 steps only",
+  "trainer": "standard",
+  "train": [
+   "set:in100/zt_sda_first2:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "zt_skip7": {
+  "description": "Z-Image-Turbo alone on `zt_ad2`'s schedule (1 -> 0.857, then its own levels)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/zt_skip7:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ "zt_skip8": {
+  "description": "Z-Image-Turbo alone on `zt_ad1`'s schedule (1 -> 0.913, then its own levels)",
+  "trainer": "standard",
+  "train": [
+   "set:in100/zt_skip8:1"
+  ],
+  "val": "in100_val",
+  "ncls": 100,
+  "recipe": {
+   "epochs": 100,
+   "bs": 256,
+   "lr": 0.2,
+   "wd": 0.0001,
+   "warmup": 5,
+   "ls": 0.1,
+   "arch": "resnet50",
+   "opt": "sgd",
+   "randaug": false
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ }
+}

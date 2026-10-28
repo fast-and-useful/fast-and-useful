@@ -1,0 +1,524 @@
+{
+ "stable-diffusion-v1-5/stable-diffusion-v1-5": {
+  "use": "SD 1.5",
+  "revision": "451f4fe16113bff5a5d2269ed5ad43b0592e9a14",
+  "files": [
+   "feature_extractor/preprocessor_config.json",
+   "model_index.json",
+   "safety_checker/config.json",
+   "safety_checker/model.fp16.safetensors",
+   "scheduler/scheduler_config.json",
+   "text_encoder/config.json",
+   "text_encoder/model.fp16.safetensors",
+   "tokenizer/merges.txt",
+   "tokenizer/special_tokens_map.json",
+   "tokenizer/tokenizer_config.json",
+   "tokenizer/vocab.json",
+   "unet/config.json",
+   "unet/diffusion_pytorch_model.fp16.safetensors",
+   "vae/config.json",
+   "vae/diffusion_pytorch_model.fp16.safetensors"
+  ]
+ },
+ "sd2-community/stable-diffusion-2-1-base": {
+  "use": "SD 2.1 (base of SD-Turbo)",
+  "revision": "4e63672c03103b6c636b8fb4119ba982469b2955",
+  "files": [
+   "feature_extractor/preprocessor_config.json",
+   "model_index.json",
+   "scheduler/scheduler_config.json",
+   "text_encoder/config.json",
+   "text_encoder/model.fp16.safetensors",
+   "text_encoder/model.safetensors",
+   "text_encoder/pytorch_model.bin",
+   "text_encoder/pytorch_model.fp16.bin",
+   "tokenizer/merges.txt",
+   "tokenizer/special_tokens_map.json",
+   "tokenizer/tokenizer_config.json",
+   "tokenizer/vocab.json",
+   "unet/config.json",
+   "unet/diffusion_pytorch_model.bin",
+   "unet/diffusion_pytorch_model.fp16.bin",
+   "unet/diffusion_pytorch_model.fp16.safetensors",
+   "unet/diffusion_pytorch_model.safetensors",
+   "v2-1_512-ema-pruned.ckpt",
+   "v2-1_512-ema-pruned.safetensors",
+   "v2-1_512-nonema-pruned.ckpt",
+   "v2-1_512-nonema-pruned.safetensors",
+   "vae/config.json",
+   "vae/diffusion_pytorch_model.bin",
+   "vae/diffusion_pytorch_model.fp16.bin",
+   "vae/diffusion_pytorch_model.fp16.safetensors",
+   "vae/diffusion_pytorch_model.safetensors"
+  ]
+ },
+ "stabilityai/sd-turbo": {
+  "use": "SD-Turbo",
+  "revision": "b261bac6fd2cf515557d5d0707481eafa0485ec2",
+  "files": [
+   "model_index.json",
+   "scheduler/scheduler_config.json",
+   "text_encoder/config.json",
+   "text_encoder/model.fp16.safetensors",
+   "tokenizer/merges.txt",
+   "tokenizer/special_tokens_map.json",
+   "tokenizer/tokenizer_config.json",
+   "tokenizer/vocab.json",
+   "unet/config.json",
+   "unet/diffusion_pytorch_model.fp16.safetensors",
+   "vae/config.json",
+   "vae/diffusion_pytorch_model.fp16.safetensors"
+  ]
+ },
+ "stabilityai/stable-diffusion-xl-base-1.0": {
+  "use": "SDXL",
+  "revision": "462165984030d82259a11f4367a4eed129e94a7b",
+  "files": [
+   "model_index.json",
+   "scheduler/scheduler_config.json",
+   "sd_xl_base_1.0.safetensors",
+   "sd_xl_base_1.0_0.9vae.safetensors",
+   "sd_xl_offset_example-lora_1.0.safetensors",
+   "text_encoder/config.json",
+   "text_encoder/flax_model.msgpack",
+   "text_encoder/model.fp16.safetensors",
+   "text_encoder/model.onnx",
+   "text_encoder/model.safetensors",
+   "text_encoder/openvino_model.bin",
+   "text_encoder/openvino_model.xml",
+   "text_encoder_2/config.json",
+   "text_encoder_2/flax_model.msgpack",
+   "text_encoder_2/model.fp16.safetensors",
+   "text_encoder_2/model.onnx",
+   "text_encoder_2/model.onnx_data",
+   "text_encoder_2/model.safetensors",
+   "text_encoder_2/openvino_model.bin",
+   "text_encoder_2/openvino_model.xml",
+   "tokenizer/merges.txt",
+   "tokenizer/special_tokens_map.json",
+   "tokenizer/tokenizer_config.json",
+   "tokenizer/vocab.json",
+   "tokenizer_2/merges.txt",
+   "tokenizer_2/special_tokens_map.json",
+   "tokenizer_2/tokenizer_config.json",
+   "tokenizer_2/vocab.json",
+   "unet/config.json",
+   "unet/diffusion_flax_model.msgpack",
+   "unet/diffusion_pytorch_model.fp16.safetensors",
+   "unet/diffusion_pytorch_model.safetensors",
+   "unet/model.onnx",
+   "unet/model.onnx_data",
+   "unet/openvino_model.bin",
+   "unet/openvino_model.xml",
+   "vae/config.json",
+   "vae/diffusion_flax_model.msgpack",
+   "vae/diffusion_pytorch_model.fp16.safetensors",
+   "vae/diffusion_pytorch_model.safetensors",
+   "vae_1_0/config.json",
+   "vae_1_0/diffusion_pytorch_model.fp16.safetensors",
+   "vae_1_0/diffusion_pytorch_model.safetensors",
+   "vae_decoder/config.json",
+   "vae_decoder/model.onnx",
+   "vae_decoder/openvino_model.bin",
+   "vae_decoder/openvino_model.xml",
+   "vae_encoder/config.json",
+   "vae_encoder/model.onnx",
+   "vae_encoder/openvino_model.bin",
+   "vae_encoder/openvino_model.xml"
+  ]
+ },
+ "stabilityai/sdxl-turbo": {
+  "use": "SDXL-Turbo",
+  "revision": "71153311d3dbb46851df1931d3ca6e939de83304",
+  "files": [
+   "model_index.json",
+   "scheduler/scheduler_config.json",
+   "sd_xl_turbo_1.0_fp16.safetensors",
+   "text_encoder/config.json",
+   "text_encoder/model.fp16.safetensors",
+   "text_encoder_2/config.json",
+   "text_encoder_2/model.fp16.safetensors",
+   "tokenizer/merges.txt",
+   "tokenizer/special_tokens_map.json",
+   "tokenizer/tokenizer_config.json",
+   "tokenizer/vocab.json",
+   "tokenizer_2/merges.txt",
+   "tokenizer_2/special_tokens_map.json",
+   "tokenizer_2/tokenizer_config.json",
+   "tokenizer_2/vocab.json",
+   "unet/config.json",
+   "unet/diffusion_pytorch_model.fp16.safetensors",
+   "vae/config.json",
+   "vae/diffusion_pytorch_model.fp16.safetensors",
+   "vae_decoder/config.json",
+   "vae_encoder/config.json"
+  ]
+ },
+ "madebyollin/sdxl-vae-fp16-fix": {
+  "use": "SDXL VAE in float16",
+  "revision": "207b116dae70ace3637169f1ddd2434b91b3a8cd",
+  "files": [
+   "config.json",
+   "diffusion_pytorch_model.bin",
+   "diffusion_pytorch_model.safetensors",
+   "sdxl.vae.safetensors",
+   "sdxl_vae.safetensors"
+  ]
+ },
+ "tianweiy/DMD2": {
+  "use": "SDXL-DMD2",
+  "revision": "be22767697a1f3ca656b73c776e15fa335c86c6c",
+  "files": [
+   "dmd2_sdxl_4step_unet_fp16.bin"
+  ]
+ },
+ "ByteDance/SDXL-Lightning": {
+  "use": "SDXL-Lightning",
+  "revision": "c9a24f48e1c025556787b0c58dd67a091ece2e44",
+  "files": [
+   "sdxl_lightning_4step_unet.safetensors"
+  ]
+ },
+ "latent-consistency/lcm-sdxl": {
+  "use": "LCM-SDXL",
+  "revision": "8b5d1b76b33abc5a5887c3f9ee8bffea2365dfe1",
+  "files": [
+   "config.json",
+   "diffusion_pytorch_model.fp16.safetensors",
+   "diffusion_pytorch_model.safetensors"
+  ]
+ },
+ "black-forest-labs/FLUX.1-schnell": {
+  "use": "FLUX.1-schnell",
+  "revision": "741f7c3ce8b383c54771c7003378a50191e9efe9",
+  "files": [
+   "ae.safetensors",
+   "flux1-schnell.safetensors",
+   "model_index.json",
+   "scheduler/scheduler_config.json",
+   "schnell_grid.jpeg",
+   "text_encoder/config.json",
+   "text_encoder/model.safetensors",
+   "text_encoder_2/config.json",
+   "text_encoder_2/model-00001-of-00002.safetensors",
+   "text_encoder_2/model-00002-of-00002.safetensors",
+   "text_encoder_2/model.safetensors.index.json",
+   "tokenizer/merges.txt",
+   "tokenizer/special_tokens_map.json",
+   "tokenizer/tokenizer_config.json",
+   "tokenizer/vocab.json",
+   "tokenizer_2/special_tokens_map.json",
+   "tokenizer_2/spiece.model",
+   "tokenizer_2/tokenizer.json",
+   "tokenizer_2/tokenizer_config.json",
+   "transformer/config.json",
+   "transformer/diffusion_pytorch_model-00001-of-00003.safetensors",
+   "transformer/diffusion_pytorch_model-00002-of-00003.safetensors",
+   "transformer/diffusion_pytorch_model-00003-of-00003.safetensors",
+   "transformer/diffusion_pytorch_model.safetensors.index.json",
+   "vae/config.json",
+   "vae/diffusion_pytorch_model.safetensors"
+  ]
+ },
+ "black-forest-labs/FLUX.1-dev": {
+  "use": "FLUX.1-dev",
+  "revision": "3de623fc3c33e44ffbe2bad470d0f45bccf2eb21",
+  "files": [
+   "ae.safetensors",
+   "flux1-dev.safetensors",
+   "model_index.json",
+   "scheduler/scheduler_config.json",
+   "text_encoder/config.json",
+   "text_encoder/model.safetensors",
+   "text_encoder_2/config.json",
+   "text_encoder_2/model-00001-of-00002.safetensors",
+   "text_encoder_2/model-00002-of-00002.safetensors",
+   "text_encoder_2/model.safetensors.index.json",
+   "tokenizer/merges.txt",
+   "tokenizer/special_tokens_map.json",
+   "tokenizer/tokenizer_config.json",
+   "tokenizer/vocab.json",
+   "tokenizer_2/special_tokens_map.json",
+   "tokenizer_2/spiece.model",
+   "tokenizer_2/tokenizer.json",
+   "tokenizer_2/tokenizer_config.json",
+   "transformer/config.json",
+   "transformer/diffusion_pytorch_model-00001-of-00003.safetensors",
+   "transformer/diffusion_pytorch_model-00002-of-00003.safetensors",
+   "transformer/diffusion_pytorch_model-00003-of-00003.safetensors",
+   "transformer/diffusion_pytorch_model.safetensors.index.json",
+   "vae/config.json",
+   "vae/diffusion_pytorch_model.safetensors"
+  ]
+ },
+ "tencent/SRPO": {
+  "use": "SRPO (FLUX.1-dev after preference tuning)",
+  "revision": "1fb5c8025b3b7627323571e38c93e2bbba597432",
+  "files": [
+   "comfyui/SRPO-workflow.json",
+   "diffusion_pytorch_model.safetensors"
+  ]
+ },
+ "black-forest-labs/FLUX.2-klein-4B": {
+  "use": "FLUX.2-klein (released student)",
+  "revision": "e7b7dc27f91deacad38e78976d1f2b499d76a294",
+  "files": [
+   "model_index.json",
+   "scheduler/scheduler_config.json",
+   "text_encoder/config.json",
+   "text_encoder/generation_config.json",
+   "text_encoder/model-00001-of-00002.safetensors",
+   "text_encoder/model-00002-of-00002.safetensors",
+   "text_encoder/model.safetensors.index.json",
+   "tokenizer/added_tokens.json",
+   "tokenizer/chat_template.jinja",
+   "tokenizer/merges.txt",
+   "tokenizer/special_tokens_map.json",
+   "tokenizer/tokenizer.json",
+   "tokenizer/tokenizer_config.json",
+   "tokenizer/vocab.json",
+   "transformer/config.json",
+   "transformer/diffusion_pytorch_model.safetensors",
+   "vae/config.json",
+   "vae/diffusion_pytorch_model.safetensors"
+  ]
+ },
+ "black-forest-labs/FLUX.2-klein-base-4B": {
+  "use": "FLUX.2-klein base",
+  "revision": "a3b4f4849157f664bdbc776fd7453c2783562f4d",
+  "files": [
+   "model_index.json",
+   "scheduler/scheduler_config.json",
+   "text_encoder/config.json",
+   "text_encoder/generation_config.json",
+   "text_encoder/model-00001-of-00002.safetensors",
+   "text_encoder/model-00002-of-00002.safetensors",
+   "text_encoder/model.safetensors.index.json",
+   "tokenizer/added_tokens.json",
+   "tokenizer/chat_template.jinja",
+   "tokenizer/merges.txt",
+   "tokenizer/special_tokens_map.json",
+   "tokenizer/tokenizer.json",
+   "tokenizer/tokenizer_config.json",
+   "tokenizer/vocab.json",
+   "transformer/config.json",
+   "transformer/diffusion_pytorch_model.safetensors",
+   "vae/config.json",
+   "vae/diffusion_pytorch_model.safetensors"
+  ]
+ },
+ "Tongyi-MAI/Z-Image": {
+  "use": "Z-Image (base)",
+  "revision": "04cc4abb7c5069926f75c9bfde9ef43d49423021",
+  "files": [
+   "model_index.json",
+   "scheduler/scheduler_config.json",
+   "text_encoder/config.json",
+   "text_encoder/generation_config.json",
+   "text_encoder/model-00001-of-00003.safetensors",
+   "text_encoder/model-00002-of-00003.safetensors",
+   "text_encoder/model-00003-of-00003.safetensors",
+   "text_encoder/model.safetensors.index.json",
+   "tokenizer/merges.txt",
+   "tokenizer/tokenizer.json",
+   "tokenizer/tokenizer_config.json",
+   "tokenizer/vocab.json",
+   "transformer/config.json",
+   "transformer/diffusion_pytorch_model-00001-of-00002.safetensors",
+   "transformer/diffusion_pytorch_model-00002-of-00002.safetensors",
+   "transformer/diffusion_pytorch_model.safetensors.index.json",
+   "vae/config.json",
+   "vae/diffusion_pytorch_model.safetensors"
+  ]
+ },
+ "Tongyi-MAI/Z-Image-Turbo": {
+  "use": "Z-Image-Turbo",
+  "revision": "f332072aa78be7aecdf3ee76d5c247082da564a6",
+  "files": [
+   "assets/DMDR.webp",
+   "assets/Z-Image-Gallery.pdf",
+   "assets/architecture.webp",
+   "assets/decoupled-dmd.webp",
+   "assets/leaderboard.webp",
+   "model_index.json",
+   "scheduler/scheduler_config.json",
+   "text_encoder/config.json",
+   "text_encoder/generation_config.json",
+   "text_encoder/model-00001-of-00003.safetensors",
+   "text_encoder/model-00002-of-00003.safetensors",
+   "text_encoder/model-00003-of-00003.safetensors",
+   "text_encoder/model.safetensors.index.json",
+   "tokenizer/merges.txt",
+   "tokenizer/tokenizer.json",
+   "tokenizer/tokenizer_config.json",
+   "tokenizer/vocab.json",
+   "transformer/config.json",
+   "transformer/diffusion_pytorch_model-00001-of-00003.safetensors",
+   "transformer/diffusion_pytorch_model-00002-of-00003.safetensors",
+   "transformer/diffusion_pytorch_model-00003-of-00003.safetensors",
+   "transformer/diffusion_pytorch_model.safetensors.index.json",
+   "vae/config.json",
+   "vae/diffusion_pytorch_model.safetensors"
+  ]
+ },
+ "stabilityai/stable-diffusion-3.5-large": {
+  "use": "SD3.5 text encoders (shared with SD3.5-Medium)",
+  "revision": "ceddf0a7fdf2064ea28e2213e3b84e4afa170a0f",
+  "files": [
+   "text_encoder/config.json",
+   "text_encoder/model.safetensors",
+   "text_encoder_2/config.json",
+   "text_encoder_2/model.safetensors",
+   "text_encoder_3/config.json",
+   "text_encoder_3/model-00001-of-00002.safetensors",
+   "text_encoder_3/model-00002-of-00002.safetensors",
+   "text_encoder_3/model.safetensors.index.json",
+   "tokenizer/merges.txt",
+   "tokenizer/special_tokens_map.json",
+   "tokenizer/tokenizer_config.json",
+   "tokenizer/vocab.json",
+   "tokenizer_2/merges.txt",
+   "tokenizer_2/special_tokens_map.json",
+   "tokenizer_2/tokenizer_config.json",
+   "tokenizer_2/vocab.json",
+   "tokenizer_3/special_tokens_map.json",
+   "tokenizer_3/spiece.model",
+   "tokenizer_3/tokenizer.json",
+   "tokenizer_3/tokenizer_config.json"
+  ]
+ },
+ "stabilityai/stable-diffusion-3.5-medium": {
+  "use": "SD3.5-Medium (DP-DMD's teacher)",
+  "revision": "b940f670f0eda2d07fbb75229e779da1ad11eb80",
+  "files": [
+   "model_index.json",
+   "scheduler/scheduler_config.json",
+   "text_encoder/config.json",
+   "text_encoder_2/config.json",
+   "text_encoder_3/config.json",
+   "text_encoder_3/model.safetensors.index.json",
+   "tokenizer/merges.txt",
+   "tokenizer/special_tokens_map.json",
+   "tokenizer/tokenizer_config.json",
+   "tokenizer/vocab.json",
+   "tokenizer_2/merges.txt",
+   "tokenizer_2/special_tokens_map.json",
+   "tokenizer_2/tokenizer_config.json",
+   "tokenizer_2/vocab.json",
+   "tokenizer_3/special_tokens_map.json",
+   "tokenizer_3/spiece.model",
+   "tokenizer_3/tokenizer.json",
+   "tokenizer_3/tokenizer_config.json",
+   "transformer/config.json",
+   "transformer/diffusion_pytorch_model.safetensors",
+   "vae/config.json",
+   "vae/diffusion_pytorch_model.safetensors"
+  ]
+ },
+ "TianheWu/dpdmd": {
+  "use": "DP-DMD's SD3.5-Medium student",
+  "revision": "9ef92239bea6a2f95f51bb6543d01a63aea562f9",
+  "files": [
+   "DPDMD-SD35M-4NFE-natural.pt"
+  ]
+ },
+ "F16/z-image-turbo-sda": {
+  "use": "the public SDA adapter for Z-Image-Turbo",
+  "revision": "41a61f7c06155a681a04a1c8f775243393ed64d8",
+  "files": [
+   "zit_sda_v1.safetensors"
+  ]
+ },
+ "facebook/dinov3-vitl16-pretrain-lvd1689m": {
+  "use": "DINOv3 ViT-L/16 (set metrics)",
+  "revision": "ea8dc2863c51be0a264bab82070e3e8836b02d51",
+  "files": [
+   "config.json",
+   "model.safetensors",
+   "preprocessor_config.json"
+  ]
+ },
+ "facebook/dinov2-base": {
+  "use": "DINOv2 (MoNO's features)",
+  "revision": "f9e44c814b77203eaa57a6bdbbd535f21ede1415",
+  "files": [
+   "config.json",
+   "model.safetensors",
+   "preprocessor_config.json",
+   "pytorch_model.bin"
+  ]
+ },
+ "openai/clip-vit-large-patch14": {
+  "use": "CLIP ViT-L/14 (set metrics, aesthetic score)",
+  "revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
+  "files": [
+   "config.json",
+   "flax_model.msgpack",
+   "merges.txt",
+   "model.safetensors",
+   "preprocessor_config.json",
+   "pytorch_model.bin",
+   "special_tokens_map.json",
+   "tf_model.h5",
+   "tokenizer.json",
+   "tokenizer_config.json",
+   "vocab.json"
+  ]
+ },
+ "trl-lib/ddpo-aesthetic-predictor": {
+  "use": "LAION aesthetic head",
+  "revision": "cf4bd10345610935a80a5d3be9a3133c50f121e4",
+  "files": [
+   "aesthetic-model.pth"
+  ]
+ },
+ "yuvalkirstain/PickScore_v1": {
+  "use": "PickScore",
+  "revision": "a4e4367c6dfa7288a00c550414478f865b875800",
+  "files": [
+   "config.json",
+   "merges.txt",
+   "model.safetensors",
+   "preprocessor_config.json",
+   "pytorch_model.bin",
+   "special_tokens_map.json",
+   "tokenizer.json",
+   "tokenizer_config.json",
+   "vocab.json"
+  ]
+ },
+ "laion/CLIP-ViT-H-14-laion2B-s32B-b79K": {
+  "use": "PickScore's processor",
+  "revision": "1c2b8495b28150b8a4922ee1c8edee224c284c0c",
+  "files": [
+   "config.json",
+   "merges.txt",
+   "open_clip_config.json",
+   "preprocessor_config.json",
+   "special_tokens_map.json",
+   "tokenizer.json",
+   "tokenizer_config.json",
+   "vocab.json"
+  ]
+ },
+ "Qwen/Qwen2.5-VL-7B-Instruct": {
+  "use": "captions and LLM descriptions",
+  "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+  "files": [
+   "chat_template.json",
+   "config.json",
+   "generation_config.json",
+   "merges.txt",
+   "model-00001-of-00005.safetensors",
+   "model-00002-of-00005.safetensors",
+   "model-00003-of-00005.safetensors",
+   "model-00004-of-00005.safetensors",
+   "model-00005-of-00005.safetensors",
+   "model.safetensors.index.json",
+   "preprocessor_config.json",
+   "tokenizer.json",
+   "tokenizer_config.json",
+   "vocab.json"
+  ]
+ }
+}
