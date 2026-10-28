@@ -268,7 +268,7 @@ def main():
     ap.add_argument("--real", required=True, help="NAME=SPEC of the real reference images")
     ap.add_argument("--val", default=None, help="real validation images: the reference rows' FID and recognizability (task 0)")
     ap.add_argument("--out-dir", required=True)
-    ap.add_argument("--cache", required=True, help="feature cache directory (cheap to recreate: scratch)")
+    ap.add_argument("--cache", required=True, help="feature cache directory (cheap to recreate)")
     ap.add_argument("--inception", default=None, help=f"FID weights (default: {FID_URL}, cached by torch.hub)")
     ap.add_argument("--classes", default="in100", help="the sets' class list")
     ap.add_argument("--ncls", type=int, default=100)

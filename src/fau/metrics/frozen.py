@@ -1,6 +1,6 @@
-"""The frozen-feature learner: how much a generated set teaches a linear classifier on a pretrained encoder (DINOv3
-ViT-L/16), next to the ResNet-50 trained from scratch (train.py); a metric of the metric study. The encoder sees real images only
-in pretraining, so this learner reads class content and is little affected by low-level image statistics.
+"""The frozen-feature learner, a metric of the metric study: how much a generated set teaches a linear classifier on a
+pretrained encoder (DINOv3 ViT-L/16), next to the ResNet-50 trained from scratch (train.py). The encoder sees real
+images only in pretraining, so this learner reads class content and is little affected by low-level image statistics.
 
 For each set: encoder features (CLS token after the final norm, center crop 224) of its training images, cached; a
 softmax-regression probe on standardized features, its L2 weight chosen on 10% of the set's own images (never on real
@@ -91,7 +91,7 @@ def main():
     ap.add_argument("--val", required=True)
     ap.add_argument("--out", required=True)
     ap.add_argument("--encoder", default="dinov3_vitl16", choices=list(ENCODERS))
-    ap.add_argument("--cache", required=True, help="feature cache directory (cheap to recreate: scratch)")
+    ap.add_argument("--cache", required=True, help="feature cache directory (cheap to recreate)")
     ap.add_argument("--ncls", type=int, help="classes (default: the validation pack's class list, else the largest label + 1)")
     a = ap.parse_args()
     from transformers import AutoModel

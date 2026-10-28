@@ -70,7 +70,7 @@ def main():
         print(f"{part} exists, nothing to do"); return
     proc = AutoProcessor.from_pretrained(snapshot(MODEL), padding_side="left")
     model = Qwen2_5_VLForConditionalGeneration.from_pretrained(snapshot(MODEL), dtype=torch.bfloat16, attn_implementation="sdpa",
-                                                               disable_mmap=True).to("cuda").eval()   # Lustre mmap: ~14 MB/s
+                                                               disable_mmap=True).to("cuda").eval()
     mm = np.memmap(a.pack + ".bin", dtype=np.uint8, mode="r")
     msg = [{"role": "user", "content": [{"type": "image"}, {"type": "text", "text": INSTRUCTION}]}]
     text = proc.apply_chat_template(msg, add_generation_prompt=True, tokenize=False)
