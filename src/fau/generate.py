@@ -365,7 +365,7 @@ class Stager(torch.nn.Module):
             yield
 
     def repelled(self, v, x, sigma):
-        """Within-batch repulsion of the predicted clean latents (a batch holds images of one class; gen.py orders its
+        """Within-batch repulsion of the predicted clean latents (a batch holds images of one class; generate.py orders its
         jobs that way): x0 = x - sigma v on FLUX.2's token grid, pooled to 4 x 4 cells (the layout), each image pushed
         away from the others along the RBF-kernel gradient (median bandwidth, as in particle guidance), the push scaled to
         `strength` times the batch's spread around its mean, then turned back into a velocity."""

@@ -73,7 +73,7 @@ def main(argv=None):
     ap.add_argument("--workers", type=int, default=14)
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--max_steps", type=int, default=0, help="stop after N steps (smoke tests)")
-    ap.add_argument("--device", default="cuda", choices=["cuda", "cpu"], help="as train_cls.py")
+    ap.add_argument("--device", default="cuda", choices=["cuda", "cpu"], help="as train.py")
     ap.add_argument("--resume_every", type=int, default=0, help="keep <out>/resume.pt every N epochs (0: never)")
     a = ap.parse_args(argv)
     torch.manual_seed(a.seed); np.random.seed(a.seed)

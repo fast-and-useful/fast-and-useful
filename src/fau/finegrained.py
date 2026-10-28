@@ -34,6 +34,7 @@ import pyarrow.parquet as pq
 from huggingface_hub import snapshot_download
 from PIL import Image
 
+from fau import REAL
 from fau.packs import PackSet, PackWriter, encode, load_recs
 
 SOURCES = {   # set: dataset, repo, revision, files, {pack: (source splits, images)}, classes
@@ -50,7 +51,6 @@ FOOD_DISH = {"chicken_wings": "chicken wings dish", "croque_madame": "croque mad
              "hot_dog": "hot dog sandwich", "mussels": "mussels dish", "oysters": "oysters dish", "peking_duck": "peking duck dish",
              "scallops": "scallops dish"}
 SIGNATURES = (b"\xff\xd8\xff", b"\x89PNG", b"GIF8", b"RIFF", b"BM")   # JPEG, PNG, GIF, WebP, BMP
-from fau import REAL
 
 
 def local(s):

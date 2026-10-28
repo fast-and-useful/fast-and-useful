@@ -329,7 +329,7 @@ def train(a):
     print(f"{n} pairs from {len(files)} shards ({a.family}, teacher guidance {teacher_g}); noise {sig_0:.4f} -> {sig_t:.5f}; "
           f"{len(tr)} train, {len(held)} held out", flush=True)
 
-    amp = [torch.bfloat16]   # SD's forward precision: bfloat16 to train; the merged check runs in float16, as gen.py does
+    amp = [torch.bfloat16]   # SD's forward precision: bfloat16 to train; the merged check runs in float16, as generate.py does
     if sd:
         from diffusers import AutoPipelineForText2Image
         warm(WEIGHTS["sd_turbo"], "sd_turbo")
@@ -411,7 +411,7 @@ def train(a):
         pipe.text_encoder.to("cpu"); torch.cuda.empty_cache()
     else:
         print(f"{len(prompts)} prompts, encoded batch by batch (the text encoder stays on the GPU)", flush=True)
-    infer_dtype = torch.float16 if sd else torch.bfloat16   # the denoiser's precision in gen.py
+    infer_dtype = torch.float16 if sd else torch.bfloat16   # the denoiser's precision in generate.py
     if a.full:
         w0 = {n: p.detach().to("cpu", infer_dtype, copy=True) for n, p in net.named_parameters()}   # exact: the weights ship in it
         params = [p.requires_grad_(True) for p in net.parameters()]
@@ -478,7 +478,7 @@ def train(a):
             e, ec = evaluate(), evaluate(True); log["curve"].append((s + 1, e, ec))
             print(f"step {s + 1}: held-out relative error {e:.4f}, content error {ec:.4f}", flush=True)
     minutes = (time.time() - t0) / 60
-    # merged: the adapter folded into the weights in the inference precision, as gen.py's partner runs it
+    # merged: the adapter folded into the weights in the inference precision, as generate.py's partner runs it
     with torch.no_grad():
         if a.full:
             delta = {n: p.detach().float().cpu() - w0[n].float() for n, p in net.named_parameters()}
